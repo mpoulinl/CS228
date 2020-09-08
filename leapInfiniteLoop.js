@@ -20,7 +20,7 @@ Leap.loop(controllerOptions, function(frame)
   {
     var fingers = hand.fingers;
     //iterrate
-    for(var n = 0; n < 5 ; n ++)
+    for(var n = 0; n < 6 ; n ++)
     {
       console.log(fingers[n]);
     }
