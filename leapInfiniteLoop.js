@@ -23,9 +23,9 @@ Leap.loop(controllerOptions, function(frame)
     //iterrate
     for(var n = 0; n < arraylength; n++)
     {   
-      if(fingers[n].length > 46)
+      if(fingers[n].length > 45.5)
       {
-        if(fingers[n].length < 48)
+        if(fingers[n].length < 48.5)
         {
           console.log(fingers[n].length);
         }
