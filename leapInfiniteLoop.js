@@ -14,7 +14,8 @@ Leap.loop(controllerOptions, function(frame)
   for(var h = 0; h < frame.hands.length; h++){
     var hand = frame.hands[h];
   }
-  console.log(frame);
+ 
+  console.log(hand);
  
 
 
