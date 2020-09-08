@@ -22,9 +22,11 @@ Leap.loop(controllerOptions, function(frame)
     var arraylength = fingers.length;
     //iterrate
     for(var n = 0; n < arraylength; n++)
-    {
-      console.log(fingers[n]);
-      
+    {    
+      if(1 == finger.type)
+      {
+        console.log(fingers[n]);
+      }
     }
     //console.log(fingers);
     //to acces the first element in the hands array
