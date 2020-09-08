@@ -5,10 +5,11 @@ var y = window.innerHeight * 0.5;
 Leap.loop(controllerOptions, function(frame)
 {
   clear();
-  var rand = (Math.random()*3)-1;
+  var randx = (Math.random()*3)-1;
+  var randy = (Math.random()*3)-1;
   console.log(i);
   i++;
-  circle(x+rand,y,50);
+  circle(x+randx,y+randy,50);
   
 
 
