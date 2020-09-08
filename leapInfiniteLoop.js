@@ -25,7 +25,7 @@ Leap.loop(controllerOptions, function(frame)
         if(fingers[n].length < 50)
         {
           console.log(fingers[n].tipPosition[0]);
-          circle(fingers[n].tipPosition[0],fingers[n].tipPosition[1],50);
+          circle(fingers[n].tipPosition[0]+x,fingers[n].tipPosition[1]+y,50);
         }
         
       }
