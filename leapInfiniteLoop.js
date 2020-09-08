@@ -25,7 +25,10 @@ Leap.loop(controllerOptions, function(frame)
     {   
       if(fingers[n].length > 45.5)
       {
+        if(fingers[n].length < 50)
+        {
           console.log(fingers[n].length);
+        }
         
       }
        
