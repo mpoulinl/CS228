@@ -19,11 +19,12 @@ Leap.loop(controllerOptions, function(frame)
   if(frame.hands.length == 1)
   {
     var fingers = hand.fingers;
+    var arraylength = fingers.length;
     //iterrate
-    for(var n = 0; n < 5)
+    for(var n = 0; n < arraylength; n++)
     {
       console.log(fingers[n]);
-      n++;
+      
     }
     //console.log(fingers);
     //to acces the first element in the hands array
