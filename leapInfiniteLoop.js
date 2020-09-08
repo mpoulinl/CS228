@@ -10,6 +10,9 @@ Leap.loop(controllerOptions, function(frame)
   //console.log(i);
   //i++;
   //circle(x+randx,y+randy,50);
+  for(var h = 0; h < frame.hands.length; h++){
+    var hand = frame.hands[h];
+  }
   console.log(frame);
 
 
