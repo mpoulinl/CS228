@@ -23,7 +23,7 @@ Leap.loop(controllerOptions, function(frame)
     //iterrate
     for(var n = 0; n < arraylength; n++)
     {    
-        console.log(fingers[n]);
+        console.log(fingers[n].Type);
        
     }
     //console.log(fingers);
