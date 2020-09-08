@@ -5,13 +5,9 @@ var y = window.innerHeight * 0.5;
 
 Leap.loop(controllerOptions, function(frame)
 {
-  //clear();
+  clear();
   //var randx = (Math.random()*3)-1;
   //var randy = (Math.random()*3)-1;
-  //console.log(i);
-  //i++;
-  //circle(x+randx,y+randy,50);
-  //console.log(frame);
   for(var h = 0; h < frame.hands.length; h++){
     var hand = frame.hands[h];
   }
@@ -28,12 +24,17 @@ Leap.loop(controllerOptions, function(frame)
       {
         if(fingers[n].length < 50)
         {
-          console.log(fingers[n].tipPosition);
+          console.log(fingers[n].tipPosition(0));
         }
         
       }
        
     }
+
+  //console.log(i);
+  //i++;
+  //circle(x+randx,y+randy,50);
+  //console.log(frame);
     //console.log(fingers);
     //to acces the first element in the hands array
     
