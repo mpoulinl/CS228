@@ -15,7 +15,7 @@ Leap.loop(controllerOptions, function(frame)
     var hand = frame.hands[h];
   }
   var hand = frame.hands[0];
-  var fingers = hand.fingers;
+  var fingers = hand.fingers[];
   if(frame.hands.length == 1)
   {
     console.log(fingers);
