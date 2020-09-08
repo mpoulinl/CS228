@@ -2,6 +2,7 @@ var controllerOptions = {};
 var i = 0;
 var x = window.innerWidth * 0.5;
 var y = window.innerHeight * 0.5;
+
 Leap.loop(controllerOptions, function(frame)
 {
   //clear();
@@ -27,7 +28,7 @@ Leap.loop(controllerOptions, function(frame)
       {
         if(fingers[n].length < 50)
         {
-          console.log(fingers[n].length);
+          console.log(fingers[n]);
         }
         
       }
@@ -42,4 +43,5 @@ Leap.loop(controllerOptions, function(frame)
 
 
 }
+          
 );
