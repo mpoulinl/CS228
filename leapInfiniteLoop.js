@@ -16,8 +16,10 @@ Leap.loop(controllerOptions, function(frame)
   }
   if(frame.hands.length == 1)
   {
-    console.log(frame);
+    console.log(frame.hands[0]);
+    //to acces the first element in the hands array
   }
+  
  
 
 
