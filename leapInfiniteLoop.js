@@ -7,46 +7,43 @@ function HandleFrame(frame){
 
   //one hand over the device
   if(frame.hands.length == 1){
-    
+
     // first element in the hands
     var hand = frame.hands[0];
     HandleHand(hand);
-     
+
 }
 
 function HandleHand(hand){
    //fingers element
     var fingers = hand.fingers;
     var arraylength = fingers.length;
-    //iterrate
+    //iterrate each finger
     for(var n = 0; n < arraylength; n++)
-    {   
-      if(fingers[n].length > 45.5)
+    {
+      //only show circle for index
+      if(fingers[n].type == 1)
       {
-        if(fingers[n].length < 50)
-        {
           console.log(fingers[n].tipPosition[0]);
-          circle(fingers[n].tipPosition[0]+(window.innerWidth * 0.5),fingers[n].tipPosition[1]+(window.innerHeight * 0.5),50);
-        }
-        
+          circle(fingers[n].tipPosition[0]+(window.innerWidth * 0.5),fingers[n].tipPosition[1]+(window.innerHeight * 0.5),50);        
       }
-       
+
     }
-  } 
- 
+  }
+
 }
 function HandleFinger(Hand){
- 
+
 }
 
 //infinity loop
 Leap.loop(controllerOptions, function(frame)
 {
- 
- HandleFrame(frame); 
- 
+
+ HandleFrame(frame);
+
 
 
 }
-          
+
 );
