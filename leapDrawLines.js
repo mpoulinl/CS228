@@ -83,7 +83,7 @@ function HandleBone(bone){
 
   var x_pos_bone = ((horizontal-rawXMin)/(rawXMax - rawXMin)) * window.innerWidth ;
   var y_pos_bone = window.innerHeight - (((vertical-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
-
+  circle(x_pos_finger,y_pos_finger,50);
 }
 //infinity loop
 Leap.loop(controllerOptions, function(frame){
