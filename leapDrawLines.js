@@ -50,11 +50,16 @@ function HandleFinger(finger){
   var x_pos_finger = ((horizontal-rawXMin)/(rawXMax - rawXMin)) * window.innerWidth ;
   var y_pos_finger = window.innerHeight - (((vertical-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
   console.log(finger.bones[1]);
-
+  for(var n = 0; n < 4; n++){
+    //if index extended
+      HandleBone(finger.bones[n]);
+  }
   //only show circle for index
-      circle(x_pos_finger,y_pos_finger,50);
+  //circle(x_pos_finger,y_pos_finger,50);
 }
-
+function HandleBone(bone){
+  console.log(bone);
+}
 //infinity loop
 Leap.loop(controllerOptions, function(frame){
 
