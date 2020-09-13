@@ -51,19 +51,19 @@ function HandleBone(bone,type){
   //line and line weight
   switch(type){
     case 0:
-    strokeWeight(1)
+    strokeWeight(4)
     stroke(80)
     break;
     case 1:
-    strokeWeight(2)
+    strokeWeight(8)
     stroke(60)
     break;
     case 2:
-    strokeWeight(3)
+    strokeWeight(16)
     stroke(40)
     break;
     case 3:
-    strokeWeight(4)
+    strokeWeight(32)
     stroke(20)
     break;
   }
