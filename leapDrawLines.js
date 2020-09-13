@@ -4,7 +4,7 @@ var rawXMax = window.innerWidth * 0.9;
 var rawYMin = window.innerHeight * 0.1;
 var rawYMax = window.innerHeight * 0.9;
 
-control.log(rawXMax);
+
 var controllerOptions = {};
 var i = 0;
 
