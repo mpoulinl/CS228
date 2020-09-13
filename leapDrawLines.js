@@ -35,7 +35,7 @@ function HandleHand(hand){
 
 function HandleFinger(finger){
   var horizontal = finger.tipPosition[0];
-  var vertical = -finger.tipPosition[1];
+  var vertical = finger.tipPosition[1];
   if(horizontal < rawXMin){
     rawXMin = horizontal;
   }
