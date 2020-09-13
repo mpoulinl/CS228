@@ -45,15 +45,28 @@ function HandleBone(bone){
   var bone_start = bone.prevJoint;
   var bone_end = bone.nextJoint;
 
-  var x_start = bone_start[0];
-  var x_end = bone_end[0];
-  var y_start = bone_start[2];
-  var y_end = bone_end[2];
+  var start = TransformCoordinates(bone_start[0],bone_start[2])
+  var end = TransformCoordinates(bone_end[0],bone_end[2])
 
-  line(x_start,y_start,x_end,y_end);
+  line(start[0],start[1],end[0],end[1]);
+}
 
-
-
+function TransformCoordinates(x,y) {
+  if(x < rawXMin){
+    rawXMin = horizontal;
+  }
+  if(x > rawXMax){
+    rawXMax = horizontal;
+  }
+  if(y < rawYMin){
+    rawYMin = vertical;
+  }
+  if(y > rawYMax){
+    rawYMax = vertical;
+  }
+  var x_pos = ((horizontal-rawXMin)/(rawXMax - rawXMin)) * window.innerWidth ;
+  var y_pos = window.innerHeight - (((vertical-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
+  return[x_pos,y_pos];
 }
 //
 // var center_bone = bone.center();
@@ -64,22 +77,9 @@ function HandleBone(bone){
 // var vertical = center_bone[1];
 // console.log(horizontal);
 // //placing it to scale
-// if(horizontal < rawXMin){
-//   rawXMin = horizontal;
-// }
-// if(horizontal > rawXMax){
-//   rawXMax = horizontal;
-// }
-// if(vertical < rawYMin){
-//   rawYMin = vertical;
-// }
-// if(vertical > rawYMax){
-//   rawYMax = vertical;
-// }
+
 //
-// var x_pos_bone = ((horizontal-rawXMin)/(rawXMax - rawXMin)) * window.innerWidth ;
-// var y_pos_bone = window.innerHeight - (((vertical-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
-// circle(x_pos_bone,y_pos_bone,50);
+
 
 //infinity loop
 Leap.loop(controllerOptions, function(frame){
