@@ -61,9 +61,28 @@ function HandleFinger(finger){
 
 function HandleBone(bone){
   var center_bone = bone.center();
-  var x_pos_bone = center_bone[0];
-  var y_pos_bone = center_bone[2];
-  var z_pos_bone = center_bone[1];
+  //x_pos_bone
+  var horizontal = center_bone[0];
+  var y_center_bone = center_bone[2];
+  //z_pos_bone
+  var veriocal = center_bone[1];
+
+  //placing it to scale
+  if(horizontal < rawXMin){
+    rawXMin = horizontal;
+  }
+  if(horizontal > rawXMax){
+    rawXMax = horizontal;
+  }
+  if(vertical < rawYMin){
+    rawYMin = vertical;
+  }
+  if(vertical > rawYMax){
+    rawYMax = vertical;
+  }
+
+  var x_pos_bone = ((horizontal-rawXMin)/(rawXMax - rawXMin)) * window.innerWidth ;
+  var y_pos_bone = window.innerHeight - (((vertical-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
 
 }
 //infinity loop
