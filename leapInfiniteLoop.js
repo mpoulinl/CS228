@@ -19,7 +19,7 @@ function HandleHand(hand){
     var fingers = hand.fingers;
     //iterrate each finger
     for(var n = 0; n < fingers.length; n++){
-      console.log(fingers[n].type);
+      console.log(fingers[n]);
       //HandleFinger(fingers[n]);
     }
   }
