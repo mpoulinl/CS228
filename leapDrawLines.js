@@ -49,12 +49,10 @@ function HandleFinger(finger){
 
   var x_pos_finger = ((horizontal-rawXMin)/(rawXMax - rawXMin)) * window.innerWidth ;
   var y_pos_finger = window.innerHeight - (((vertical-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
-  var m = finger.bones[1].center();
 
-console.log(m[0]);
+
   for(var n = 0; n < 4; n++){
-  //  console.log(finger.bones[n]);
-      //HandleBone(finger.bones[n]);
+      HandleBone(finger.bones[n]);
   }
   //only show circle for index
   //circle(x_pos_finger,y_pos_finger,50);
@@ -62,10 +60,11 @@ console.log(m[0]);
 
 
 function HandleBone(bone){
-  var x_pos_bone = bone.basis[0];
-  var y_pos_bone = bone.basis[1];
-  var z_pos_bone = bone.basis[2];
-  console.log(bone.basis[0]);
+  var center_bone = bone.center();
+  var x_pos_bone = center_bone[0];
+  var y_pos_bone = center_bone[2];
+  var z_pos_bone = center_bone[1];
+
 }
 //infinity loop
 Leap.loop(controllerOptions, function(frame){
