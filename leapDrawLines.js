@@ -49,6 +49,9 @@ function HandleFinger(finger){
     rawYMax = vertical;
   }
   console.log(rawXMin);
+  console.log(rawXMax);
+  console.log(rawYMin);
+  console.log(rawYMax);
   //only show circle for index
       circle((finger.tipPosition[0]-rawXMin)/(rawXMax - rawXMin),(-finger.tipPosition[1]-rawYMin)/(rawYMax-rawYMin),50);
 }
