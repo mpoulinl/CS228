@@ -20,9 +20,7 @@ function HandleHand(hand){
     //iterrate each finger
     for(var n = 0; n < fingers.length; n++){
       //if index extended
-      if(fingers[n].type == 1 && fingers[n].extended){
         HandleFinger(fingers[n])
-      }
     }
   }
 
