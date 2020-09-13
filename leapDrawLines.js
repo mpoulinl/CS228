@@ -66,7 +66,7 @@ function HandleBone(bone){
   var y_center_bone = center_bone[2];
   //z_pos_bone
   var vertical = center_bone[1];
-
+  console.log(horizontal);
   //placing it to scale
   if(horizontal < rawXMin){
     rawXMin = horizontal;
