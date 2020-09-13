@@ -46,30 +46,32 @@ function HandleBone(bone){
   var bone_end = bone.nextJoint;
 
   line(bone_start[0],bone_start[2],bone_end[0],bone_end[2]);
-  // var center_bone = bone.center();
-  // //x_pos_bone
-  // var horizontal = center_bone[0];
-  // var y_center_bone = center_bone[2];
+  var center_bone = bone.center();
+  //x_pos_bone
+  var horizontal = center_bone[0];
+  var y_center_bone = center_bone[2];
   //z_pos_bone
-  // var vertical = center_bone[1];
-  // console.log(horizontal);
-  // //placing it to scale
-  // if(horizontal < rawXMin){
-  //   rawXMin = horizontal;
-  // }
-  // if(horizontal > rawXMax){
-  //   rawXMax = horizontal;
-  // }
-  // if(vertical < rawYMin){
-  //   rawYMin = vertical;
-  // }
-  // if(vertical > rawYMax){
-  //   rawYMax = vertical;
-  // }
+  var vertical = center_bone[1];
+  console.log(horizontal);
+  //placing it to scale
+  if(horizontal < rawXMin){
+    rawXMin = horizontal;
+  }
+  if(horizontal > rawXMax){
+    rawXMax = horizontal;
+  }
+  if(vertical < rawYMin){
+    rawYMin = vertical;
+  }
+  if(vertical > rawYMax){
+    rawYMax = vertical;
+  }
 
-  // var x_pos_bone = ((horizontal-rawXMin)/(rawXMax - rawXMin)) * window.innerWidth ;
-  // var y_pos_bone = window.innerHeight - (((vertical-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
-  // circle(x_pos_bone,y_pos_bone,50);
+  var x_start = ((bone_start[0]-rawXMin)/(rawXMax - rawXMin)) * window.innerWidth ;
+  var y_start = window.innerHeight - (((bone_start[2]-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
+  var x_end = ((bone_end[0]-rawXMin)/(rawXMax - rawXMin)) * window.innerWidth ;
+  var y_end = window.innerHeight - (((bone_end[0]-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
+  line(x_start,y_start,x_end,y_end);
 }
 //infinity loop
 Leap.loop(controllerOptions, function(frame){
