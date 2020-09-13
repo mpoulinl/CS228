@@ -44,5 +44,3 @@ Leap.loop(controllerOptions, function(frame)
 
 
 }
-
-);
