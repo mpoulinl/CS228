@@ -34,6 +34,21 @@ function HandleHand(hand){
   }
 
 function HandleFinger(finger){
+  var horizontal = finger.tipPosition[0];
+  var vertical = -finger.tipPosition[1];
+  if(horizontal < rawXMin){
+    rawXMin = horizontal;
+  }
+  if(horizontal > rawXMax){
+    rawXMax = horizontal;
+  }
+  if(vertical < rawYMin){
+    rawYMin = vertical;
+  }
+  if(horizontal > rawYMax){
+    rawYMax = vertical;
+  }
+  console.log(rawXMin);
   //only show circle for index
       circle((finger.tipPosition[0]-rawXMin)/(rawXMax - rawXMin),(-finger.tipPosition[1]-rawYMin)/(rawYMax-rawYMin),50);
 }
