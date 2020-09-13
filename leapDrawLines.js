@@ -1,8 +1,8 @@
 //four global variable for max/min width and innerHeight
-var rawXMin = window.innerWidth * 0.1;
-var rawXMax = window.innerWidth * 0.9;
-var rawYMin = window.innerHeight * 0.1;
-var rawYMax = window.innerHeight * 0.9;
+var rawXMin = 100;
+var rawXMax = 1;
+var rawYMin = 100;
+var rawYMax = 1;
 
 
 var controllerOptions = {};
