@@ -34,7 +34,7 @@ function HandleHand(hand){
 function HandleFinger(finger){
 
   //for(var n = 0; n < 4; n++){
-      HandleBone(finger.bones[0],0);
+      HandleBone(finger.bones[2],2);
 //  }
   //only show circle for index
   //circle(x_pos_finger,y_pos_finger,50);
