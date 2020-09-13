@@ -5,10 +5,17 @@ var i = 0;
 function HandleFrame(frame){
  clear();
 
-  var hand = frame.hands[0];
-  
-   if(frame.hands.length == 1)
-  {
+  //one hand over the device
+  if(frame.hands.length == 1){
+    
+    // first element in the hands
+    var hand = frame.hands[0];
+    HandleHand(hand);
+     
+}
+
+function HandleHand(hand){
+   //fingers element
     var fingers = hand.fingers;
     var arraylength = fingers.length;
     //iterrate
@@ -25,13 +32,10 @@ function HandleFrame(frame){
       }
        
     }
-  }
-  
+  } 
  
 }
-
-function HandleHAnd(Hand){
- 
+function HandleFinger(Hand){
  
 }
 
