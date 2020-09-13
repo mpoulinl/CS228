@@ -29,7 +29,7 @@ function HandleHand(hand){
 
 function HandleFinger(finger){
   //only show circle for index
-      console.log(finger.tipPosition[1]);
+      console.log(finger.tipPosition[2]);
       circle(finger.tipPosition[0]+(window.innerWidth * 0.5),finger.tipPosition[2]+(window.innerHeight * 0.5),50);
 }
 
