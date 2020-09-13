@@ -50,7 +50,7 @@ function HandleBone(bone,type){
 
   //line and line weight
   strokeWeight((type+2)*2)
-  stroke((type+10)*2)
+  stroke((type+10)*5)
   line(start[0],start[1],end[0],end[1]);
 
 }
