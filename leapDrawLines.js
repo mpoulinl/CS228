@@ -45,13 +45,13 @@ function HandleFinger(finger){
   if(vertical < rawYMin){
     rawYMin = vertical;
   }
-  if(horizontal > rawYMax){
+  if(vertical > rawYMax){
     rawYMax = vertical;
   }
 
   var x_pos_finger = ((horizontal-rawXMin)/(rawXMax - rawXMin)) * window.innerWidth ;
   var y_pos_finger = ((vertical-rawYMin)/rawYMax-rawYMin)*window.innerHeight;
-  console.log(rawYMin);
+  console.log(rawYMax);
 
   //only show circle for index
       circle(x_pos_finger,y_pos_finger,50);
