@@ -49,7 +49,7 @@ function HandleFinger(finger){
 
   var x_pos_finger = ((horizontal-rawXMin)/(rawXMax - rawXMin)) * window.innerWidth ;
   var y_pos_finger = window.innerHeight - (((vertical-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
-  console.log(finger);
+  console.log(finger.bones[1]);
 
   //only show circle for index
       circle(x_pos_finger,y_pos_finger,50);
