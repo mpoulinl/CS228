@@ -49,8 +49,8 @@ function HandleBone(bone,type){
   var end = TransformCoordinates(bone_end[0],bone_end[2])
 
   //line and line weight
-  strokeWeight((type+2)*2)
-  stroke((type)*10)
+  strokeWeight((type+1)*2)
+  stroke((type+1)*10)
   line(start[0],start[1],end[0],end[1]);
 
 }
