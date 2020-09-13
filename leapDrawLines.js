@@ -85,7 +85,7 @@ function TransformCoordinates(x,y) {
     rawYMax = y;
   }
   var x_pos = (1-((x-rawXMin)/(rawXMax - rawXMin))) * window.innerWidth ;
-  var y_pos = (1-((y-rawYMin)/(rawYMax-rawYMin)))* window.innerHeight;
+  var y_pos = (y-rawYMin)/(rawYMax-rawYMin))* window.innerHeight;
   return[x_pos,y_pos];
 }
 //
