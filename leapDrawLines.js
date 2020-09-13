@@ -64,8 +64,8 @@ function TransformCoordinates(x,y) {
   if(y > rawYMax){
     rawYMax = y;
   }
-  var x_pos = ((horizontal-rawXMin)/(rawXMax - rawXMin)) * window.innerWidth ;
-  var y_pos = window.innerHeight - (((vertical-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
+  var x_pos = ((x-rawXMin)/(rawXMax - rawXMin)) * window.innerWidth ;
+  var y_pos = window.innerHeight - (((y-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
   return[x_pos,y_pos];
 }
 //
