@@ -32,25 +32,7 @@ function HandleHand(hand){
   }
 
 function HandleFinger(finger){
-  var horizontal = finger.tipPosition[0];
-  var vertical = finger.tipPosition[1];
-  if(horizontal < rawXMin){
-    rawXMin = horizontal;
-  }
-  if(horizontal > rawXMax){
-    rawXMax = horizontal;
-  }
-  if(vertical < rawYMin){
-    rawYMin = vertical;
-  }
-  if(vertical > rawYMax){
-    rawYMax = vertical;
-  }
-
-  var x_pos_finger = ((horizontal-rawXMin)/(rawXMax - rawXMin)) * window.innerWidth ;
-  var y_pos_finger = window.innerHeight - (((vertical-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
-
-
+  
   for(var n = 0; n < 4; n++){
       HandleBone(finger.bones[n]);
   }
