@@ -67,8 +67,8 @@ function HandleBone(bone,type){
   //     strokeWeight(4)
   //     stroke(16)
   // }
-  strokeWeight((n+1)*10)
-  stroke(n+1)
+  strokeWeight((type+1)*10)
+  stroke(type+1)
   line(start[0],start[1],end[0],end[1]);
 
 }
