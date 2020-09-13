@@ -53,16 +53,16 @@ function HandleBone(bone){
 
 function TransformCoordinates(x,y) {
   if(x < rawXMin){
-    rawXMin = horizontal;
+    rawXMin = x;
   }
   if(x > rawXMax){
-    rawXMax = horizontal;
+    rawXMax = x;
   }
   if(y < rawYMin){
-    rawYMin = vertical;
+    rawYMin = y;
   }
   if(y > rawYMax){
-    rawYMax = vertical;
+    rawYMax = y;
   }
   var x_pos = ((horizontal-rawXMin)/(rawXMax - rawXMin)) * window.innerWidth ;
   var y_pos = window.innerHeight - (((vertical-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
