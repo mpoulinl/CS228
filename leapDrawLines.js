@@ -67,8 +67,8 @@ function HandleBone(bone){
     rawYMax = vertical;
   }
 
-  var x_pos_bone = ((horizontal-rawXMin)/(rawXMax - rawXMin)) * window.innerWidth ;
-  var y_pos_bone = window.innerHeight - (((vertical-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
+  var x_pos_bone = ((horizontal-rawXMin)/(rawXMax - rawXMin)) * (window.innerWidth-20) ;
+  var y_pos_bone = window.innerHeight - (((vertical-rawYMin)/(rawYMax-rawYMin))* (window.innerHeight-20);
   circle(x_pos_bone,y_pos_bone,50);
 
   line(bone_start[0]*x_pos_bone,bone_start[2]*y_pos_bone,bone_end[0]**x_pos_bone,bone_end[2]*y_pos_bone);
