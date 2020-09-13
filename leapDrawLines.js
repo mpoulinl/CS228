@@ -66,8 +66,8 @@ function HandleBone(bone,type){
     case 3:
       strokeWeight(4)
       stroke(40)
-
   }
+  rect(20, 20, 60, 60);
 
 }
 
