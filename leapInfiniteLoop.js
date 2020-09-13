@@ -3,8 +3,8 @@ var i = 0;
 var x = window.innerWidth * 0.5;
 var y = window.innerHeight * 0.5;
 
-//functions :
-function HandleFrame(frame){
+Leap.loop(controllerOptions, function(frame)
+{
   clear();
   //var randx = (Math.random()*3)-1;
   //var randy = (Math.random()*3)-1;
@@ -31,12 +31,14 @@ function HandleFrame(frame){
       }
        
     }
-}
-}
 
-Leap.loop(controllerOptions, function(frame){
-
-    HandleFrame(frame);
+  //console.log(i);
+  //i++;
+  //circle(x+randx,y+randy,50);
+  //console.log(frame);
+    //console.log(fingers);
+    //to acces the first element in the hands array
+    
   }
   
  
