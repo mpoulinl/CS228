@@ -34,14 +34,14 @@ function HandleHand(hand){
 function HandleFinger(finger){
 
   for(var n = 0; n < 4; n++){
-      HandleBone(finger.bones[n]);
+      HandleBone(finger.bones[n],n);
   }
   //only show circle for index
   //circle(x_pos_finger,y_pos_finger,50);
 }
 
 
-function HandleBone(bone){
+function HandleBone(bone,type){
   var bone_start = bone.prevJoint;
   var bone_end = bone.nextJoint;
 
@@ -49,6 +49,7 @@ function HandleBone(bone){
   var end = TransformCoordinates(bone_end[0],bone_end[2])
 
   line(start[0],start[1],end[0],end[1]);
+  strokeWeight(type)
 }
 
 function TransformCoordinates(x,y) {
