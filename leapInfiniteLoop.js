@@ -17,23 +17,21 @@ function HandleFrame(frame){
 function HandleHand(hand){
    //fingers element
     var fingers = hand.fingers;
-    var arraylength = fingers.length;
     //iterrate each finger
-    for(var n = 0; n < arraylength; n++)
+    for(var n = 0; n < fingers.length; n++)
     {
-      //only show circle for index
-      if(fingers[n].type == 1)
-      {
-          console.log(fingers[n].tipPosition[0]);
-          circle(fingers[n].tipPosition[0]+(window.innerWidth * 0.5),fingers[n].tipPosition[1]+(window.innerHeight * 0.5),50);        
-      }
+      HandleFinger(fingers[n]);
 
     }
   }
 
-}
-function HandleFinger(Hand){
-
+function HandleFinger(finger){
+  //only show circle for index
+  if(finger.type == 1)
+  {
+      console.log(fingers[n].tipPosition[0]);
+      circle(finger.tipPosition[0]+(window.innerWidth * 0.5),finger.tipPosition[1]+(window.innerHeight * 0.5),50);
+  }
 }
 
 //infinity loop
