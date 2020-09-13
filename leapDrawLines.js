@@ -45,8 +45,8 @@ function HandleBone(bone,type){
   var bone_start = bone.prevJoint;
   var bone_end = bone.nextJoint;
 
-  var start = TransformCoordinates(bone_start[0],bone_start[2])
-  var end = TransformCoordinates(bone_end[0],bone_end[2])
+  var start = TransformCoordinates(bone_start[0],bone_start[1])
+  var end = TransformCoordinates(bone_end[0],bone_end[1])
 
   //line and line weight
   switch(type){
