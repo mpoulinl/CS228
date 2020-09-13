@@ -42,7 +42,10 @@ function HandleFinger(finger){
 
 
 function HandleBone(bone){
-  console.log(bone.prevJoint);
+  var bone_start = bone.prevJoint;
+  var bone_end = bone.nextJoint;
+
+  line(bone_start[0],bone_start[2],bone_end[0],bone_end[2]);
   // var center_bone = bone.center();
   // //x_pos_bone
   // var horizontal = center_bone[0];
