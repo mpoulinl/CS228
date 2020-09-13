@@ -52,7 +52,7 @@ function HandleFinger(finger){
   console.log(finger.bones[1]);
 
   //from del02 should be in handle hand
-  for(var n = 0; n < 5; n++){
+  for(var n = 0; n < 4; n++){
     //if index extended
       HandleBone(finger.bones[n]);
   }
