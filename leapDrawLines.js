@@ -62,10 +62,12 @@ function HandleFinger(finger){
 
 
 function HandleBone(bone){
-  var x_pos_bone = bone.tipPosition[0];
-  var y_pos_bone = bone.tipPosition[2];
-  var z_pos_bone = bone.tipPosition[1];
-  console.log(x_pos_bone);
+  // var x_pos_bone = bone.tipPosition[0];
+  // var y_pos_bone = bone.tipPosition[2];
+  // var z_pos_bone = bone.tipPosition[1];
+  // console.log(x_pos_bone);
+  var position = finger.dipPosition;
+  console.table(position);
 }
 //infinity loop
 Leap.loop(controllerOptions, function(frame){
