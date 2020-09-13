@@ -73,8 +73,8 @@ function HandleBone(bone){
 
   var x_start = bone_start[0]+x_pos_bone;
   var x_end = bone_end[0]+x_pos_bone;
-  var y_start = bone_start[2]+y_pos_bone;
-  var y_end = bone_end[2]+y_pos_bone;
+  var y_start = bone_start[2];
+  var y_end = bone_end[2];
 
   line(x_start,y_start,x_end,y_end);
 
