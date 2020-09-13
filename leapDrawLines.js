@@ -1,4 +1,10 @@
-
+//four global variable for max/min width and innerHeight
+var rawXMin = window.innerWidth * 0.1;
+var rawXMax = window.innerWidth * 0.9;
+var rawYMin = window.innerHeight * 0.1;
+var rawYMax = window.innerHeight * 0.9;
+control.log(rawXMin);
+control.log(rawXMax);
 var controllerOptions = {};
 var i = 0;
 
@@ -29,8 +35,7 @@ function HandleHand(hand){
 
 function HandleFinger(finger){
   //only show circle for index
-      console.log(finger.tipPosition[2]);
-      circle(finger.tipPosition[0]+(window.innerWidth * 0.5),-finger.tipPosition[1]+(window.innerHeight * 0.5),50);
+      circle((finger.tipPosition[0]-rawXMin)/(rawXMax - rawXMin),(-finger.tipPosition[1]-rawYMin)/(rawYMax-rawYMin),50);
 }
 
 //infinity loop
