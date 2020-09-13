@@ -19,20 +19,17 @@ function HandleHand(hand){
     var fingers = hand.fingers;
     //iterrate each finger
     for(var n = 0; n < fingers.length; n++){
-      if(fingers[n].type == 1 && fingers[n].extended)
-      {
-      console.log(fingers[n]);
-    }
-      //HandleFinger(fingers[n]);
+      //if index extended
+      if(fingers[n].type == 1 && fingers[n].extended){
+        fingers[n];
+      }
     }
   }
 
 function HandleFinger(finger){
   //only show circle for index
-  if(finger.type == 1){
-      console.log(fingers[n].tipPosition[0]);
+      console.log(finger.tipPosition[0]);
       circle(finger.tipPosition[0]+(window.innerWidth * 0.5),finger.tipPosition[1]+(window.innerHeight * 0.5),50);
-  }
 }
 
 //infinity loop
