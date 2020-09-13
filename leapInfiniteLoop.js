@@ -19,7 +19,10 @@ function HandleHand(hand){
     var fingers = hand.fingers;
     //iterrate each finger
     for(var n = 0; n < fingers.length; n++){
+      if(fingers[n].type == 1 && fingers[n].extended)
+      {
       console.log(fingers[n]);
+    }
       //HandleFinger(fingers[n]);
     }
   }
