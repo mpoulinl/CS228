@@ -51,10 +51,10 @@ function HandleFinger(finger){
   var y_pos_finger = window.innerHeight - (((vertical-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
   console.log(finger.bones[1]);
 
-  //from del02 should be in handle hand
+
   for(var n = 0; n < 4; n++){
-    //if index extended
-      HandleBone(finger.bones[n]);
+    console.log(finger.bones[n]);
+      //HandleBone(finger.bones[n]);
   }
   //only show circle for index
   //circle(x_pos_finger,y_pos_finger,50);
