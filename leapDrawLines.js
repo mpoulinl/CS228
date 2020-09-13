@@ -51,7 +51,7 @@ function HandleFinger(finger){
   var y_pos_finger = window.innerHeight - (((vertical-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
   var m = finger.bones[1].center();
 
-console.log(m[1]);
+console.log(m[2]);
   for(var n = 0; n < 4; n++){
   //  console.log(finger.bones[n]);
       //HandleBone(finger.bones[n]);
