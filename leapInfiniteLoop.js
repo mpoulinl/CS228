@@ -1,15 +1,10 @@
 var controllerOptions = {};
 var i = 0;
 
-
-
+//function
 function HandleFrame(frame){
  clear();
- 
-  for(var h = 0; h < frame.hands.length; h++){
-    var hand = frame.hands[h];
-  }  
-  
+
   var hand = frame.hands[0];
   
    if(frame.hands.length == 1)
@@ -35,6 +30,12 @@ function HandleFrame(frame){
  
 }
 
+function HandleHAnd(Hand){
+ 
+ 
+}
+
+//infinity loop
 Leap.loop(controllerOptions, function(frame)
 {
  
