@@ -84,7 +84,7 @@ function TransformCoordinates(x,y) {
   if(y > rawYMax){
     rawYMax = y;
   }
-  var x_pos = (window.innerWidth-((x-rawXMin)/(rawXMax - rawXMin))) * window.innerWidth ;
+  var x_pos = (1-((x-rawXMin)/(rawXMax - rawXMin))) * window.innerWidth ;
   var y_pos = ((y-rawYMin)/(rawYMax-rawYMin))* window.innerHeight;
   return[x_pos,y_pos];
 }
