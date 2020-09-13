@@ -33,7 +33,7 @@ function HandleHand(hand){
 
 function HandleFinger(finger){
 
-  for(var n = 3; 0 >= n; n--){
+  for(var n = 3; 0 >= n; --n){
       HandleBone(finger.bones[n],n);
   }
   //only show circle for index
