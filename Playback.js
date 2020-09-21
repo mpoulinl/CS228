@@ -22,7 +22,7 @@ var oneFrameOfData = nj.array([[[139.62817,732.53159,127.965,139.62817,732.53159
 var maude = nj.zeros([5]);
 function draw(){
   clear();
-  console.log(maude.toString());
+  console.log(oneFrameOfData);
   // for(var i = 0 ; i < 5 ; i++){
   //   for(var j = 0 ; j < 4 ; j++){
   //     //x
