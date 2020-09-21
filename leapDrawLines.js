@@ -25,16 +25,22 @@ function HandleHand(hand){
    //fingers element
     var fingers = hand.fingers;
     //iterrate each finger
-    for(var n = 2; 0 <=n; --n){
-      for(var i=0; n <fingers.length; n++){
-        HandleFinger(fingers[i],n)
-      }
+    // for(var n = 3; 0 <=n; --n){
+    //   for(var i=0; n <fingers.length; n++){
+    //     HandleFinger(fingers[i],)
+    //   }
+    // }
+    for(var n = 0; n < fingers.length; n++){
+      //if index extended
+        HandleFinger(fingers[n])
     }
   }
 
-function HandleFinger(finger,n){
+function HandleFinger(finger,num){
 
+  for(var n = 3; 0 <= n; --n){
       HandleBone(finger.bones[n],n);
+  }
   //only show circle for index
   //circle(x_pos_finger,y_pos_finger,50);
 }
