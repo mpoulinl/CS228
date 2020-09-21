@@ -29,23 +29,29 @@ function HandleHand(hand){
     //iterrate each finger
     for(var n = 3; 0 <=n; --n){
       for(var i=0; i <fingers.length; i++){
-        HandleFinger(fingers[i],n)
+        HandleFinger(fingers[i],n,i)
       }
     }
   }
 
-function HandleFinger(finger,n){
+function HandleFinger(finger,n,fingerIndex){
 
-      HandleBone(finger.bones[n],n);
+      HandleBone(finger.bones[n],n,fingerIndex);
 }
 
 
-function HandleBone(bone,type){
+function HandleBone(bone,type,fingerIndex){
   var bone_start = bone.prevJoint;
   var bone_end = bone.nextJoint;
 
   var start = TransformCoordinates(bone_start[0],bone_start[1])
   var end = TransformCoordinates(bone_end[0],bone_end[1])
+
+  var z1 = bone_start[2];
+  var z2 = bone_end[2];
+  var z3 = z1+z2;
+  //fingerIndex == finger
+  oneFrameOfData.set(fingerIndex,type,z3);
 
   if(currentNumbHands == 1){
 
