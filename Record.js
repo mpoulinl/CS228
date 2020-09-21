@@ -106,7 +106,6 @@ function TransformCoordinates(x,y) {
 
 //
 
-currentNumbHands = frame.hands.length;
 //infinity loop
 Leap.loop(controllerOptions, function(frame){
   currentNumbHands = frame.hands.length;
