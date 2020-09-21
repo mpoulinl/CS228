@@ -57,7 +57,7 @@ function HandleBone(bone,type,fingerIndex){
   oneFrameOfData.set(fingerIndex,type,3,bone_end[0]);
   oneFrameOfData.set(fingerIndex,type,4,bone_end[1]);
   oneFrameOfData.set(fingerIndex,type,5,bone_end[2]);
-  
+
 
   if(currentNumbHands == 1){
 
@@ -127,6 +127,7 @@ function TransformCoordinates(x,y) {
 function RecordData(){
   if(currentNumbHands == 1 && previousNumHands == 2){
     background(51);
+    console.log(oneFrameOfData.toString());
   }
 }
 //infinity loop
@@ -135,7 +136,7 @@ Leap.loop(controllerOptions, function(frame){
   HandleFrame(frame);
   RecordData();
   previousNumHands = currentNumbHands;
- console.log(oneFrameOfData.toString());
+
 
 
 }
