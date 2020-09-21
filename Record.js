@@ -51,7 +51,7 @@ function HandleBone(bone,type,fingerIndex){
   var z2 = bone_end[2];
   var z3 = z1+z2;
   //fingerIndex == finger
-  oneFrameOfData.set(fingerIndex,type,z3);
+  oneFrameOfData.set(fingerIndex,z3);
 
   if(currentNumbHands == 1){
 
