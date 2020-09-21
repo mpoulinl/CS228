@@ -49,7 +49,7 @@ function HandleBone(bone,type,fingerIndex){
 
   var z1 = bone_start[2];
   var z2 = bone_end[2];
-  var sum = z1+z2+bone_start+bone_end+start+end;
+  var sum = z1+z2+bone_start[0]+bone_end[0]+bone_start[1]+bone_end[1]
   console.log(sum);
   //fingerIndex == finger
   oneFrameOfData.set(fingerIndex,type,sum);
