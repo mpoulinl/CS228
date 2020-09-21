@@ -110,11 +110,16 @@ function TransformCoordinates(x,y) {
   return[x_pos,y_pos];
 }
 
-
+function RecordData(){
+  if(currentNumbHands == 1 && previousNumHands == 2){
+    background(51);
+  }
+}
 //infinity loop
 Leap.loop(controllerOptions, function(frame){
   currentNumbHands = frame.hands.length;
   HandleFrame(frame);
+  RecordData();
   previousNumHands = currentNumbHands;
 
 
