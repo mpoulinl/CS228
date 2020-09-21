@@ -1,3 +1,5 @@
+var oneFrameOfData = nj.zeros([5]);
+
 //four global variable for max/min width and innerHeight
 var rawXMin = 10000;
 var rawXMax = -10000;
@@ -117,12 +119,11 @@ function RecordData(){
 }
 //infinity loop
 Leap.loop(controllerOptions, function(frame){
-  currentNumbHands = frame.hands.length;
-  HandleFrame(frame);
-  RecordData();
-  previousNumHands = currentNumbHands;
-
-
+  // currentNumbHands = frame.hands.length;
+  // HandleFrame(frame);
+  // RecordData();
+  // previousNumHands = currentNumbHands;
+  console.log(oneFrameOfData.toString());
 
 
 }
