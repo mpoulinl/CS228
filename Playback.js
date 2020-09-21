@@ -19,11 +19,14 @@ var oneFrameOfData = nj.array([[[139.62817,732.53159,127.965,139.62817,732.53159
         [166.29674,651.80285,53.3977,199.88083,644.15519,27.7799],
         [199.88083,644.15519,27.7799,222.3194,676.70511,16.792],
         [222.3194,676.70511,16.792,241.28849,726.54051,11.135]]]);
+var maude = nj.zeros([5]);
 function draw(){
   clear();
-  for(var i = 0 ; i < 5 ; i++){
-    for(var j = 0 ; j < 4 ; j++){
-      console.log(oneFrameOfData,get(i,j,0));
-    }
-  }
+  maude.toString();
+  // for(var i = 0 ; i < 5 ; i++){
+  //   for(var j = 0 ; j < 4 ; j++){
+  //     //x
+  //     console.log(oneFrameOfData,get(i,j,0));
+  //   }
+  // }
 }
