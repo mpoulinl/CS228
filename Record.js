@@ -125,10 +125,10 @@ function RecordData(){
 }
 //infinity loop
 Leap.loop(controllerOptions, function(frame){
-  // currentNumbHands = frame.hands.length;
-  // HandleFrame(frame);
-  // RecordData();
-  // previousNumHands = currentNumbHands;
+  currentNumbHands = frame.hands.length;
+  HandleFrame(frame);
+  RecordData();
+  previousNumHands = currentNumbHands;
   console.log(oneFrameOfData.toString());
 
 
