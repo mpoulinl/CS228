@@ -50,19 +50,19 @@ function HandleBone(bone,type){
   switch(type){
     case 0:
     strokeWeight(4)
-    stroke('rgba(0,255,0,0.2)')
+    stroke('rgb(100,202,10)')
     break;
     case 1:
     strokeWeight(3)
-    stroke('rgba(0,255,0,0.4)')
+    stroke('rgb(86,174,9)')
     break;
     case 2:
     strokeWeight(2)
-    stroke('rgba(0,255,0,0.6)')
+    stroke('rgb(73,148,7)')
     break;
     case 3:
     strokeWeight(1)
-    stroke('rgba(0,255,0,0.8)')
+    stroke('rgb(62,125,6)')
     break;
   }
   line(start[0],start[1],end[0],end[1]);
