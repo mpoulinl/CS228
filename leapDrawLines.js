@@ -38,9 +38,9 @@ function HandleHand(hand){
 
 function HandleFinger(finger,num){
 
-  for(var n = 3; 0 <= n; --n){
-      HandleBone(finger.bones[n],n);
-  }
+  //for(var n = 3; 0 <= n; --n){
+      HandleBone(finger.bones[3],3);
+  // }
   //only show circle for index
   //circle(x_pos_finger,y_pos_finger,50);
 }
