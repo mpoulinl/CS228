@@ -13,12 +13,9 @@ var i = 0;
 function HandleFrame(frame){
  clear();
 
-  //one hand over the device
-  if(frame.hands.length == 1){
     // first element in the hands
     var hand = frame.hands[0];
     HandleHand(hand);
-  }
 
 }
 
