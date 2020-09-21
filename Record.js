@@ -45,7 +45,7 @@ function HandleBone(bone,type){
   var start = TransformCoordinates(bone_start[0],bone_start[1])
   var end = TransformCoordinates(bone_end[0],bone_end[1])
 
-  if(frame.hands.length == 1){
+  if(currentNumbHands == 1){
 
     //line and line weight
     switch(type){
