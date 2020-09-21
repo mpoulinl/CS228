@@ -62,7 +62,7 @@ function HandleBone(bone,type){
     break;
     case 3:
     strokeWeight(2)
-    stroke('rgb(62,125,6)')
+    stroke('rgb(34,70,3)')
     break;
   }
   line(start[0],start[1],end[0],end[1]);
