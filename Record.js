@@ -31,19 +31,11 @@ function HandleHand(hand){
         HandleFinger(fingers[i],n)
       }
     }
-    // for(var n = 0; n < fingers.length; n++){
-    //   //if index extended
-    //     HandleFinger(fingers[n])
-    // }
   }
 
 function HandleFinger(finger,n){
 
-  //for(var n = 3; 0 <= n; --n){
       HandleBone(finger.bones[n],n);
-  // }
-  //only show circle for index
-  //circle(x_pos_finger,y_pos_finger,50);
 }
 
 
@@ -58,19 +50,19 @@ function HandleBone(bone,type){
   switch(type){
     case 0:
     strokeWeight(4)
-    stroke(210)
+    stroke(0,255,0,0,2)
     break;
     case 1:
     strokeWeight(3)
-    stroke(70)
+    stroke(0,255,0,0,4)
     break;
     case 2:
     strokeWeight(2)
-    stroke(40)
+    stroke(0,255,0,0,6)
     break;
     case 3:
     strokeWeight(1)
-    stroke(10)
+    stroke(0,255,0,0,8)
     break;
   }
   line(start[0],start[1],end[0],end[1]);
@@ -94,17 +86,7 @@ function TransformCoordinates(x,y) {
   var y_pos = window.innerHeight-(((y-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
   return[x_pos,y_pos];
 }
-//
-// var center_bone = bone.center();
-// //x_pos_bone
-// var horizontal = center_bone[0];
-// var y_center_bone = center_bone[2];
-// //z_pos_bone
-// var vertical = center_bone[1];
-// console.log(horizontal);
-// //placing it to scale
 
-//
 
 //infinity loop
 Leap.loop(controllerOptions, function(frame){
