@@ -53,7 +53,7 @@ function HandleBone(bone,type,fingerIndex){
 
   oneFrameOfData.set(fingerIndex,type,0,start[0]);
   oneFrameOfData.set(fingerIndex,type,1,start[1]);
-  oneFrameOfData.set(fingerIndex,type,2,start_start[2]);
+  oneFrameOfData.set(fingerIndex,type,2,bone_start[2]);
   oneFrameOfData.set(fingerIndex,type,3,end[0]);
   oneFrameOfData.set(fingerIndex,type,4,end[1]);
   oneFrameOfData.set(fingerIndex,type,5,bone_end[2]);
