@@ -50,7 +50,7 @@ function HandleBone(bone,type){
   switch(type){
     case 0:
     strokeWeight(5)
-    stroke('rgb(114,218,23)')
+    stroke('rgb(150,243,68)')
     break;
     case 1:
     strokeWeight(4)
