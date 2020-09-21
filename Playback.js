@@ -21,5 +21,10 @@ var oneFrameOfData = nj.array([[[139.62817,732.53159,127.965,139.62817,732.53159
         [222.3194,676.70511,16.792,241.28849,726.54051,11.135]]])
 function draw(){
   clear();
+  for(int i = 0 ; i < 5 ; i++){
+    for(int j = 0 ; i < 4 ; j++){
+      console.log(oneFrameOfData.get(i,j));
+    }
+  }
   console.log(oneFrameOfData);
 }
