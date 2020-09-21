@@ -1,4 +1,4 @@
-var oneFrameOfData = nj.zeros([5]);
+var oneFrameOfData = nj.zeros([5,4]);
 
 //four global variable for max/min width and innerHeight
 var rawXMin = 10000;
@@ -51,7 +51,7 @@ function HandleBone(bone,type,fingerIndex){
   var z2 = bone_end[2];
   var z3 = z1+z2;
   //fingerIndex == finger
-  oneFrameOfData.set(fingerIndex,z3);
+  oneFrameOfData.set(fingerIndex,type,z3);
 
   if(currentNumbHands == 1){
 
