@@ -4,7 +4,7 @@ var rawXMax = -10000;
 var rawYMin = 10000;
 var rawYMax = -10000;
 
-var preiousNumHands = 0;
+var previousNumHands = 0;
 var currentNumbHands = 0;
 var controllerOptions = {};
 var i = 0;
@@ -109,7 +109,7 @@ function TransformCoordinates(x,y) {
 
 //infinity loop
 Leap.loop(controllerOptions, function(frame){
-cosole.log(preiousNumHands);
+console.log(previousNumHands);
 console.log(currentNumbHands);
 // HandleFrame(frame);
 
