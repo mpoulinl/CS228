@@ -32,9 +32,9 @@ function HandleHand(hand){
     }
   }
 
-function HandleFinger(finger,num){
+function HandleFinger(finger,n){
 
-      HandleBone(finger.bones[num],num);
+      HandleBone(finger.bones[n],n);
   //only show circle for index
   //circle(x_pos_finger,y_pos_finger,50);
 }
