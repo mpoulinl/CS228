@@ -26,5 +26,4 @@ function draw(){
       console.log(oneFrameOfData);
     }
   }
-  console.log(oneFrameOfData);
 }
