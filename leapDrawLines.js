@@ -25,7 +25,7 @@ function HandleHand(hand){
    //fingers element
     var fingers = hand.fingers;
     //iterrate each finger
-    for(var n = 3; 0 <=n; --n){
+    for(var n = 2; 0 <=n; --n){
       for(var i=0; n <fingers.length; n++){
         HandleFinger(fingers[i],n)
       }
