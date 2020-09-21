@@ -1,4 +1,3 @@
-
 //four global variable for max/min width and innerHeight
 var rawXMin = 10000;
 var rawXMax = -10000;
@@ -26,17 +25,22 @@ function HandleHand(hand){
    //fingers element
     var fingers = hand.fingers;
     //iterrate each finger
-    for(var n = 0; n < fingers.length; n++){
-      //if index extended
-        HandleFinger(fingers[n])
+    for(var n = 3; 0 <=n; --n){
+      for(var i=0; i <fingers.length; i++){
+        HandleFinger(fingers[i],n)
+      }
     }
+    // for(var n = 0; n < fingers.length; n++){
+    //   //if index extended
+    //     HandleFinger(fingers[n])
+    // }
   }
 
-function HandleFinger(finger){
+function HandleFinger(finger,n){
 
-  for(var n = 3; 0 <= n; --n){
+  //for(var n = 3; 0 <= n; --n){
       HandleBone(finger.bones[n],n);
-  }
+  // }
   //only show circle for index
   //circle(x_pos_finger,y_pos_finger,50);
 }
@@ -52,20 +56,20 @@ function HandleBone(bone,type){
   //line and line weight
   switch(type){
     case 0:
-    strokeWeight(20)
-    stroke(80)
+    strokeWeight(4)
+    stroke(210)
     break;
     case 1:
-    strokeWeight(40)
-    stroke(60)
+    strokeWeight(3)
+    stroke(70)
     break;
     case 2:
-    strokeWeight(60)
+    strokeWeight(2)
     stroke(40)
     break;
     case 3:
-    strokeWeight(80)
-    stroke(20)
+    strokeWeight(1)
+    stroke(10)
     break;
   }
   line(start[0],start[1],end[0],end[1]);
