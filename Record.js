@@ -109,7 +109,7 @@ function TransformCoordinates(x,y) {
 //infinity loop
 Leap.loop(controllerOptions, function(frame){
   currentNumbHands = frame.hands.length;
-  HandleHand(frame);
+  HandleFrame(frame);
   previousNumHands = currentNumbHands;
 
 
