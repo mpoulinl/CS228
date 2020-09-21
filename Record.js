@@ -45,24 +45,48 @@ function HandleBone(bone,type){
   var start = TransformCoordinates(bone_start[0],bone_start[1])
   var end = TransformCoordinates(bone_end[0],bone_end[1])
 
-  //line and line weight
-  switch(type){
-    case 0:
-    strokeWeight(5)
-    stroke('rgb(150,243,68)')
-    break;
-    case 1:
-    strokeWeight(4)
-    stroke('rgb(100,202,10)')
-    break;
-    case 2:
-    strokeWeight(3)
-    stroke('rgb(73,148,7)')
-    break;
-    case 3:
-    strokeWeight(2)
-    stroke('rgb(34,70,3)')
-    break;
+  if(currentNumbHands == 1){
+
+    //line and line weight
+    switch(type){
+      case 0:
+      strokeWeight(5)
+      stroke('rgb(150,243,68)')
+      break;
+      case 1:
+      strokeWeight(4)
+      stroke('rgb(100,202,10)')
+      break;
+      case 2:
+      strokeWeight(3)
+      stroke('rgb(73,148,7)')
+      break;
+      case 3:
+      strokeWeight(2)
+      stroke('rgb(34,70,3)')
+      break;
+    }
+  }
+  else{
+    switch(type){
+      case 0:
+      strokeWeight(5)
+      stroke('rgb(255,4,4)')
+      break;
+      case 1:
+      strokeWeight(4)
+      stroke('rgb(205,14,14)')
+      break;
+      case 2:
+      strokeWeight(3)
+      stroke('rgb(156,9,9)')
+      break;
+      case 3:
+      strokeWeight(2)
+      stroke('rgb(91,3,3)')
+      break;
+    }
+
   }
   line(start[0],start[1],end[0],end[1]);
 
