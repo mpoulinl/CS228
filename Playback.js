@@ -73,7 +73,7 @@ function draw(){
       }
 
       if(secondframeIndex == 0){
-        line(xStart,yStart,xEnd,yEnd);
+        line(xStart,zStart,xEnd,zEnd);
       }
       else{
         line(xStart_a,zStart_a,xEnd_a,zEnd_a);
