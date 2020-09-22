@@ -39,8 +39,10 @@ var anotherFrameDate = nj.array([[[ 610.27843,  492.8579,    178.21, 610.27843, 
        [[   868.689, 413.66599,   167.478, 891.31842, 288.54135,   124.334],
         [ 891.31842, 288.54135,   124.334, 932.43482, 277.05816,   95.1932],
         [ 932.43482, 277.05816,   95.1932, 941.88627, 285.51829,   78.8542],
-        [ 941.88627, 285.51829,   78.8542, 941.67251, 302.10634,   64.6592]]])
-var maude = nj.zeros([5]);
+        [ 941.88627, 285.51829,   78.8542, 941.67251, 302.10634,   64.6592]]]);
+
+
+var frameIndex = 0;
 function draw(){
   clear();
   for(var i = 0 ; i < 5 ; i++){
@@ -52,14 +54,24 @@ function draw(){
       var xEnd = oneFrameOfData.get(i,j,3);
       var yEnd = oneFrameOfData.get(i,j,4);
       var zEnd = oneFrameOfData.get(i,j,5);
-      line(xStart,yStart,zStart,xEnd,yEnd,zEnd);
-      var xStart = anotherFrameDate.get(i,j,0);
-      var yStart = anotherFrameDate.get(i,j,1);
-      var zStart = anotherFrameDate.get(i,j,2);
-      var xEnd = anotherFrameDate.get(i,j,3);
-      var yEnd = anotherFrameDate.get(i,j,4);
-      var zEnd = anotherFrameDate.get(i,j,5);
-      line(xStart,yStart,zStart,xEnd,yEnd,zEnd);
+
+      var xStart_a = anotherFrameDate.get(i,j,0);
+      var yStart_a = anotherFrameDate.get(i,j,1);
+      var zStart_a = anotherFrameDate.get(i,j,2);
+      var xEnd_a = anotherFrameDate.get(i,j,3);
+      var yEnd_a = anotherFrameDate.get(i,j,4);
+      var zEnd_a = anotherFrameDate.get(i,j,5);
+
+      if(frameIndex === 0){
+        line(xStart,yStart,zStart,xEnd,yEnd,zEnd);
+      }
+      else if(x % 2 ===0){
+        line(xStart,yStart,zStart,xEnd,yEnd,zEnd);
+      }
+      else{
+        line(xStart_a,yStart_a,zStart_a,xEnd_a,yEnd_a,zEnd_a);
+      }
+
     }
   }
 }
