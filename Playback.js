@@ -62,7 +62,7 @@ function draw(){
       var xEnd_a = anotherFrameDate.get(i,j,3);
       var yEnd_a = anotherFrameDate.get(i,j,4);
       var zEnd_a = anotherFrameDate.get(i,j,5);
-      if(frameIndex == 100){
+      if(frameIndex == 1000){
         frameIndex = 0;
         if(secondframeIndex == 0){
           secondframeIndex = 1;
