@@ -62,6 +62,11 @@ function draw(){
       var yEnd_a = anotherFrameDate.get(i,j,4);
       var zEnd_a = anotherFrameDate.get(i,j,5);
 
+      for(var m = 0; m < 100 ; m++){
+        if(m==99){
+          frameIndex++;
+        }
+      }
       if(frameIndex === 0){
         line(xStart,yStart,zStart,xEnd,yEnd,zEnd);
       }
