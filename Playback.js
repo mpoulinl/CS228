@@ -76,7 +76,7 @@ function draw(){
         line(xStart,yStart,xEnd,yEnd);
       }
       else{
-        line(xStart_a,yStart_a,zStart_a,xEnd_a,yEnd_a,zEnd_a);
+        line(xStart_a,zStart_a,xEnd_a,zEnd_a);
       }
       frameIndex++;
       console.log(frameIndex);
