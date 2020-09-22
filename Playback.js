@@ -67,10 +67,10 @@ function draw(){
           frameIndex++;
         }
       }
-      if(frameIndex === 0){
+      if(frameIndex == 0){
         line(xStart,yStart,zStart,xEnd,yEnd,zEnd);
       }
-      else if(x % 2 ===0){
+      else if(x % 2 == 0){
         line(xStart,yStart,zStart,xEnd,yEnd,zEnd);
       }
       else{
