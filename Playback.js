@@ -25,8 +25,13 @@ function draw(){
   for(var i = 0 ; i < 5 ; i++){
     for(var j = 0 ; j < 4 ; j++){
       //x
-
-      console.log(oneFrameOfData.get(i,j,0));
+      var xStart = oneFrameOfData.get(i,j,0);
+      var yStart = oneFrameOfData.get(i,j,1);
+      var zStart = oneFrameOfData.get(i,j,2);
+      var xEnd = oneFrameOfData.get(i,j,3);
+      var yEnd = oneFrameOfData.get(i,j,4);
+      var zEnd = oneFrameOfData.get(i,j,5);
+      line(xStart,yStart,zStart,xEnd,yEnd,zEnd);
     }
   }
 }
