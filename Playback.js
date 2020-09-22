@@ -42,7 +42,7 @@ var anotherFrameDate = nj.array([[[ 610.27843,  492.8579,    178.21, 610.27843, 
         [ 941.88627, 285.51829,   78.8542, 941.67251, 302.10634,   64.6592]]]);
 
 
-var frameIndex = 1;
+var frameIndex = 0;
 function draw(){
   clear();
   for(var i = 0 ; i < 5 ; i++){
@@ -62,11 +62,6 @@ function draw(){
       var yEnd_a = anotherFrameDate.get(i,j,4);
       var zEnd_a = anotherFrameDate.get(i,j,5);
 
-      for(var m = 0; m < 100 ; m++){
-        if(m==99){
-          frameIndex++;
-        }
-      }
 
       if((frameIndex % 2) == 0){
         line(xStart,yStart,zStart,xEnd,yEnd,zEnd);
