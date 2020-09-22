@@ -67,8 +67,8 @@ function draw(){
           frameIndex++;
         }
       }
-      var y = x%2;
-      if(y == 0){
+
+      if((frameIndex % 2) == 0){
         line(xStart,yStart,zStart,xEnd,yEnd,zEnd);
       }
       else{
