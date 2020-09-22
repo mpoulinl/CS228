@@ -42,7 +42,7 @@ var anotherFrameDate = nj.array([[[ 610.27843,  492.8579,    178.21, 610.27843, 
         [ 941.88627, 285.51829,   78.8542, 941.67251, 302.10634,   64.6592]]]);
 
 
-var frameIndex = 0;
+var frameIndex = 1;
 function draw(){
   clear();
   for(var i = 0 ; i < 5 ; i++){
