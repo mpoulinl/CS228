@@ -162,7 +162,7 @@ function Train(){
     var currentLabels = parseInt(irisData.pick(i).lo(4,4).hi(1,1).toString()[8])-1
     // var str = irisData.pick(i).lo(4,4).hi(1,1).toString();
     // var int = parseInt(str[8]);
-   console.log(currentFeatures.toString());
+    //console.log(currentFeatures.toString());
     //console.log(currentLabels.toString());
     //console.log(currentLabels);
     knnClassifier.addExample(currentFeatures.tolist(),currentLabels)
@@ -173,7 +173,7 @@ function Test(){
   // for(var i = 1 ; i <= numFeatures[0]-1; i = i+2){
 
     //array
-    var currentFeatures = irisData.pick(testingSampleIndex).hi(4,1)
+    var currentFeatures = irisData.pick(testingSampleIndex).hi(2,1)
 
     //integer
     var currentLabels = parseInt(irisData.pick(testingSampleIndex).lo(4,4).hi(1,1).toString()[8])-1
@@ -191,7 +191,13 @@ function GotResults(err, result){
   }
 }
 
-
+function DrawCircles(){
+    for(var i = 0 ; i <= numFeatures[0]-1; i++){
+        var currentFeatures = irisData.pick(i).hi(2,1)
+        var x = currentFeatures[0]
+        var y = currentFeatures[1]
+    }
+}
 function draw(){
   clear();
   if(trainingCompleted == false){
@@ -199,4 +205,5 @@ function draw(){
     trainingCompleted = true;
   }
   Test();
+  DrawCircles();
 }
