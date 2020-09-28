@@ -1,5 +1,5 @@
 const knnClassifier = ml5.KNNClassifier();
-
+var testingSampleIndex = 1
 var trainingCompleted = false
 
 irisData = nj.array([[	5.1	,	3.5	,	1.4	,	0.2	,	1	],
@@ -170,17 +170,17 @@ function Train(){
 }
 
 function Test(){
-  for(var i = 1 ; i <= numFeatures[0]-1; i = i+2){
+  // for(var i = 1 ; i <= numFeatures[0]-1; i = i+2){
 
     //array
-    var currentFeatures = irisData.pick(i).hi(4,1)
+    var currentFeatures = irisData.pick(testingSampleIndex).hi(4,1)
 
     //integer
-    var currentLabels = parseInt(irisData.pick(i).lo(4,4).hi(1,1).toString()[8])-1
+    var currentLabels = parseInt(irisData.pick(testingSampleIndex).lo(4,4).hi(1,1).toString()[8])-1
 
     var predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
 
-  }
+  // }
 }
 
 function GotResults(err, result){
