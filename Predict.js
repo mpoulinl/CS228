@@ -156,25 +156,28 @@ irisData = nj.array([[	5.1	,	3.5	,	1.4	,	0.2	,	1	],
 var numFeatures = irisData.shape;
 
 function Train(){
-
-}
-
-function Test(){
   for(var i = 0 ; i <= numFeatures[0]; i = i+2){
   //  console.log(irisData.pick(null,i).toString())
     var currentFeatures = irisData.pick(i).hi(4,1)
-    var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)
-    console.log(currentFeatures.toString());
+    var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)[0]
+    // console.log(currentFeatures.toString());
     console.log(currentLabels.toString());
     knnClassifier.addExample(currentFeatures.tolist(),currentLabels)
   }
 }
 
+function Test(){
+  for(var i = 1 ; i <= numFeatures[0]; i = i+2){
+    var currentFeatures = irisData.pick(i).hi(4,1)
+    var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)[0]
+  }
+}
+
 function draw(){
   clear();
-  // if(trainingCompleted == false){
-  //   Train();
-  //   trainingCompleted = true;
-  // }
+  if(trainingCompleted == false){
+    Train();
+    trainingCompleted = true;
+  }
   Test();
 }
