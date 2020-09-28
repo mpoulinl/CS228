@@ -151,22 +151,23 @@ irisData = nj.array([[	5.1	,	3.5	,	1.4	,	0.2	,	1	],
 [	6.2	,	3.4	,	5.4	,	2.3	,	3	],
 [	5.9	,	3	,	5.1	,	1.8	,	3	]]);
 
-var numFeatures = 0
+var numFeatures = irisData.shape;
 
 function Train(){
-  console.log("I am being Trained");
+
 }
 
 function Test(){
-  console.log("I am being Test");
+  for(var i = 0 ; i <= numFeatures[0]; i = i + 2){
+    console.log(irisData.pick(null,i))
+  }
 }
 
 function draw(){
   clear();
-  if(trainingCompleted == false){
-    Train();
-    console.log(irisData.shape)
-    trainingCompleted = true;
-  }
+  // if(trainingCompleted == false){
+  //   Train();
+  //   trainingCompleted = true;
+  // }
   Test();
 }
