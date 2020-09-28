@@ -165,7 +165,7 @@ function draw(){
   clear();
   if(trainingCompleted == false){
     Train();
-    console.log(irisData);
+    console.log(irisData[0]);
     trainingCompleted = true;
   }
   Test();
