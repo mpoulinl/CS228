@@ -154,7 +154,7 @@ irisData = nj.array([[	5.1	,	3.5	,	1.4	,	0.2	,	1	],
 [	5.9	,	3	,	5.1	,	1.8	,	3	]]);
 
 var numFeatures = irisData.shape;
-
+console.log(numFeatures[0]);
 function Train(){
   for(var i = 0 ; i <= numFeatures[0]; i = i+2){
   //  console.log(irisData.pick(null,i).toString())
