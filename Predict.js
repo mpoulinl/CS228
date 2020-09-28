@@ -167,7 +167,7 @@ function draw(){
   clear();
   if(trainingCompleted == false){
     Train();
-    console.log(a)
+    console.log(a.shape)
     trainingCompleted = true;
   }
   Test();
