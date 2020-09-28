@@ -176,6 +176,8 @@ function Test(){
     var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)[0]
 
     var predictLabel = knnClassifier.classify(currentFeatures.tolist());
+
+    console.log(predictLabel);
   }
 }
 
