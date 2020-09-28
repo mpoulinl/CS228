@@ -1,3 +1,5 @@
+const knnClassifier = mml5.KNNClassifier();
+
 var trainingCompleted = false
 
 irisData = nj.array([[	5.1	,	3.5	,	1.4	,	0.2	,	1	],
@@ -162,8 +164,7 @@ function Test(){
   //  console.log(irisData.pick(null,i).toString())
     var currentFeatures = irisData.pick(i).hi(4,1)
     var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)
-
-    console.log(currentLabels.toString())
+    knnClassifier.addExample(currentFeatures.tolist(),currentLabels)
   }
 }
 
