@@ -1,4 +1,4 @@
-const knnClassifier = mml5.KNNClassifier();
+const knnClassifier = ml5.KNNClassifier();
 
 var trainingCompleted = false
 
