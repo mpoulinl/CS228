@@ -151,7 +151,7 @@ irisData = nj.array([[	5.1	,	3.5	,	1.4	,	0.2	,	"Iris-setosa"	],
 [	6.3	,	2.5	,	5	,	1.9	,	"Iris-virginica"	],
 [	6.5	,	3	,	5.2	,	2	,	"Iris-virginica"	],
 [	6.2	,	3.4	,	5.4	,	2.3	,	"Iris-virginica"	],
-[	5.9	,	3	,	5.1	,	1.8	,	"Iris-virginica"	]])
+[	5.9	,	3	,	5.1	,	1.8	,	"Iris-virginica"	]]);
 
 var numFeatures = 0
 
