@@ -184,7 +184,7 @@ function Test(){
 }
 
 function GotResults(err, result){
-  //console.log(result);
+  console.log(result);
 }
 
 
