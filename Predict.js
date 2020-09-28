@@ -1,5 +1,5 @@
 var trainingCompleted = false
-var irisData = nj.array([	5.1	,	3.5	,	1.4	,	0.2	,	"Iris-setosa"	],
+var irisData = nj.array([[	5.1	,	3.5	,	1.4	,	0.2	,	"Iris-setosa"	],
 [	4.9	,	3	,	1.4	,	0.2	,	"Iris-setosa"	],
 [	4.7	,	3.2	,	1.3	,	0.2	,	"Iris-setosa"	],
 [	4.6	,	3.1	,	1.5	,	0.2	,	"Iris-setosa"	],
@@ -148,10 +148,9 @@ var irisData = nj.array([	5.1	,	3.5	,	1.4	,	0.2	,	"Iris-setosa"	],
 [	6.3	,	2.5	,	5	,	1.9	,	"Iris-virginica"	],
 [	6.5	,	3	,	5.2	,	2	,	"Iris-virginica"	],
 [	6.2	,	3.4	,	5.4	,	2.3	,	"Iris-virginica"	],
-[	5.9	,	3	,	5.1	,	1.8	,	"Iris-virginica"	]
-)
+[	5.9	,	3	,	5.1	,	1.8	,	"Iris-virginica"	]])
 
-var numFeatures = irisData.shape()
+var numFeatures = 0
 
 function Train(){
   console.log("I am being Trained");
@@ -165,7 +164,7 @@ function draw(){
   clear();
   if(trainingCompleted == false){
     Train();
-    console.log(numFeatures);
+    console.log(irisData.shape);
     trainingCompleted = true;
   }
   Test();
