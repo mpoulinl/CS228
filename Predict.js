@@ -161,10 +161,10 @@ function Train(){
     var currentFeatures = irisData.pick(i).hi(4,1)
     var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)
     var str = irisData.pick(i).lo(4,4).hi(1,1).toString();
-    var int = str[2];
+    var int = str[parseInt(str[2])];
     // console.log(currentFeatures.toString());
     //console.log(currentLabels.toString());
-    console.log(str);
+    console.log(int);
     knnClassifier.addExample(currentFeatures.tolist(),currentLabels)
   }
 }
