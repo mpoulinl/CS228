@@ -163,7 +163,7 @@ function Test(){
     var currentFeatures = irisData.slice(4)
     var currentLabels = irisData.pick(null,4).toString()
 
-    console.log(currentFeatures)
+    console.log(currentFeatures.toString())
   }
 }
 
