@@ -164,8 +164,8 @@ function Train(){
     // var int = parseInt(str[8]);
     // console.log(currentFeatures.toString());
     //console.log(currentLabels.toString());
-    //console.log(currentLabels);
-    knnClassifier.addExample(currentFeatures.tolist(),currentLabels)
+    //console.log(currentLabels)
+    knnClassifier.addExample(currentFeatures,currentLabels)
   }
 }
 
