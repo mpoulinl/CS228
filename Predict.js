@@ -177,8 +177,9 @@ function Test(){
 
     //integer
     var currentLabels = parseInt(irisData.pick(testingSampleIndex).lo(4,4).hi(1,1).toString()[8])-1
-
-    var predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
+    console.log(currentFeatures);
+    console.log(currentLabels);
+    //var predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
 
   // }
 }
