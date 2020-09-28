@@ -197,18 +197,40 @@ function DrawCircles(){
         var currentLabels = parseInt(irisData.pick(i).lo(4,4).hi(1,1).toString()[8])-1
         var x = currentFeatures.get(0)
         var y = currentFeatures.get(1)
-
-        if(currentLabels == 0){
-          circle(x*100,y*100,8)
-          fill("red")
-        }
-        else if (currentLabels ==1) {
-          circle(x*100,y*100,8)
-          fill("green")
+        if(i%2==0){//ex:6%2 = 0 == odd
+          if(currentLabels == 0){
+            circle(x*100,y*100,8)
+            fill("red")
+            stroke("red")
+          }
+          else if (currentLabels ==1) {
+            circle(x*100,y*100,8)
+            fill("green")
+            stroke("green")
+          }
+          else{
+            circle(x*100,y*100,8)
+            fill("blue")
+            stroke("blue")
+          }
         }
         else{
-          circle(x*100,y*100,8)
-          fill("blue")
+          if(currentLabels == 0){
+            circle(x*100,y*100,8)
+            fill("red")
+            stroke("black")
+          }
+          else if (currentLabels ==1) {
+            circle(x*100,y*100,8)
+            fill("green")
+            stroke("black")
+          }
+          else{
+            circle(x*100,y*100,8)
+            fill("blue")
+            stroke("black")
+          }
+
         }
 
     }
