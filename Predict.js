@@ -164,7 +164,7 @@ function Train(){
     var int = str[parseInt(str[4])];
     // console.log(currentFeatures.toString());
     //console.log(currentLabels.toString());
-    console.log(str[7]);
+    console.log(str[9]);
     knnClassifier.addExample(currentFeatures.tolist(),currentLabels)
   }
 }
