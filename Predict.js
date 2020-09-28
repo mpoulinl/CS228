@@ -194,16 +194,17 @@ function GotResults(err, result){
 function DrawCircles(){
     for(var i = 0 ; i <= numFeatures[0]-1; i++){
         var currentFeatures = irisData.pick(i).hi(2,1)
-        var currentLabels = parseInt(irisData.pick(i).lo(4,4).hi(1,1).toString()[8])-1
+        var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)
+        var c = currentLabels.get(0)
         var x = currentFeatures.get(0)
         var y = currentFeatures.get(1)
         if(i%2==0){//ex:6%2 = 0 == odd
-          if(currentLabels == 0){
+          if(c == 0){
             circle(x*100,y*100,8)
             fill("red")
             stroke("red")
           }
-          else if (currentLabels ==1) {
+          else if (c ==1) {
             circle(x*100,y*100,8)
             fill("green")
             stroke("green")
@@ -215,12 +216,12 @@ function DrawCircles(){
           }
         }
         else{
-          if(currentLabels == 0){
+          if(c == 0){
             circle(x*100,y*100,8)
             fill("red")
             stroke("black")
           }
-          else if (currentLabels ==1) {
+          else if (c ==1) {
             circle(x*100,y*100,8)
             fill("green")
             stroke("black")
