@@ -2,7 +2,7 @@ var trainingCompleted = false
 
 a = nj.array([[  0,  1,  2,  3], [  4,  5,  6,  7], [  8,  9, 10, 11]]);
 
-irisData = nj.array([[	5.1	,	3.5	,	1.4	,	0.2	,	"Iris-setosa"	], [	4.9	,	3	,	1.4	,	0.2	,	"Iris-setosa"	], [	4.7	,	3.2	,	1.3	,	0.2	,	"Iris-setosa"	]]);
+irisData = nj.array([[	5.1	,	3.5	,	1.4	,	0.2	], [	4.9	,	3	,	1.4	,	0.2	], [	4.7	,	3.2	,	1.3	,	0.2]]);
 // [	4.6	,	3.1	,	1.5	,	0.2	,	"Iris-setosa"	],
 // [	5	,	3.6	,	1.4	,	0.2	,	"Iris-setosa"	],
 // [	5.4	,	3.9	,	1.7	,	0.4	,	"Iris-setosa"	],
