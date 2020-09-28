@@ -175,9 +175,10 @@ function Test(){
     //integer
     var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)[0]
 
-    var predictLabel = knnClassifier.classify(.tolist());
+    var predictLabel = knnClassifier.classify(currentFeatures.tolist());
   }
 }
+
 
 function draw(){
   clear();
