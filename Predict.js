@@ -177,15 +177,15 @@ function Test(){
 
     //integer
     var currentLabels = parseInt(irisData.pick(testingSampleIndex).lo(4,4).hi(1,1).toString()[8])-1
-    console.log(currentFeatures.toString());
-    console.log(currentLabels);
-    //var predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
+
+    predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
 
   // }
 }
 
 function GotResults(err, result){
-  //console.log(result.label);
+  console.log(result[0]);
+  console.log(result[0].label);
 }
 
 
