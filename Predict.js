@@ -196,6 +196,7 @@ function DrawCircles(){
         var currentFeatures = irisData.pick(i).hi(2,1)
         var x = currentFeatures[0]
         var y = currentFeatures[1]
+        console.log(x)
     }
 }
 function draw(){
