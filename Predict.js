@@ -160,8 +160,8 @@ function Train(){
 function Test(){
   for(var i = 0 ; i <= numFeatures[0]; i++){
   //  console.log(irisData.pick(null,i).toString())
-    var currentFeatures = irisData.slice([1])
-    var currentLabels = irisData.pick(null,4).toString()
+    var currentFeatures = irisData.pick(i).hi(1,4)
+    var currentLabels = irisData.pick(i).lo(1,1).hi(1,1)
 
     console.log(currentFeatures.toString())
   }
