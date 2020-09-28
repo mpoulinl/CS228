@@ -161,15 +161,21 @@ function Train(){
     var currentFeatures = irisData.pick(i).hi(4,1)
     var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)
     // console.log(currentFeatures.toString());
-    console.log(currentLabels.toString());
+    //console.log(currentLabels.toString());
     knnClassifier.addExample(currentFeatures.tolist(),currentLabels)
   }
 }
 
 function Test(){
   for(var i = 1 ; i <= numFeatures[0]; i = i+2){
+
+    //array
     var currentFeatures = irisData.pick(i).hi(4,1)
+
+    //integer
     var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)[0]
+
+    var predictLabel = knnClassifier.classify(.tolist());
   }
 }
 
