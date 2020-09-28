@@ -200,11 +200,11 @@ function DrawCircles(){
 
         if(currentLabels == 0){
           circle(x*100,y*100,8)
-          fill("green")
+          fill("red")
         }
         else if (currentLabels ==1) {
           circle(x*100,y*100,8)
-          fill("red")
+          fill("green")
         }
         else{
           circle(x*100,y*100,8)
