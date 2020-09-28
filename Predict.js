@@ -164,19 +164,19 @@ function Train(){
     // var int = parseInt(str[8]);
     // console.log(currentFeatures.toString());
     //console.log(currentLabels.toString());
-    console.log(currentLabels);
+    //console.log(currentLabels);
     knnClassifier.addExample(currentFeatures.tolist(),currentLabels)
   }
 }
 
 function Test(){
-  for(var i = 1 ; i <= numFeatures[0]; i = i+2){
+  for(var i = 1 ; i <= numFeatures[0]-1; i = i+2){
 
     //array
     var currentFeatures = irisData.pick(i).hi(4,1)
 
     //integer
-    var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)[0]
+    var currentLabels = parseInt(irisData.pick(i).lo(4,4).hi(1,1).toString()[8])
 
     var predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
 
