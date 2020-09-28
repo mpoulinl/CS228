@@ -161,7 +161,7 @@ function Test(){
   for(var i = 0 ; i <= numFeatures[0]; i++){
   //  console.log(irisData.pick(null,i).toString())
     var currentFeatures = irisData.pick(i).hi(4,1)
-    var currentLabels = irisData.pick(i).hi(1,4)
+    var currentLabels = irisData.pick(i).lo(1,4)
 
     console.log(currentLabels.toString())
   }
