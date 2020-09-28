@@ -194,7 +194,7 @@ function GotResults(err, result){
 function DrawCircles(){
     for(var i = 0 ; i <= numFeatures[0]-1; i++){
         var currentFeatures = irisData.pick(i).hi(2,1)
-        var x = currentFeatures[0]
+        var x = currentFeatures.get(0)
         var y = currentFeatures[1]
         console.log(x)
     }
