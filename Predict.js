@@ -1,3 +1,5 @@
+var trainingCompleted = false
+
 function Train(){
   console.log("I am being Trained");
 }
@@ -5,8 +7,11 @@ function Train(){
 function Test(){
   console.log("I am being Test");
 }
+
 function draw(){
   clear();
-  Train();
+  if(trainingCompleted == false){
+    Train();
+  }
   Test();
 }
