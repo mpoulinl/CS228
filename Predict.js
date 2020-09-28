@@ -159,7 +159,7 @@ function Train(){
 
 function Test(){
   for(var i = 0 ; i <= numFeatures[0]; i = i + 2){
-    console.log(irisData.pick(null,i))
+    console.log(irisData.pick(null,i).toString())
   }
 }
 
