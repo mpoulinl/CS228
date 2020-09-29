@@ -187,7 +187,7 @@ function GotResults(err, result){
   if(testingSampleIndex <= numFeatures[0]-1){
     testingSampleIndex = testingSampleIndex + 2
     predictedClassLabels[testingSampleIndex] = result.label
-    console.log(predictedClassLabels.get(0))
+    console.log(predictedClassLabels.get(testingSampleIndex))
   }
 }
 
