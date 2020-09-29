@@ -213,7 +213,7 @@ function DrawCircles(){
         }
         if(co==2){
           circle(x*100,y*100,8)
-          fill("blue"")
+          fill("blue")
           stroke("blue")
         }
         if(oe=="even"){//ex:6%2 = 0 == odd
