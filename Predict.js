@@ -211,11 +211,11 @@ function DrawCircles(){
         //   fill("red")
         //   stroke("red")
         // }
-        if (c ==1) {
-          circle(x*100,y*100,8)
-          fill("green")
-          stroke("green")
-        }
+        // if (c ==1) {
+        //   circle(x*100,y*100,8)
+        //   fill("green")
+        //   stroke("green")
+        // }
 
 
         if(i%2!=0){//ex:6%2 = 0 == odd
