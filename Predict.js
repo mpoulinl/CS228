@@ -201,40 +201,25 @@ function DrawCircles(){
         var x = currentFeatures.get(0)
         var y = currentFeatures.get(1)
         console.log(c)
-        if(i%2==0){//ex:6%2 = 0 == odd
-          if(c == 0){
-            circle(x*100,y*100,1)
-            fill("red")
-            stroke("red")
-          }
-          else if (c ==1) {
-            circle(x*100,y*100,8)
-            fill("green")
-            stroke("green")
-          }
-          else{
-            circle(x*100,y*100,8)
-            fill("blue")
-            stroke("blue")
-          }
+        if(c == 0){
+          circle(x*100,y*100,1)
+          fill("red")
+          stroke("red")
+        }
+        else if (c ==1) {
+          circle(x*100,y*100,8)
+          fill("green")
+          stroke("green")
         }
         else{
-          if(c == 0){
-            circle(x*100,y*100,1)
-            fill("red")
-            stroke("black")
-          }
-          else if (c ==1) {
-            circle(x*100,y*100,8)
-            fill("green")
-            stroke("black")
-          }
-          else{
-            circle(x*100,y*100,8)
-            fill("blue")
-            stroke("black")
-          }
+          circle(x*100,y*100,8)
+          fill("blue")
+          stroke("blue")
+        }
 
+        if(i%2!=0){//ex:6%2 = 0 == odd
+          stroke("black")
+  
         }
 
     }
