@@ -202,20 +202,12 @@ function DrawCircles(){
         var l = (currentLabels.get(0))
         var co = l-1
 
-        // if(c==2){
-        //   circle(x*100,y*100,8)
-        //   fill("blue")
-        //   stroke("blue")
-        // }
-        if(co==0){
+        if(i < 50){
           circle(x*100,y*100,1)
-          console.log(co)
-          console.log(x)
-          console.log(y)
           fill("red")
           stroke("red")
         }
-        if(co==2){
+        if(i >= 50){
           circle(x*100,y*100,8)
           fill("blue")
           stroke("blue")
@@ -233,7 +225,6 @@ function DrawCircles(){
 
     }
 }
-var l = true
 function draw(){
   clear();
   if(trainingCompleted == false){
@@ -242,8 +233,5 @@ function draw(){
   }
   Test();
 
-  if(l==true){
   DrawCircles();
-  l=false
-}
 }
