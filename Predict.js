@@ -202,7 +202,7 @@ function DrawCircles(){
         var l = (currentLabels.get(0))
         var co = l-1
 
-        if(i < 50 && i > 10){
+        if(i < 0){
           circle(x*100,y*100,8)
           fill("red")
           stroke("red")
