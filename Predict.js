@@ -203,7 +203,7 @@ function DrawCircles(){
         console.log(c)
         if(i%2==0){//ex:6%2 = 0 == odd
           if(c == 0){
-            circle(x*100,y*100,8)
+            circle(x*100,y*100,1)
             fill("red")
             stroke("red")
           }
