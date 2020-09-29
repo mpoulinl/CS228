@@ -189,7 +189,7 @@ function GotResults(err, result){
     testingSampleIndex = testingSampleIndex + 2
   }
 }
-
+var oe="odd"
 function DrawCircles(){
   console.log(predictedClassLabels)
     for(var i = 0 ; i < numFeatures[0]; i++){
@@ -213,11 +213,12 @@ function DrawCircles(){
           circle(x*100,y*100,8)
           fill("green")
         }
-        if(i%2!=0){//ex:6%2 = 0 == odd
+        if(oe=="odd"){//ex:6%2 = 0 == odd
           stroke("black")
+          oe="even"
         }
         else{
-
+          oe="odd"
         }
 
     }
