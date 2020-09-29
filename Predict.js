@@ -208,8 +208,8 @@ function DrawCircles(){
         //   stroke("blue")
         // }
         if(co==0){
-          circle(x*100,y*100,8)
-          fill("red")
+          circle(x*100,y*100,1)
+          fill("green")
           stroke("red")
         }
         if(co==2){
@@ -226,7 +226,6 @@ function DrawCircles(){
 
         if(i%2!=0){//ex:6%2 = 0 == odd
           stroke("black")
-
         }
 
     }
