@@ -171,7 +171,7 @@ function Test(){
 
     //array
     var currentFeatures = irisData.pick(testingSampleIndex).hi(4,1)
-    console.log(currentFeatures)
+    console.log(currentFeatures.toString())
     //integer
     var curr = irisData.pick(testingSampleIndex).lo(4,4).hi(1,1)
     var currentLabels = curr.get(0)-1
