@@ -203,7 +203,7 @@ function DrawCircles(){
         var co = l-1
 
         if(i < 50){
-          circle(x*100,y*100,1)
+          circle(x*100,y*100,8)
           fill("red")
           stroke("red")
         }
