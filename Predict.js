@@ -219,7 +219,7 @@ function DrawCircles(){
 
         if(i%2!=0){//ex:6%2 = 0 == odd
           stroke("black")
-  
+
         }
 
     }
