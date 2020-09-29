@@ -208,13 +208,13 @@ function DrawCircles(){
         }
         if(co==1){
           circle(x*100,y*100,8)
-          fill("blue")
-          stroke("blue")
+          fill("green")
+          stroke("green")
         }
         if(co==2){
           circle(x*100,y*100,8)
-          fill("green")
-          stroke("green")
+          fill("blue"")
+          stroke("blue")
         }
         if(oe=="even"){//ex:6%2 = 0 == odd
           stroke("black")
