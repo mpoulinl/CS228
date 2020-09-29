@@ -192,35 +192,35 @@ function GotResults(err, result){
 
 function DrawCircles(){
   console.log(predictedClassLabels)
-    // for(var i = 0 ; i < numFeatures[0]; i++){
-    //     var currentFeatures = irisData.pick(i).hi(2,1)
-    //     var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)
-    //
-    //     var x = currentFeatures.get(0)
-    //     var y = currentFeatures.get(1)
-    //     var l = (currentLabels.get(0))
-    //     var co = l-1
-    //
-    //     if(co==0){
-    //       circle(x*100,y*100,8)
-    //       fill("red")
-    //     }
-    //     if(co==1){
-    //       circle(x*100,y*100,8)
-    //       fill("blue")
-    //     }
-    //     if(co==2){
-    //       circle(x*100,y*100,8)
-    //       fill("green")
-    //     }
-    //     if(i%2!=0){//ex:6%2 = 0 == odd
-    //       stroke("black")
-    //     }
-    //     else{
-    //
-    //     }
-    //
-    // }
+    for(var i = 0 ; i < numFeatures[0]; i++){
+        var currentFeatures = irisData.pick(i).hi(2,1)
+        var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)
+
+        var x = currentFeatures.get(0)
+        var y = currentFeatures.get(1)
+        var l = (currentLabels.get(0))
+        var co = l-1
+
+        if(co==0){
+          circle(x*100,y*100,8)
+          fill("red")
+        }
+        if(co==1){
+          circle(x*100,y*100,8)
+          fill("blue")
+        }
+        if(co==2){
+          circle(x*100,y*100,8)
+          fill("green")
+        }
+        if(i%2!=0){//ex:6%2 = 0 == odd
+          stroke("black")
+        }
+        else{
+
+        }
+
+    }
 }
 var l = true
 function draw(){
