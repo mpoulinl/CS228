@@ -206,12 +206,12 @@ function DrawCircles(){
           fill("red")
           stroke("red")
         }
-        else if (c ==1) {
+        if (c ==1) {
           circle(x*100,y*100,8)
           fill("green")
           stroke("green")
         }
-        else{
+        if(c==2){
           circle(x*100,y*100,8)
           fill("blue")
           stroke("blue")
