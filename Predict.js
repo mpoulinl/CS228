@@ -205,8 +205,8 @@ function DrawCircles(){
         if(i == 0){
           if(i==0){
             circle(x*100,y*100,8)
-            fill("orange")
-            stroke("red")
+            fill("green")
+            stroke("green")
           }
           else{
             circle(x*100,y*100,8)
