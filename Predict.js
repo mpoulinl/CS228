@@ -171,7 +171,6 @@ function Test(){
 
     //array
     var currentFeatures = irisData.pick(testingSampleIndex).hi(4,1)
-    console.log(currentFeatures.toString())
     //integer
     var curr = irisData.pick(testingSampleIndex).lo(4,4).hi(1,1)
     var currentLabels = curr.get(0)-1
@@ -217,9 +216,10 @@ function DrawCircles(){
         }
         if(oe=="even"){//ex:6%2 = 0 == odd
           var p = predictedClassLabels.get(i)
-          if(p==0){
-            stroke("red")
-          }
+          console.log(predictedClassLabels)
+          // if(p==0){
+          //   stroke("red")
+          // }
           if(p==1){
             stroke("green")
           }
