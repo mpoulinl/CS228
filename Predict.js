@@ -191,12 +191,13 @@ function GotResults(err, result){
 }
 
 function DrawCircles(){
-    for(var i = 0 ; i <= numFeatures[0]-1; i++){
+    for(var i = 0 ; i < numFeatures[0]; i++){
         var currentFeatures = irisData.pick(i).hi(2,1)
         var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)
         var c = currentLabels.get(0)-1
         var x = currentFeatures.get(0)
         var y = currentFeatures.get(1)
+        console.log(c)
         if(i%2==0){//ex:6%2 = 0 == odd
           if(c == 0){
             circle(x*100,y*100,8)
