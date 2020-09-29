@@ -220,7 +220,7 @@ function DrawCircles(){
         }
         else{
           if(c == 0){
-            circle(x*100,y*100,8)
+            circle(x*100,y*100,1)
             fill("red")
             stroke("black")
           }
