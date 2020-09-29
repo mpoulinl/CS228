@@ -193,7 +193,7 @@ function GotResults(err, result){
 }
 
 function DrawCircles(){
-    for(var i = 0 ; i < numFeatures[0]; i++){
+    for(var i = 0 ; i <= numFeatures[0]; i++){
         var currentFeatures = irisData.pick(i).hi(2,1)
         var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)
 
@@ -209,7 +209,10 @@ function DrawCircles(){
         // }
         if(co==0){
           circle(x*100,y*100,1)
-          fill("green")
+          console.log(co)
+          console.log(x)
+          console.log(y)
+          fill("red")
           stroke("red")
         }
         if(co==2){
