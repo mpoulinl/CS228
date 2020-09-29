@@ -207,16 +207,16 @@ function DrawCircles(){
           fill("red")
           stroke("red")
         }
-        if(i >= 50){
+        if(i >= 50 && i < 100){
           circle(x*100,y*100,8)
           fill("blue")
           stroke("blue")
         }
-        // if (c ==1) {
-        //   circle(x*100,y*100,8)
-        //   fill("green")
-        //   stroke("green")
-        // }
+        if(i >= 100){
+          circle(x*100,y*100,8)
+          fill("green")
+          stroke("green")
+        }
 
 
         if(i%2!=0){//ex:6%2 = 0 == odd
