@@ -215,17 +215,18 @@ function DrawCircles(){
           stroke("blue")
         }
         if(oe=="even"){//ex:6%2 = 0 == odd
-          var p = predictedClassLabels.get(i)
+          var q = predictedClassLabels.get(i)
           console.log(predictedClassLabels)
+          var p = parInt(q)
           switch(p){
             case 0:
-            stroke("red")
+              stroke("red")
             break;
             case 1:
-            stroke("green")
+              stroke("green")
             break;
             case 2:
-            stroke("blue")
+              stroke("blue")
             break;
           }
           oe="odd"
