@@ -176,7 +176,7 @@ function Test(){
     var currentFeatures = irisData.pick(testingSampleIndex).hi(2,1)
 
     //integer
-    var curr = irisData.pick(i).lo(4,4).hi(1,1)
+    var curr = irisData.pick(testingSampleIndex).lo(4,4).hi(1,1)
     var currentLabels = curr.get(0)-1
 
     predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
