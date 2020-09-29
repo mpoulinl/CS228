@@ -1,7 +1,6 @@
 const knnClassifier = ml5.KNNClassifier();
 var testingSampleIndex = 1
 var trainingCompleted = false
-
 irisData = nj.array([[	5.1	,	3.5	,	1.4	,	0.2	,	1	],
 [	4.9	,	3	,	1.4	,	0.2	,	1	],
 [	4.7	,	3.2	,	1.3	,	0.2	,	1	],
