@@ -162,11 +162,6 @@ function Train(){
     var currentFeatures = irisData.pick(i).hi(2,1)
     var curr = irisData.pick(i).lo(4,4).hi(1,1)
     var currentLabels = curr.get(0)-1
-    // var str = irisData.pick(i).lo(4,4).hi(1,1).toString();
-    // var int = parseInt(str[8]);
-    //console.log(currentFeatures.toString());
-    //console.log(currentLabels.toString());
-    //console.log(currentLabels);
     knnClassifier.addExample(currentFeatures.tolist(),currentLabels)
   }
 }
@@ -191,6 +186,7 @@ function GotResults(err, result){
   // console.log(result.label);
   if(testingSampleIndex <= numFeatures[0]-1){
     testingSampleIndex = testingSampleIndex + 2
+    predictedClassLabels.get(testingSampleIndex) = result.label
   }
 }
 
