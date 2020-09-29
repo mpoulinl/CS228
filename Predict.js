@@ -200,19 +200,19 @@ function DrawCircles(){
         var x = currentFeatures.get(0)
         var y = currentFeatures.get(1)
         var l = (currentLabels.get(0))
-        var c = l-1
+        var co = l-1
 
         // if(c==2){
         //   circle(x*100,y*100,8)
         //   fill("blue")
         //   stroke("blue")
         // }
-        // if(c == 0){
-        //   circle(x*100,y*100,1)
-        //   fill("red")
-        //   stroke("red")
-        // }
-        if(c==2){
+        if(co==0){
+          circle(x*100,y*100,8)
+          fill("red")
+          stroke("red")
+        }
+        if(co==2){
           circle(x*100,y*100,8)
           fill("blue")
           stroke("blue")
