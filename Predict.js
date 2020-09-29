@@ -204,14 +204,17 @@ function DrawCircles(){
         if(co==0){
           circle(x*100,y*100,8)
           fill("red")
+          stroke("red")
         }
         if(co==1){
           circle(x*100,y*100,8)
           fill("blue")
+          stroke("blue")
         }
         if(co==2){
           circle(x*100,y*100,8)
           fill("green")
+          stroke("green")
         }
         if(oe=="odd"){//ex:6%2 = 0 == odd
           stroke("black")
