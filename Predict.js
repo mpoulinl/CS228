@@ -192,7 +192,7 @@ function GotResults(err, result){
 
 function DrawCircles(){
     for(var i = 0 ; i < numFeatures[0]; i++){
-      console.log(predictedClassLabels.get(i))
+      console.log(predictedClassLabels)
         // var currentFeatures = irisData.pick(i).hi(2,1)
         // var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)
         //
