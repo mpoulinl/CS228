@@ -216,12 +216,12 @@ function DrawCircles(){
           fill("green")
           stroke("green")
         }
-        if(oe=="odd"){//ex:6%2 = 0 == odd
+        if(oe=="even"){//ex:6%2 = 0 == odd
           stroke("black")
-          oe="even"
+          oe="odd"
         }
         else{
-          oe="odd"
+          oe="even"
         }
 
     }
