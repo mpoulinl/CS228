@@ -171,7 +171,7 @@ function Test(){
 
     //array
     var currentFeatures = irisData.pick(testingSampleIndex).hi(4,1)
-
+    console.log(currentFeatures)
     //integer
     var curr = irisData.pick(testingSampleIndex).lo(4,4).hi(1,1)
     var currentLabels = curr.get(0)-1
@@ -191,7 +191,6 @@ function GotResults(err, result){
 }
 var oe="odd"
 function DrawCircles(){
-  console.log(predictedClassLabels)
     for(var i = 0 ; i < numFeatures[0]; i++){
         var currentFeatures = irisData.pick(i).hi(2,1)
         var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)
