@@ -159,7 +159,7 @@ console.log(numFeatures[0]);
 function Train(){
   for(var i = 0 ; i < numFeatures[0]; i = i+2){
   //  console.log(irisData.pick(null,i).toString())
-    var currentFeatures = irisData.pick(i).hi(2,1)
+    var currentFeatures = irisData.pick(i).hi(4,1)
     var curr = irisData.pick(i).lo(4,4).hi(1,1)
     var currentLabels = curr.get(0)-1
     knnClassifier.addExample(currentFeatures.tolist(),currentLabels)
@@ -170,7 +170,7 @@ function Test(){
   // for(var i = 1 ; i <= numFeatures[0]-1; i = i+2){
 
     //array
-    var currentFeatures = irisData.pick(testingSampleIndex).hi(2,1)
+    var currentFeatures = irisData.pick(testingSampleIndex).hi(4,1)
 
     //integer
     var curr = irisData.pick(testingSampleIndex).lo(4,4).hi(1,1)
