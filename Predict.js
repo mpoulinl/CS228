@@ -155,7 +155,7 @@ irisData = nj.array([[	5.1	,	3.5	,	1.4	,	0.2	,	1	],
 var numFeatures = irisData.shape;
 console.log(numFeatures[0]);
 function Train(){
-  for(var i = 0 ; i <= numFeatures[0]-1; i = i+2){
+  for(var i = 0 ; i < numFeatures[0]; i = i+2){
   //  console.log(irisData.pick(null,i).toString())
     var currentFeatures = irisData.pick(i).hi(2,1)
     var curr = irisData.pick(i).lo(4,4).hi(1,1)
