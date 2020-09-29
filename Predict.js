@@ -202,30 +202,21 @@ function DrawCircles(){
         var l = (currentLabels.get(0))
         var co = l-1
 
-        if(i < 2){
-          if(i==0){
-            circle(x*100,y*100,8)
-            fill("green")
-            stroke("green")
-          }
-          else{
-            circle(x*100,y*100,8)
-            fill("red")
-            stroke("red")
-          }
+        if(co==0){
+          circle(x*100,y*100,8)
+          fill("red")
+          stroke("red")
         }
-        if(i >= 50 && i < 100){
+        if(co==1){
           circle(x*100,y*100,8)
           fill("blue")
           stroke("blue")
         }
-        if(i >= 100){
+        if(co==2){
           circle(x*100,y*100,8)
           fill("green")
           stroke("green")
         }
-
-
         if(i%2!=0){//ex:6%2 = 0 == odd
           stroke("black")
         }
