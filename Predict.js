@@ -230,8 +230,6 @@ function draw(){
     trainingCompleted = true;
   }
   Test();
-if(l == true){
   DrawCircles();
-  l=false
-}
+
 }
