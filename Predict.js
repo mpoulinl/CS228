@@ -159,7 +159,7 @@ var numFeatures = numSamples[1] - 1;
 function practice(){
   for(var i = 0 ; i < numRows; i = i+2){
     //console.log(irisData.pick(i).toString());//givae all odd numRows
-    console.log(irisData.pick(i).get(1)) //give the first 4 feature
+    console.log(irisData.pick(i).get(4)) //give the first 4 feature
 
   }
 }
