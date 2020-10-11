@@ -1,4 +1,4 @@
-var framesOfData = nj.zeros([5,4,2,6]);
+var framesOfData = nj.zeros([5,4,6,2]);
 var numSamples = 2;
 var currentSample = 0;
 //four global variable for max/min width and innerHeight
