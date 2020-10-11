@@ -203,7 +203,7 @@ function DrawCircles(){
           fill("blue")
         }
 
-        if(i%2 == 0){//testing sample
+        if(i%2 == 0 || i == 0){//testing sample
           stroke("black")
         }
         else{//training sample
