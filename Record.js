@@ -51,7 +51,7 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   var canvasXStart = window.innerWidth * normalizedPrevJoint[0];
   var canvasXEnd = window.innerWidth * normalizedNextJoint[0];
 
-  var canvasYStart = window.innerHeight * -(1 - ormalizedPrevJoint[1]);
+  var canvasYStart = window.innerHeight * -(1 - normalizedPrevJoint[1]);
   var canvasYEnd =  window.innerHeight * -(1-normalizedNextJoint[1]);
 
   // var start = TransformCoordinates(bone_start[0],bone_start[1])
