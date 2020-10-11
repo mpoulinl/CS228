@@ -73,10 +73,10 @@ function draw(){
       }
 
       if(secondframeIndex == 0){
-        line(xStart,zStart,xEnd,zEnd);
+        line(xStart*innerWidth,zStart*innerHeight,xEnd*innerWidth,zEnd*innerHeight);
       }
       else{
-        line(xStart_a,zStart_a,xEnd_a,zEnd_a);
+        line(xStart_a*innerWidth,zStart_a*innerHeight,xEnd_a*innerWidth,zEnd_a*innerHeight);
       }
       frameIndex++;
       console.log(frameIndex);
