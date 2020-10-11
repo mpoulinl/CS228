@@ -20,7 +20,7 @@ var oneFrameOfData = nj.array([[[ 528.22582, 521.49655,   176.199, 528.22582, 52
         [ 696.15372, 194.38009,   111.847, 690.54687,  189.5801,   94.4241],
         [ 690.54687,  189.5801,   94.4241, 677.06872, 199.79597,   79.6753]]])
 
-var anotherFrameDate = nj.array([[[ 0.53268, 0.59235, 236.904, 0.53268, 0.59235, 236.904],
+var anotherFrameData = nj.array([[[ 0.53268, 0.59235, 236.904, 0.53268, 0.59235, 236.904],
                 [ 0.53268, 0.59235, 236.904, 0.43985, 0.67989, 207.695],
                 [ 0.43985, 0.67989, 207.695, 0.39101, 0.73995, 185.633],
                 [ 0.39101, 0.73995, 185.633, 0.33881, 0.78007, 173.562]],
@@ -73,10 +73,10 @@ function draw(){
       }
 
       if(secondframeIndex == 0){
-        line(xStart*innerWidth,zStart*innerHeight,xEnd*innerWidth,zEnd*innerHeight);
+        line(xStart,zStart,xEnd,zEnd);
       }
       else{
-        line(xStart_a*innerWidth,zStart_a*innerHeight,xEnd_a*innerWidth,zEnd_a*innerHeight);
+        line(xStart_a,zStart_a,xEnd_a,zEnd_a);
       }
       frameIndex++;
       console.log(frameIndex);
