@@ -211,15 +211,12 @@ function DrawCircles(){
 
         if(currentLabel==0){
           fill("red")
-          stroke("red")
         }
         else if (currentLabel==1) {
           fill("green")
-          stroke("green")
         }
         else{
           fill("blue")
-          stroke("blue")
         }
       }
 
