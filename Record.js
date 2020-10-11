@@ -63,7 +63,7 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   var z1 = bone_start[2];
   var z2 = bone_end[2];
   var sum = z1+z2+bone_start[0]+bone_end[0]+bone_start[1]+bone_end[1]
-  
+
   oneFrameOfData.set(fingerIndex,type,0,canvasXStart);
   oneFrameOfData.set(fingerIndex,type,1,canvasYStart);
   oneFrameOfData.set(fingerIndex,type,2,bone_start[2]);
@@ -122,7 +122,7 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
     }
 
   }
-  line(start[0],start[1],end[0],end[1]);
+  line(canvasXStart,canvasYStart,canvasXEnd,canvasYEnd);
 
 }
 
