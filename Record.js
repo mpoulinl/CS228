@@ -138,7 +138,7 @@ function TransformCoordinates(x,y) {
 }
 
 function RecordData(){
-  if(currentNumbHands == 1 && previousNumHands == 2){
+  if(currentNumbHands == 1 && previousNumHands == 1){
     background(51);
     console.log(framesOfData.toString() );
     currentSample++;
