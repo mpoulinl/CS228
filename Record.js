@@ -36,7 +36,7 @@ function HandleHand(hand,InteractionBox){
 
 function HandleFinger(finger,n,fingerIndex,InteractionBox){
 
-      HandleBone(finger.bones[n],n,fingerIndex,frame.InteractionBox);
+      HandleBone(finger.bones[n],n,fingerIndex,InteractionBox);
 }
 
 
