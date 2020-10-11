@@ -145,7 +145,7 @@ function RecordData(){
     }
   }
   if(currentNumbHands == 2){
-    if(!print){
+    if(print){
       console.log(framesOfData.toString() );
       print = true;
     }
