@@ -152,7 +152,7 @@ function TransformCoordinates(x,y) {
 function RecordData(){
   if(currentNumbHands == 1 && previousNumHands == 2){
     background(51);
-    console.log(framesOfData.toString());
+    console.log( framesOfData.pick(null,null,null,0).toString() );
 
   }
 }
