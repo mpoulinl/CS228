@@ -1,3 +1,4 @@
+nj.config.printThreshold = 1000;
 var framesOfData = nj.zeros([5,4,6,100]);
 var numSamples = 100;
 var currentSample = 0;
