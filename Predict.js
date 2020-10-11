@@ -177,7 +177,7 @@ function Test(){
 }
 
 function GotResults(err, result){
-  console.log(result.toString());
+  console.log(result.parseInt());
   //predictedClassLabels.get(testingSampleIndex) = result.label;
   testingSampleIndex = testingSampleIndex + 2;
   if(testingSampleIndex > numRows){
