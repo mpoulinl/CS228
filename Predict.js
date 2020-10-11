@@ -159,7 +159,7 @@ predictedClassLabels = nj.zeros(numRows,1)
 
 function practice(){
   console.log(predictedClassLabels.get(1))
-  predictedClassLabels.get(1) = 5
+  predictedClassLabels[1] = 5
   console.log(predictedClassLabels.get(1))
 }
 
