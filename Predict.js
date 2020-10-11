@@ -200,17 +200,18 @@ function GotResults(err, result){
 var oe="odd"
 function DrawCircles(){
     for(var i = 0 ; i < numRows; i++){
-      var currentFeatures = irisData.pick(testingSampleIndex).slice([0,2])
-      var currentLabel = irisData.pick(testingSampleIndex).get(4)
+      var currentFeatures = irisData.pick(i).slice([0,2])
+      var currentLabel = irisData.pick(i).get(4)
 
         var x = currentFeatures.get(0)
         var y = currentFeatures.get(1)
 
         circle(x*100,y*100,8)
-    }
+      }
 }
 var l = true
 function draw(){
+  clear();
   if(trainingCompleted == false){
     Train();
     trainingCompleted = true;
