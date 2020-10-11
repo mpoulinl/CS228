@@ -155,7 +155,7 @@ irisData = nj.array([[	5.1	,	3.5	,	1.4	,	0.2	,	0	],
 var numSamples = irisData.shape;
 var numRows = numSamples[0];
 var numFeatures = numSamples[1] - 1;
-predictedClassLabels = nj.zeros(numSamples)
+predictedClassLabels = nj.zeros(numRows)
 
 function practice(){
   for(var i = 0 ; i < numRows ; i++){
