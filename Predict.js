@@ -163,7 +163,7 @@ function practice(){
   //
   // }
   for(var i = 1 ; i < numRows; i = i+2){
-    console.log(irisData.pick(i).get(4))
+    console.log(irisData.pick(i).toString())
     var currentFeatures = irisData.pick(i).slice([0,4])
     var currentLabel = irisData.pick(i).get(4)
   }
