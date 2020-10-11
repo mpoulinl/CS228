@@ -155,21 +155,14 @@ irisData = nj.array([[	5.1	,	3.5	,	1.4	,	0.2	,	0	],
 var numSamples = irisData.shape;
 var numRows = numSamples[0];
 var numFeatures = numSamples[1] - 1;
+predictedClassLabels = nj.zeros(numRows)
 
 function practice(){
-  // for(var i = 0 ; i < numRows; i = i+2){
-  //   //console.log(irisData.pick(i).toString());//givae all odd numRows
-  //   console.log(irisData.pick(i).get(4)) //give the first 4 feature
-  //
-  // }
-  // for(var i = 1 ; i < numRows; i = i+2){
-  //   console.log(irisData.pick(i).toString())
-  //   var currentFeatures = irisData.pick(i).slice([0,4])
-  //   var currentLabel = irisData.pick(i).get(4)
-  // }
+  for(var i = 0 ; i < numRows ; i
+    console.log(predictedClassLabels.pick(i).toString());
+  }
 }
-predictedClassLabels = nj.zeros(150)
-console.log(numFeatures[0]);
+
 
 function Train(){
   for(var i = 0 ; i < numRows ; i = i+2){
@@ -191,13 +184,7 @@ function GotResults(err, result){
   if(testingSampleIndex > numRows){
     testingSampleIndex = 1;
   }
-  // console.log(result.label);
-  // if(testingSampleIndex <= numFeatures[0]-1){
-  //   predictedClassLabels[testingSampleIndex] = result.label
-  //   testingSampleIndex = testingSampleIndex + 2
-  // }
 }
-var oe="odd"
 function DrawCircles(){
     for(var i = 0 ; i < numRows; i++){
       var currentFeatures = irisData.pick(i).slice([0,2])
@@ -218,6 +205,7 @@ function DrawCircles(){
         else{
           fill("blue")
         }
+
         if(i%2 ==0){//testing sample
           if(currentLabel==0){
             stroke("red")
@@ -234,43 +222,16 @@ function DrawCircles(){
         }
       }
 
-    //     if(oe=="even"){//ex:6%2 = 0 == odd
-    //       var q = predictedClassLabels.get(i)
-    //       console.log(predictedClassLabels)
-    //       var p = parseInt(q)
-    //       switch(p){
-    //         case 0:
-    //           stroke("red")
-    //         break;
-    //         case 1:
-    //           stroke("green")
-    //         break;
-    //         case 2:
-    //           stroke("blue")
-    //         break;
-    //       }
-    //       oe="odd"
-    //     }
-    //     else{
-    //       oe="even"
-    //     }
-    //
-    // }
 }
 var l = true
 function draw(){
   clear();
-  if(trainingCompleted == false){
-    Train();
-    trainingCompleted = true;
-  }
-  Test()
-  DrawCircles();
+  Practice();
   // if(trainingCompleted == false){
   //   Train();
   //   trainingCompleted = true;
   // }
-  // Test();
+  // Test()
   // DrawCircles();
 
 }
