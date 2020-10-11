@@ -6,12 +6,10 @@ var trainingCompleted = false
 
 function Train(){
   //console.log(train0.pick().toString())
-  console.log( train7.shape[3])
   for(var i = 0 ; i < train7.shape[3] ; i++){
 
     var features = train7.pick(null,null,null,i)
     features = features.reshape(1,120)
-    console.log(features.toString())
     knnClassifier.addExample(features.tolist(),7)
 
     features = train9.pick(null,null,null,i)
