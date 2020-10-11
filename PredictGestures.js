@@ -23,8 +23,6 @@ function Test(){
 }
 
 function GotResults(err, result){
-  predictedClassLabels.set(testingSampleIndex,parseInt(result.label))
-  testingSampleIndex = testingSampleIndex + 1
   if(testingSampleIndex >= train0.shape[3]){
     testingSampleIndex = 0;
   }
