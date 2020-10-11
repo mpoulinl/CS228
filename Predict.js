@@ -250,8 +250,9 @@ function draw(){
   if(trainingCompleted == false){
     Train();
     trainingCompleted = true;
+    Test()
   }
-  Test()
+
   // if(trainingCompleted == false){
   //   Train();
   //   trainingCompleted = true;
