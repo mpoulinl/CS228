@@ -153,10 +153,17 @@ irisData = nj.array([[	5.1	,	3.5	,	1.4	,	0.2	,	1	],
 [	5.9	,	3	,	5.1	,	1.8	,	3	]]);
 
 var numSamples = irisData.shape;
+var numRows = numSamples[0];
 var numFeatures = numSamples[1] - 1;
 
 function practice(){
-  console.log(numFeatures);
+  for(var i = 0 ; i <= numRows; i = i+2){
+    console.log(irisData.pick(null,i).toString())
+    // var currentFeatures = irisData.pick(i).hi(4,1)
+    // var curr = irisData.pick(i).lo(4,4).hi(1,1)
+    // var currentLabels = curr.get(0)-1
+    // knnClassifier.addExample(currentFeatures.tolist(),currentLabels)
+  }
 }
 predictedClassLabels = nj.zeros(150)
 console.log(numFeatures[0]);
@@ -244,7 +251,10 @@ function DrawCircles(){
 var l = true
 function draw(){
   clear();
-  practice();
+  if(trainingCompleted == false){
+    practice();
+    trainingCompleted = true;
+  }
   // if(trainingCompleted == false){
   //   Train();
   //   trainingCompleted = true;
