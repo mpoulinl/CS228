@@ -1,4 +1,3 @@
-nj.config.printThreshold = 1000;
 var framesOfData = nj.zeros([5,4,6,100]);
 var numSamples = 100;
 var currentSample = 0;
@@ -138,7 +137,7 @@ function TransformCoordinates(x,y) {
 }
 
 function RecordData(){
-  if(currentNumbHands == 1 && previousNumHands == 1){
+  if(currentNumbHands == 1 && previousNumHands == 2){
     background(51);
     console.log(framesOfData.toString() );
     currentSample++;
