@@ -22,7 +22,6 @@ function HandleFrame(frame){
     var hand = frame.hands[0];
     var interactionBox = frame.interactionBox;
     HandleHand(hand,interactionBox);
-    RecordData();
 }
 }
 
