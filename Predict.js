@@ -166,14 +166,14 @@ function practice(){
 
 function Train(){
   for(var i = 0 ; i <= numRows ; i = i+2){
-    var currentFeatures = irisData.pick(i).slice([0,2])
+    var currentFeatures = irisData.pick(i).slice([0,4])
     var currentLabel = irisData.pick(i).get(4)
     knnClassifier.addExample(currentFeatures.tolist(),currentLabel)
   }
 }
 
 function Test(){
-    var currentFeatures = irisData.pick(testingSampleIndex).slice([0,2])
+    var currentFeatures = irisData.pick(testingSampleIndex).slice([0,4])
     var currentLabel = irisData.pick(testingSampleIndex).get(4)
     predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
 }
