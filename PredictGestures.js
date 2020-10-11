@@ -1,4 +1,4 @@
-
+nj.config.printThreshold = 1000;
 const knnClassifier = ml5.KNNClassifier();
 var testingSampleIndex = 1
 var trainingCompleted = false
@@ -7,15 +7,15 @@ var trainingCompleted = false
 function Train(){
   //console.log(train0.pick().toString())
   // console.log(test.toString())
-  for(var i = 0 ; i < train0.shape[3] ; i++){
-    var features0 = train0.pick(null,null,null,i)
-    features0 = features0.reshape(1,120)
+  for(var i = 0 ; i < train7.shape[3] ; i++){
+    var features7 = train7.pick(null,null,null,i)
+    features7 = features7.reshape(1,120)
 
-    var features1 = train1.pick(null,null,null,i)
-    features1 = features1.reshape(1,120)
+    var features9 = train9.pick(null,null,null,i)
+    features9 = features9.reshape(1,120)
 
-    knnClassifier.addExample(features0.tolist(),0)
-    knnClassifier.addExample(features1.tolist(),1)
+    knnClassifier.addExample(features7.tolist(),7)
+    knnClassifier.addExample(features9.tolist(),9)
   }
 }
 
