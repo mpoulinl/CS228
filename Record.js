@@ -51,15 +51,19 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
 
   var x_start = normalizedPrevJoint[0];
   var x_end =  normalizedNextJoint[0];
+
   var y_start = normalizedPrevJoint[1];
   var y_end = normalizedNextJoint[1];
 
+  var z_start = normalizedPrevJoint[2];
+  var z_end = normalizedNextJoint[2];
+
   oneFrameOfData.set(fingerIndex,type,0,x_start);
   oneFrameOfData.set(fingerIndex,type,1,y_start);
-  oneFrameOfData.set(fingerIndex,type,2,bone_start[2]);
+  oneFrameOfData.set(fingerIndex,type,2,z_start);
   oneFrameOfData.set(fingerIndex,type,3,x_end);
   oneFrameOfData.set(fingerIndex,type,4,y_end);
-  oneFrameOfData.set(fingerIndex,type,5,bone_end[2]);
+  oneFrameOfData.set(fingerIndex,type,5,z_end);
 
   var canvasXStart = window.innerWidth * x_start;
   var canvasXEnd = window.innerWidth * x_end;
