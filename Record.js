@@ -138,7 +138,6 @@ function TransformCoordinates(x,y) {
 
 function RecordData(){
   if(currentNumbHands == 1){
-    background(51);
     currentSample++;
     if(currentSample == numSamples){
       currentSample = 0;
