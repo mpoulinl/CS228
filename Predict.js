@@ -219,7 +219,7 @@ function DrawCircles(){
         }
         circle(x*100,y*100,8)
       }
-    }
+    
 
 }
 var l = true
