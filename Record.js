@@ -151,7 +151,7 @@ function RecordData(){
 Leap.loop(controllerOptions, function(frame){
   currentNumbHands = frame.hands.length;
   HandleFrame(frame);
-  if(!print){
+  if(print = false){
     RecordData();
     if(currentNumbHands == 2){
       print = true;
