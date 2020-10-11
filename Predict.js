@@ -173,22 +173,24 @@ console.log(numFeatures[0]);
 
 function Train(){
   for(var i = 0 ; i < numRows ; i = i+2){
-    var currentFeatures = irisData.pick(i).slice([0,4])
+    var currentFeatures = irisData.pick(i).slice([0,2])
     var currentLabel = irisData.pick(i).get(4)
     knnClassifier.addExample(currentFeatures.tolist(),currentLabel)
   }
 }
 
 function Test(){
-  //for(var i = 1 ; i <= numRows ; i = i+2){
-    var currentFeatures = irisData.pick(testingSampleIndex).slice([0,4])
+    var currentFeatures = irisData.pick(testingSampleIndex).slice([0,2])
     var currentLabel = irisData.pick(testingSampleIndex).get(4)
     predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
- //}
 }
 
 function GotResults(err, result){
   console.log(result);
+  testingSampleIndex = testingSampleIndex + 2;
+  if(testingSampleIndex > numRows){
+    testingSampleIndex = 1;
+  }
   // console.log(result.label);
   // if(testingSampleIndex <= numFeatures[0]-1){
   //   predictedClassLabels[testingSampleIndex] = result.label
@@ -197,50 +199,14 @@ function GotResults(err, result){
 }
 var oe="odd"
 function DrawCircles(){
-    for(var i = 0 ; i < numFeatures[0]; i++){
-        var currentFeatures = irisData.pick(i).hi(2,1)
-        var currentLabels = irisData.pick(i).lo(4,4).hi(1,1)
+    for(var i = 0 ; i < numRows; i++){
+      var currentFeatures = irisData.pick(testingSampleIndex).slice([0,2])
+      var currentLabel = irisData.pick(testingSampleIndex).get(4)
 
         var x = currentFeatures.get(0)
         var y = currentFeatures.get(1)
-        var l = (currentLabels.get(0))
-        var co = l-1
 
-        if(co==0){
-          circle(x*100,y*100,8)
-          fill("red")
-          stroke("red")
-        }
-        if(co==1){
-          circle(x*100,y*100,8)
-          fill("green")
-          stroke("green")
-        }
-        if(co==2){
-          circle(x*100,y*100,8)
-          fill("blue")
-          stroke("blue")
-        }
-        if(oe=="even"){//ex:6%2 = 0 == odd
-          var q = predictedClassLabels.get(i)
-          console.log(predictedClassLabels)
-          var p = parseInt(q)
-          switch(p){
-            case 0:
-              stroke("red")
-            break;
-            case 1:
-              stroke("green")
-            break;
-            case 2:
-              stroke("blue")
-            break;
-          }
-          oe="odd"
-        }
-        else{
-          oe="even"
-        }
+        circle(x*100,y*100,8)
 
     }
 }
@@ -250,9 +216,9 @@ function draw(){
   if(trainingCompleted == false){
     Train();
     trainingCompleted = true;
-    Test()
   }
-
+  Test()
+  DrawCircles();
   // if(trainingCompleted == false){
   //   Train();
   //   trainingCompleted = true;
