@@ -23,6 +23,8 @@ function Test(){
 }
 
 function GotResults(err, result){
+  
+  console.log(result.label)
   if(testingSampleIndex >= train0.shape[3]){
     testingSampleIndex = 0;
   }
