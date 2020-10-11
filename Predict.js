@@ -218,6 +218,20 @@ function DrawCircles(){
         else{
           fill("blue")
         }
+        if(i%2 ==0){//testing sample
+          if(currentLabel==0){
+            stroke("red")
+          }
+          else if (currentLabel==1) {
+            stroke("green")
+          }
+          else{
+            stroke("blue")
+          }
+        }
+        else{//training sample
+          stroke("black")
+        }
       }
 
     //     if(oe=="even"){//ex:6%2 = 0 == odd
