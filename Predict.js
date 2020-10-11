@@ -165,7 +165,7 @@ function practice(){
 
 
 function Train(){
-  for(var i = 0 ; i < numRows ; i = i+2){
+  for(var i = 0 ; i <= numRows ; i = i+2){
     var currentFeatures = irisData.pick(i).slice([0,2])
     var currentLabel = irisData.pick(i).get(4)
     knnClassifier.addExample(currentFeatures.tolist(),currentLabel)
