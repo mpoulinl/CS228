@@ -158,7 +158,9 @@ var numFeatures = numSamples[1] - 1;
 predictedClassLabels = nj.zeros(numRows,1)
 
 function practice(){
-
+  console.log(predictedClassLabels.get(1))
+  predictedClassLabels.get(1) = 5
+  console.log(predictedClassLabels.get(1))
 }
 
 
@@ -222,12 +224,13 @@ function DrawCircles(){
 var l = true
 function draw(){
   clear();
-
-  if(trainingCompleted == false){
-    Train();
-    trainingCompleted = true;
-  }
-  Test()
+  practice();
+  //
+  // if(trainingCompleted == false){
+  //   Train();
+  //   trainingCompleted = true;
+  // }
+  // Test()
 //  DrawCircles();
 
 }
