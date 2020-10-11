@@ -159,7 +159,7 @@ predictedClassLabels = nj.zeros(numRows,1)
 
 function practice(){
   for(var i = 0 ; i < numRows ; i++){
-    console.log(predictedClassLabels.pick(i).toString());
+    console.log(predictedClassLabels.pick(i).get(0));
   }
 }
 
