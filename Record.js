@@ -42,6 +42,8 @@ function HandleFinger(finger,n,fingerIndex,interactionBox){
 
 
 function HandleBone(bone,type,fingerIndex,interactionBox){
+  var bone_start = bone.prevJoint;
+  var bone_end = bone.nextJoint;
 
   var normalizedPrevJoint = interactionBox.normalizePoint(bone.prevJoint,true);
   var normalizedNextJoint = interactionBox.normalizePoint(bone.nextJoint,true);
@@ -58,7 +60,6 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   oneFrameOfData.set(fingerIndex,type,3,canvasXEnd);
   oneFrameOfData.set(fingerIndex,type,4,canvasYEnd);
   oneFrameOfData.set(fingerIndex,type,5,bone_end[2]);
-
 
   if(currentNumbHands == 1){
 
