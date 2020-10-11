@@ -138,14 +138,16 @@ function TransformCoordinates(x,y) {
 }
 
 function RecordData(){
-  if(currentNumbHands == 1 && previousNumHands == 2){
+  if(currentNumbHands == 1){
     background(51);
-    console.log(framesOfData.toString() );
+
     currentSample++;
-    console.log(currentSample)
     if(currentSample == numSamples){
       currentSample = 0;
     }
+  }
+  if(currentNumbHands == 2){
+    console.log(framesOfData.toString() );
   }
 
 }
