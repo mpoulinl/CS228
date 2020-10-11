@@ -19,7 +19,7 @@ function HandleFrame(frame){
   if(frame.hands.length >= 1){
     // first element in the hands
     var hand = frame.hands[0];
-    HandleHand(hand,frame.InteractionBox);
+    HandleHand(hand,frame.InteractionBox());
 }
 }
 
