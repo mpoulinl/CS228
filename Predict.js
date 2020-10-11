@@ -187,39 +187,38 @@ function GotResults(err, result){
 }
 function DrawCircles(){
     for(var i = 0 ; i < numRows; i++){
-      console.log(predictedClassLabels.get(i))
-      // var currentFeatures = irisData.pick(i).slice([0,2])
-      // var currentLabel = irisData.pick(i).get(4)
-      //
-      //   var x = currentFeatures.get(0)
-      //   var y = currentFeatures.get(1)
-      //
-      //   if(currentLabel==0){
-      //     fill("red")
-      //   }
-      //   else if (currentLabel==1) {
-      //     fill("green")
-      //   }
-      //   else{
-      //     fill("blue")
-      //   }
-      //
-      //   if(i%2 == 0){//testing sample
-      //     stroke("black")
-      //   }
-      //   else{//training sample
-      //     if(currentLabel==0){
-      //       stroke("red")
-      //     }
-      //     else if (currentLabel==1) {
-      //       stroke("green")
-      //     }
-      //     else{
-      //       stroke("blue")
-      //     }
-      //   }
-      //   circle(x*100,y*100,8)
-      // }
+      var currentFeatures = irisData.pick(i).slice([0,2])
+      var currentLabel = irisData.pick(i).get(4)
+
+        var x = currentFeatures.get(0)
+        var y = currentFeatures.get(1)
+
+        if(currentLabel==0){
+          fill("red")
+        }
+        else if (currentLabel==1) {
+          fill("green")
+        }
+        else{
+          fill("blue")
+        }
+
+        if(i%2 == 0){//testing sample
+          stroke("black")
+        }
+        else{//training sample
+          if(predictedClassLabels.get(i)==0){
+            stroke("red")
+          }
+          else if (predictedClassLabels.get(i)==1) {
+            stroke("green")
+          }
+          else{
+            stroke("blue")
+          }
+        }
+        circle(x*100,y*100,8)
+      }
     }
 
 }
