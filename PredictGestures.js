@@ -17,7 +17,7 @@ function Train(){
 
 function Test(){
   var currentFeatures = train0.pick(null,null,null,testingSampleIndex)
-  features = features.reshape(1,120)
+  currentFeatures = currentFeatures.reshape(1,120)
   predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
 
 }
