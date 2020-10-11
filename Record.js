@@ -141,7 +141,7 @@ function RecordData(){
   if(currentNumbHands == 1 && previousNumHands == 2){
     background(51);
     console.log(framesOfData.toString() );
-    currentSample++;
+    currentSample+;
     console.log(currentSample)
     if(currentSample == numSamples){
       currentSample = 0;
