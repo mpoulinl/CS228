@@ -44,7 +44,7 @@ function HandleBone(bone,type,fingerIndex,InteractionBox){
   var bone_start = bone.prevJoint;
   var bone_end = bone.nextJoint;
 
-  var normalizedPrevJoint = InteractionBox.normalizePoint(bone.prevJoint, true);
+  var normalizedPrevJoint = InteractionBox.InteractionBox.normalizePoint();
 
   console.log(normalizedPrevJoint);
   var start = TransformCoordinates(bone_start[0],bone_start[1])
