@@ -203,7 +203,7 @@ function DrawCircles(){
           fill("blue")
         }
 
-        if(i%2 ==0){//testing sample
+        if(i%2 !=0){//testing sample
           if(currentLabel==0){
             stroke("red")
           }
@@ -224,7 +224,7 @@ function DrawCircles(){
 var l = true
 function draw(){
   clear();
-  
+
   if(trainingCompleted == false){
     Train();
     trainingCompleted = true;
