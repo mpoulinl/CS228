@@ -19,33 +19,33 @@ function HandleFrame(frame){
   if(frame.hands.length >= 1){
     // first element in the hands
     var hand = frame.hands[0];
-    var InteractionBox = frame.InteractionBox;
-    HandleHand(hand,InteractionBox);
+    var interactionBox = frame.interactionBox;
+    HandleHand(hand,interactionBox);
 }
 }
 
-function HandleHand(hand,InteractionBox){
+function HandleHand(hand,interactionBox){
    //fingers element
     var fingers = hand.fingers;
     //iterrate each finger
     for(var n = 3; 0 <=n; --n){
       for(var i=0; i <fingers.length; i++){
-        HandleFinger(fingers[i],n,i,InteractionBox)
+        HandleFinger(fingers[i],n,i,interactionBox)
       }
     }
   }
 
-function HandleFinger(finger,n,fingerIndex,InteractionBox){
+function HandleFinger(finger,n,fingerIndex,interactionBox){
 
-      HandleBone(finger.bones[n],n,fingerIndex,InteractionBox);
+      HandleBone(finger.bones[n],n,fingerIndex,interactionBox);
 }
 
 
-function HandleBone(bone,type,fingerIndex,InteractionBox){
+function HandleBone(bone,type,fingerIndex,interactionBox){
   var bone_start = bone.prevJoint;
   var bone_end = bone.nextJoint;
 
-  var normalizedPrevJoint = InteractionBox.normalizePoint(bone.prevJoint,true);
+  var normalizedPrevJoint = interactionBox.normalizePoint(bone.prevJoint,true);
 
   console.log(normalizedPrevJoint);
   var start = TransformCoordinates(bone_start[0],bone_start[1])
