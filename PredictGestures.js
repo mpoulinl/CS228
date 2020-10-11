@@ -1,6 +1,6 @@
 nj.config.printThreshold = 1000;
 const knnClassifier = ml5.KNNClassifier();
-var testingSampleIndex = 1
+var testingSampleIndex = 0
 var trainingCompleted = false
 
 
@@ -29,6 +29,7 @@ function Test(){
 function GotResults(err, result){
 
   console.log(result.label)
+  testingSampleIndex++;
   if(testingSampleIndex >= 2){
     testingSampleIndex = 0;
   }
