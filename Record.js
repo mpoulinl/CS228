@@ -1,5 +1,5 @@
-var framesOfData = nj.zeros([5,4,6,2]);
-var numSamples = 2;
+var framesOfData = nj.zeros([5,4,6,100]);
+var numSamples = 100;
 var currentSample = 0;
 //four global variable for max/min width and innerHeight
 var rawXMin = 10000;
@@ -137,14 +137,15 @@ function TransformCoordinates(x,y) {
 }
 
 function RecordData(){
-  if(currentNumbHands == 1 && previousNumHands == 2){
+  if(currentNumbHands != 2){
     background(51);
-    console.log(framesOfData.toString() );
     currentSample++;
-    console.log(currentSample)
     if(currentSample == numSamples){
       currentSample = 0;
     }
+  }
+  if(previousNumHands == 2){
+    console.log(framesOfData.toString() );
   }
 
 }
