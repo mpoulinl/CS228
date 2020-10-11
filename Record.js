@@ -29,12 +29,12 @@ function HandleHand(hand,InteractionBox){
     //iterrate each finger
     for(var n = 3; 0 <=n; --n){
       for(var i=0; i <fingers.length; i++){
-        HandleFinger(fingers[i],n,i)
+        HandleFinger(fingers[i],n,i,InteractionBox)
       }
     }
   }
 
-function HandleFinger(finger,n,fingerIndex){
+function HandleFinger(finger,n,fingerIndex,InteractionBox){
 
       HandleBone(finger.bones[n],n,fingerIndex,frame.InteractionBox);
 }
