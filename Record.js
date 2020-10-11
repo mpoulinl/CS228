@@ -51,8 +51,8 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   var canvasXStart = window.innerWidth * normalizedPrevJoint[0];
   var canvasXEnd = window.innerWidth * normalizedNextJoint[0];
 
-  var canvasYStart = window.innerWidth * normalizedPrevJoint[1];
-  var canvasYEnd =  window.innerWidth * normalizedNextJoint[1];
+  var canvasYStart = window.innerHeight * normalizedPrevJoint[1];
+  var canvasYEnd =  window.innerHeight * normalizedNextJoint[1];
 
   // var start = TransformCoordinates(bone_start[0],bone_start[1])
   // var end = TransformCoordinates(bone_end[0],bone_end[1])
@@ -63,7 +63,7 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   var z1 = bone_start[2];
   var z2 = bone_end[2];
   var sum = z1+z2+bone_start[0]+bone_end[0]+bone_start[1]+bone_end[1]
-
+  
   oneFrameOfData.set(fingerIndex,type,0,canvasXStart);
   oneFrameOfData.set(fingerIndex,type,1,canvasYStart);
   oneFrameOfData.set(fingerIndex,type,2,bone_start[2]);
