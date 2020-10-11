@@ -226,7 +226,7 @@ function DrawCircles(){
 var l = true
 function draw(){
   clear();
-  Practice();
+  practice()
   // if(trainingCompleted == false){
   //   Train();
   //   trainingCompleted = true;
