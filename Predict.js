@@ -207,17 +207,14 @@ function DrawCircles(){
         var y = currentFeatures.get(1)
 
         if(currentLabel==0){
-          circle(x*100,y*100,8)
           fill("red")
           stroke("red")
         }
         else if (currentLabel==1) {
-          circle(x*100,y*100,8)
           fill("green")
           stroke("green")
         }
         else{
-          circle(x*100,y*100,8)
           fill("blue")
           stroke("blue")
         }
@@ -254,7 +251,7 @@ function draw(){
     trainingCompleted = true;
   }
   Test()
-
+  DrawCircles();
   // if(trainingCompleted == false){
   //   Train();
   //   trainingCompleted = true;
