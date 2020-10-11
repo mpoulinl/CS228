@@ -9,6 +9,7 @@ function Train(){
   // console.log(test.toString())
   for(var i = 0 ; i < train0.shape[3] ; i++){
     var features = train0.pick(null,null,null,i)
+    console.log(features.toString())
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),0)
   }
