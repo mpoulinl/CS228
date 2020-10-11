@@ -177,7 +177,8 @@ function Test(){
 }
 
 function GotResults(err, result){
-  console.log(result);
+  console.log(result.label());
+  predictedClassLabels.get(testingSampleIndex) = result.label();
   testingSampleIndex = testingSampleIndex + 2;
   if(testingSampleIndex > numRows){
     testingSampleIndex = 1;
@@ -185,13 +186,11 @@ function GotResults(err, result){
 }
 function DrawCircles(){
     for(var i = 0 ; i < numRows; i++){
-
       var currentFeatures = irisData.pick(i).slice([0,2])
       var currentLabel = irisData.pick(i).get(4)
 
         var x = currentFeatures.get(0)
         var y = currentFeatures.get(1)
-
 
         if(currentLabel==0){
           fill("red")
@@ -203,7 +202,7 @@ function DrawCircles(){
           fill("blue")
         }
 
-        if(i%2 == 0 || i == 0){//testing sample
+        if(i%2 == 0){//testing sample
           stroke("black")
         }
         else{//training sample
