@@ -177,12 +177,13 @@ function Test(){
 }
 
 function GotResults(err, result){
-  console.log(result.parseInt());
+  console.log(result);
+  console.log(err);
   //predictedClassLabels.get(testingSampleIndex) = result.label;
-  testingSampleIndex = testingSampleIndex + 2;
-  if(testingSampleIndex > numRows){
-    testingSampleIndex = 1;
-  }
+  // testingSampleIndex = testingSampleIndex + 2;
+  // if(testingSampleIndex > numRows){
+  //   testingSampleIndex = 1;
+  // }
 }
 function DrawCircles(){
     for(var i = 0 ; i < numRows; i++){
@@ -229,6 +230,6 @@ function draw(){
     trainingCompleted = true;
   }
   Test()
-  DrawCircles();
+//  DrawCircles();
 
 }
