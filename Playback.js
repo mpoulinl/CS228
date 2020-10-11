@@ -58,10 +58,10 @@ function draw(){
 
       var xStart_a = window.innerWidth * anotherFrameDate.get(i,j,0);
       var yStart_a = window.innerWidth * (1-anotherFrameDate.get(i,j,1));
-      var zStart_a = window.innerHeight * anotherFrameDate.get(i,j,2);
+      var zStart_a = anotherFrameDate.get(i,j,2);
       var xEnd_a = window.innerWidth * anotherFrameDate.get(i,j,3);
       var yEnd_a = window.innerHeight * (1-anotherFrameDate.get(i,j,4));
-      var zEnd_a = window.innerHeight * anotherFrameDate.get(i,j,5);
+      var zEnd_a =  anotherFrameDate.get(i,j,5);
 
 
       if(frameIndex == 1000){
