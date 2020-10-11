@@ -144,9 +144,11 @@ function RecordData(){
       currentSample = 0;
     }
   }
-  if(currentNumbHands == 2 && print == false){
-    console.log(framesOfData.toString() );
-    print = true;
+  if(currentNumbHands == 2){
+    if(!print){
+      console.log(framesOfData.toString() );
+      print = true;
+    }
   }
 
 }
