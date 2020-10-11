@@ -10,22 +10,24 @@ function Train(){
   for(var i = 0 ; i < train0.shape[3] ; i++){
     var features = train0.pick(null,null,null,i)
     features = features.reshape(1,120)
-    console.log(features.toString())
-    //knnClassifier.addExample(features.tolist(),currentLabel)
+    knnClassifier.addExample(features.tolist(),0)
   }
-  // var currentFeatures = irisData.pick(i).slice([0,4])
-  //   var currentLabel = irisData.pick(i).get(4)
-  //   knnClassifier.addExample(currentFeatures.tolist(),currentLabel)
-  // for(var i = 0 ; i < test.shape[3] ; i++){
-  //   var features = test.pick(null,null,null,i)
-  // }
 }
 
 function Test(){
+  var currentFeatures = train0.pick(null,null,null,testingSampleIndex)
+  features = features.reshape(1,120)
+  predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
 
 }
 
-
+function GotResults(err, result){
+  predictedClassLabels.set(testingSampleIndex,parseInt(result.label))
+  testingSampleIndex = testingSampleIndex + 1
+  if(testingSampleIndex >= train0.shape[3]){
+    testingSampleIndex = 0;
+  }
+}
 
 var l = true
 function draw(){
