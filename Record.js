@@ -1,4 +1,4 @@
-var framesOfData = nj.zeros([2,5,4,6]);
+var framesOfData = nj.zeros([5,4,2,6]);
 var numSamples = 2;
 var currentSample = 0;
 //four global variable for max/min width and innerHeight
@@ -139,7 +139,7 @@ function TransformCoordinates(x,y) {
 function RecordData(){
   if(currentNumbHands == 1 && previousNumHands == 2){
     background(51);
-    console.log(oneFrameOfData.toString());
+    console.log(framesOfData.toString());
   }
 }
 //infinity loop
