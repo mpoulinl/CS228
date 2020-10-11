@@ -1,4 +1,4 @@
-var framesOfData = nj.zeros([5,4,2,6]);
+var framesOfData = nj.zeros([5,2,4,6]);
 var frameOfData = nj.zeros([5,4,6]);
 var numSamples = 2;
 var currentSample = 0;
