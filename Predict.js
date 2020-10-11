@@ -180,11 +180,11 @@ function Train(){
 }
 
 function Test(){
-  for(var i = 1 ; i <= numRows ; i = i+2){
-    var currentFeatures = irisData.pick(i).slice([0,4])
-    var currentLabel = irisData.pick(i).get(4)
+  //for(var i = 1 ; i <= numRows ; i = i+2){
+    var currentFeatures = irisData.pick(testingSampleIndex).slice([0,4])
+    var currentLabel = irisData.pick(testingSampleIndex).get(4)
     predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
- }
+ //}
 }
 
 function GotResults(err, result){
