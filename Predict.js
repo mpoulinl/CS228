@@ -158,9 +158,9 @@ var numFeatures = numSamples[1] - 1;
 predictedClassLabels = nj.zeros(numRows,1)
 
 function practice(){
-  console.log(predictedClassLabels.get(1))
+  console.log(predictedClassLabels.get(0))
   predictedClassLabels.set(0,1,5)
-  console.log(predictedClassLabels.get(1))
+  console.log(predictedClassLabels.get(0))
 }
 
 
