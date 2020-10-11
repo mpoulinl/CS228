@@ -206,6 +206,9 @@ function DrawCircles(){
         var x = currentFeatures.get(0)
         var y = currentFeatures.get(1)
 
+        circle(x*100,y*100,8)
+
+
         if(currentLabel==0){
           fill("red")
           stroke("red")
