@@ -23,7 +23,6 @@ function Test(){
   var currentFeatures = test.pick(null,null,null,testingSampleIndex)
   currentFeatures = currentFeatures.reshape(1,120)
   predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
-
 }
 
 function GotResults(err, result){
