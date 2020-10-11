@@ -5,9 +5,9 @@ var trainingCompleted = false
 
 
 function Train(){
-  console.log(train0.shape[3])
+  console.log(train0.pick(1).toString())
   // console.log(test.toString())
-  for(var i = 0 ; i < 2 ; i++){
+  for(var i = 0 ; i < train0.shape[3] ; i++){
 
   }
 }
