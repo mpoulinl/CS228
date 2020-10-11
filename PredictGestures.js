@@ -6,7 +6,7 @@ var trainingCompleted = false
 
 function Train(){
   //console.log(train0.pick().toString())
-  // console.log(test.toString())
+  console.log( train7.shape[3])
   for(var i = 0 ; i < train7.shape[3] ; i++){
     var features7 = train7.pick(null,null,null,i)
     features7 = features7.reshape(1,120)
