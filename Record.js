@@ -136,7 +136,7 @@ function TransformCoordinates(x,y) {
   var y_pos = window.innerHeight-(((y-rawYMin)/(rawYMax-rawYMin))* window.innerHeight);
   return[x_pos,y_pos];
 }
-var print = false;
+
 
 function RecordData(){
   if(currentNumbHands == 1){
@@ -149,12 +149,13 @@ function RecordData(){
 }
 //infinity loop
 Leap.loop(controllerOptions, function(frame){
+  var v = false;
   currentNumbHands = frame.hands.length;
   HandleFrame(frame);
-  if(print = false){
+  if(v == false){
     RecordData();
     if(currentNumbHands == 2){
-      print = true;
+      v = true;
       console.log(framesOfData.toString())
     }
   }
