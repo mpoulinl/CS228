@@ -41,6 +41,6 @@ function draw(){
     Train();
     trainingCompleted = true;
   }
-  //Test()
+  Test()
 
 }
