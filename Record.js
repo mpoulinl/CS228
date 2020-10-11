@@ -1,5 +1,6 @@
-var oneFrameOfData = nj.zeros([5,4,6]);
-
+var framesOfData = nj.zeros([2,5,4,6]);
+var numSamples = 2;
+var currentSample = 0;
 //four global variable for max/min width and innerHeight
 var rawXMin = 10000;
 var rawXMax = -10000;
@@ -58,12 +59,12 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   var z_start = bone_start[2];
   var z_end = bone_end[2];
 
-  oneFrameOfData.set(fingerIndex,type,0,x_start);
-  oneFrameOfData.set(fingerIndex,type,1,y_start);
-  oneFrameOfData.set(fingerIndex,type,2,z_start);
-  oneFrameOfData.set(fingerIndex,type,3,x_end);
-  oneFrameOfData.set(fingerIndex,type,4,y_end);
-  oneFrameOfData.set(fingerIndex,type,5,z_end);
+  framesOfData.set(fingerIndex,type,0,currentSample,x_start);
+  framesOfData.set(fingerIndex,type,1,currentSample,y_start);
+  framesOfData.set(fingerIndex,type,2,currentSample,z_start);
+  framesOfData.set(fingerIndex,type,3,currentSample,x_end);
+  framesOfData.set(fingerIndex,type,4,currentSample,y_end);
+  framesOfData.set(fingerIndex,type,5,currentSample,z_end);
 
   var canvasXStart = window.innerWidth * x_start;
   var canvasXEnd = window.innerWidth * x_end;
