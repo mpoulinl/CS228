@@ -179,46 +179,46 @@ function Test(){
 }
 
 function GotResults(err, result){
-  console.log(parseInt(result.label));
-  testingSampleIndex = testingSampleIndex + 2;
+  predictedClassLabels.set(testingSampleIndex,parseInt(result.label))
   if(testingSampleIndex > numRows){
     testingSampleIndex = 1;
   }
 }
 function DrawCircles(){
     for(var i = 0 ; i < numRows; i++){
-      var currentFeatures = irisData.pick(i).slice([0,2])
-      var currentLabel = irisData.pick(i).get(4)
-
-        var x = currentFeatures.get(0)
-        var y = currentFeatures.get(1)
-
-        if(currentLabel==0){
-          fill("red")
-        }
-        else if (currentLabel==1) {
-          fill("green")
-        }
-        else{
-          fill("blue")
-        }
-
-        if(i%2 == 0){//testing sample
-          stroke("black")
-        }
-        else{//training sample
-          if(currentLabel==0){
-            stroke("red")
-          }
-          else if (currentLabel==1) {
-            stroke("green")
-          }
-          else{
-            stroke("blue")
-          }
-        }
-        circle(x*100,y*100,8)
-      }
+        console.log(predictedClassLabels.get(i))
+      // var currentFeatures = irisData.pick(i).slice([0,2])
+      // var currentLabel = irisData.pick(i).get(4)
+      //
+      //   var x = currentFeatures.get(0)
+      //   var y = currentFeatures.get(1)
+      //
+      //   if(currentLabel==0){
+      //     fill("red")
+      //   }
+      //   else if (currentLabel==1) {
+      //     fill("green")
+      //   }
+      //   else{
+      //     fill("blue")
+      //   }
+      //
+      //   if(i%2 == 0){//testing sample
+      //     stroke("black")
+      //   }
+      //   else{//training sample
+      //     if(currentLabel==0){
+      //       stroke("red")
+      //     }
+      //     else if (currentLabel==1) {
+      //       stroke("green")
+      //     }
+      //     else{
+      //       stroke("blue")
+      //     }
+      //   }
+      //   circle(x*100,y*100,8)
+      // }
 
 }
 var l = true
@@ -229,12 +229,12 @@ function draw(){
     trainingCompleted = true;
   }
 
-  //
-  // if(trainingCompleted == false){
-  //   Train();
-  //   trainingCompleted = true;
-  // }
-  // Test()
-//  DrawCircles();
+
+  if(trainingCompleted == false){
+    Train();
+    trainingCompleted = true;
+  }
+  Test()
+ DrawCircles();
 
 }
