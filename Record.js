@@ -147,9 +147,9 @@ function RecordData(){
   }
 
 }
+var v = false;
 //infinity loop
 Leap.loop(controllerOptions, function(frame){
-  var v = false;
   currentNumbHands = frame.hands.length;
   HandleFrame(frame);
   if(v == false){
