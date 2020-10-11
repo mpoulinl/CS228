@@ -19,7 +19,7 @@ function HandleFrame(frame){
   if(frame.hands.length >= 1){
     // first element in the hands
     var hand = frame.hands[0];
-    HandleHand(hand,frame.InteractionBox());
+    HandleHand(hand,frame.InteractionBox;
 }
 }
 
@@ -46,7 +46,7 @@ function HandleBone(bone,type,fingerIndex,InteractionBox){
 
   var normalizedPrevJoint = InteractionBox.normalizePoint(bone.prevJoint, true);
 
-  //console.log(normalizedPrevJoint);
+  console.log(normalizedPrevJoint);
   var start = TransformCoordinates(bone_start[0],bone_start[1])
   var end = TransformCoordinates(bone_end[0],bone_end[1])
 
