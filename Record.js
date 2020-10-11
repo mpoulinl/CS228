@@ -52,7 +52,7 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   var canvasXEnd = window.innerWidth * normalizedNextJoint[0];
 
   var canvasYStart = window.innerWidth * normalizedPrevJoint[1];
-  var canvasYEnd = var canvasXMax = window.innerWidth * normalizedNextJoint[0];
+  var canvasYEnd =  window.innerWidth * normalizedNextJoint[1];
 
   // var start = TransformCoordinates(bone_start[0],bone_start[1])
   // var end = TransformCoordinates(bone_end[0],bone_end[1])
