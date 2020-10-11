@@ -6,6 +6,7 @@ var trainingCompleted = false
 
 function Train(){
   console.log(train0.toString())
+  console.log(test.toString())
 }
 
 function Test(){
