@@ -158,9 +158,7 @@ var numFeatures = numSamples[1] - 1;
 predictedClassLabels = nj.zeros(numRows,1)
 
 function practice(){
-  for(var i = 0 ; i < numRows ; i++){
-    console.log(predictedClassLabels.pick(i).get(0));
-  }
+
 }
 
 
@@ -187,13 +185,12 @@ function GotResults(err, result){
 }
 function DrawCircles(){
     for(var i = 0 ; i < numRows; i++){
+
       var currentFeatures = irisData.pick(i).slice([0,2])
       var currentLabel = irisData.pick(i).get(4)
 
         var x = currentFeatures.get(0)
         var y = currentFeatures.get(1)
-
-        circle(x*100,y*100,8)
 
 
         if(currentLabel==0){
@@ -220,18 +217,19 @@ function DrawCircles(){
         else{//training sample
           stroke("black")
         }
+        circle(x*100,y*100,8)
       }
 
 }
 var l = true
 function draw(){
   clear();
-  practice()
-  // if(trainingCompleted == false){
-  //   Train();
-  //   trainingCompleted = true;
-  // }
-  // Test()
-  // DrawCircles();
+  
+  if(trainingCompleted == false){
+    Train();
+    trainingCompleted = true;
+  }
+  Test()
+  DrawCircles();
 
 }
