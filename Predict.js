@@ -179,7 +179,8 @@ function Test(){
 }
 
 function GotResults(err, result){
-  predictedClassLabels.set(testingSampleIndex,parseInt(result.label))
+  console.log(result)
+  //predictedClassLabels.set(testingSampleIndex,parseInt(result.label))
   if(testingSampleIndex > numRows){
     testingSampleIndex = 1;
   }
