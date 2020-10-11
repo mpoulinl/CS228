@@ -152,8 +152,12 @@ irisData = nj.array([[	5.1	,	3.5	,	1.4	,	0.2	,	1	],
 [	6.2	,	3.4	,	5.4	,	2.3	,	3	],
 [	5.9	,	3	,	5.1	,	1.8	,	3	]]);
 
+var numSamples = irisData.shape;
 var numFeatures = irisData.shape;
 
+function practice(){
+  console.log(numSamples);
+}
 predictedClassLabels = nj.zeros(150)
 console.log(numFeatures[0]);
 function Train(){
@@ -240,11 +244,12 @@ function DrawCircles(){
 var l = true
 function draw(){
   clear();
-  if(trainingCompleted == false){
-    Train();
-    trainingCompleted = true;
-  }
-  Test();
-  DrawCircles();
+  practice();
+  // if(trainingCompleted == false){
+  //   Train();
+  //   trainingCompleted = true;
+  // }
+  // Test();
+  // DrawCircles();
 
 }
