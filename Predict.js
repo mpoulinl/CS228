@@ -186,7 +186,7 @@ function GotResults(err, result){
   }
 }
 function DrawCircles(){
-    for(var i = 0 ; i < numRows; i++){
+    for(var i = 0 ; i <= numRows; i++){
       var currentFeatures = irisData.pick(i).slice([0,2])
       var currentLabel = irisData.pick(i).get(4)
 
