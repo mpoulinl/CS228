@@ -10,7 +10,7 @@ function Train(){
   for(var i = 0 ; i < train7.shape[3] ; i++){
     var features = train7.pick(null,null,null,i)
     features = features.reshape(1,120)
-    console.log(features)
+    console.log(features.toString())
     knnClassifier.addExample(features.tolist(),7)
 
     features = train9.pick(null,null,null,i)
