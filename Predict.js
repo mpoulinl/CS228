@@ -180,6 +180,7 @@ function Test(){
 
 function GotResults(err, result){
   console.log(parseInt(result.label))
+  testingSampleIndex = testingSampleIndex + 2
   //predictedClassLabels.set(testingSampleIndex,parseInt(result.label))
   if(testingSampleIndex > numRows){
     testingSampleIndex = 1;
@@ -230,7 +231,6 @@ function draw(){
   //   practice();
   //   trainingCompleted = true;
   // }
-
 
   if(trainingCompleted == false){
     Train();
