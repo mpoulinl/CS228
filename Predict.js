@@ -207,12 +207,10 @@ function DrawCircles(){
         var y = currentFeatures.get(1)
 
         circle(x*100,y*100,8)
-
     }
 }
 var l = true
 function draw(){
-  clear();
   if(trainingCompleted == false){
     Train();
     trainingCompleted = true;
