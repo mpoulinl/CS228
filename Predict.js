@@ -159,16 +159,16 @@ var numFeatures = numSamples[1] - 1;
 function practice(){
   for(var i = 0 ; i < numRows; i = i+2){
     //console.log(irisData.pick(i).toString());//givae all odd numRows
-    console.log(irisData.pick(i).slice([0,4]).toString())
+    console.log(irisData.pick(i).get(1)) //give the first 4 feature
 
   }
 }
 predictedClassLabels = nj.zeros(150)
 console.log(numFeatures[0]);
 function Train(){
-  for(var i = 0 ; i < numFeatures[0]; i = i+2){
+  for(var i = 0 ; i < numRows; i = i+2){
   //  console.log(irisData.pick(null,i).toString())
-    var currentFeatures = irisData.pick(i).hi(4,1)
+    var currentFeatures = irisData.pick(i).slice([0,4])
     var curr = irisData.pick(i).lo(4,4).hi(1,1)
     var currentLabels = curr.get(0)-1
     knnClassifier.addExample(currentFeatures.tolist(),currentLabels)
