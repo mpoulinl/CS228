@@ -153,10 +153,10 @@ irisData = nj.array([[	5.1	,	3.5	,	1.4	,	0.2	,	1	],
 [	5.9	,	3	,	5.1	,	1.8	,	3	]]);
 
 var numSamples = irisData.shape;
-var numFeatures = irisData.shape;
+var numFeatures = numSamples[1] - 1;
 
 function practice(){
-  console.log(numSamples[0]);
+  console.log(numFeatures);
 }
 predictedClassLabels = nj.zeros(150)
 console.log(numFeatures[0]);
