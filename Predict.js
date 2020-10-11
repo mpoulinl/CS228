@@ -158,11 +158,9 @@ var numFeatures = numSamples[1] - 1;
 
 function practice(){
   for(var i = 0 ; i < numRows; i = i+2){
-    console.log(irisData.pick(i).toString());
-    // var currentFeatures = irisData.pick(i).hi(4,1)
-    // var curr = irisData.pick(i).lo(4,4).hi(1,1)
-    // var currentLabels = curr.get(0)-1
-    // knnClassifier.addExample(currentFeatures.tolist(),currentLabels)
+    //console.log(irisData.pick(i).toString());//givae all odd numRows
+    console.log(irisData.slice([i,4]).toString())
+
   }
 }
 predictedClassLabels = nj.zeros(150)
