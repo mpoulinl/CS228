@@ -137,28 +137,23 @@ function TransformCoordinates(x,y) {
   return[x_pos,y_pos];
 }
 
-
 function RecordData(){
-  if(currentNumbHands == 1){
+  if(currentNumbHands == 1 && previousNumHands == 2){
+    background(51);
+    console.log(framesOfData.toString() );
     currentSample++;
+    console.log(currentSample)
     if(currentSample == numSamples){
       currentSample = 0;
     }
   }
 
 }
-var v = false;
 //infinity loop
 Leap.loop(controllerOptions, function(frame){
   currentNumbHands = frame.hands.length;
   HandleFrame(frame);
-  if(v == false){
-    RecordData();
-    if(currentNumbHands == 2){
-      v = true;
-      console.log(framesOfData.toString())
-    }
-  }
+  RecordData();
   previousNumHands = currentNumbHands;
 
 
