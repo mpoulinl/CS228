@@ -178,11 +178,11 @@ function Test(){
 
 function GotResults(err, result){
   console.log(parseInt(result.label));
-  //predictedClassLabels.get(testingSampleIndex) = result.label;
-  // testingSampleIndex = testingSampleIndex + 2;
-  // if(testingSampleIndex > numRows){
-  //   testingSampleIndex = 1;
-  // }
+  predictedClassLabels.get(testingSampleIndex) = result.label;
+  testingSampleIndex = testingSampleIndex + 2;
+  if(testingSampleIndex > numRows){
+    testingSampleIndex = 1;
+  }
 }
 function DrawCircles(){
     for(var i = 0 ; i < numRows; i++){
