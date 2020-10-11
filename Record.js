@@ -1,4 +1,5 @@
 var framesOfData = nj.zeros([5,4,2,6]);
+var frameOfData = nj.zeros([5,4,6]);
 var numSamples = 2;
 var currentSample = 0;
 //four global variable for max/min width and innerHeight
@@ -65,6 +66,13 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   framesOfData.set(fingerIndex,type,3,currentSample,x_end);
   framesOfData.set(fingerIndex,type,4,currentSample,y_end);
   framesOfData.set(fingerIndex,type,5,currentSample,z_end);
+
+  frameOfData.set(fingerIndex,type,0,x_start);
+  frameOfData.set(fingerIndex,type,1,y_start);
+  frameOfData.set(fingerIndex,type,2,z_start);
+  frameOfData.set(fingerIndex,type,3,x_end);
+  frameOfData.set(fingerIndex,type,4,y_end);
+  frameOfData.set(fingerIndex,type,5,z_end);
 
   var canvasXStart = window.innerWidth * x_start;
   var canvasXEnd = window.innerWidth * x_end;
@@ -140,6 +148,7 @@ function RecordData(){
   if(currentNumbHands == 1 && previousNumHands == 2){
     background(51);
     console.log(framesOfData.toString());
+    console.log(frameOfData.toString());
   }
 }
 //infinity loop
