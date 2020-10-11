@@ -158,7 +158,7 @@ var numFeatures = numSamples[1] - 1;
 
 function practice(){
   for(var i = 0 ; i < numRows; i = i+2){
-    console.log(irisData.pick(null,i).toString())
+    console.log(irisData.pick(i));
     // var currentFeatures = irisData.pick(i).hi(4,1)
     // var curr = irisData.pick(i).lo(4,4).hi(1,1)
     // var currentLabels = curr.get(0)-1
