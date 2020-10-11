@@ -10,7 +10,7 @@ function Train(){
   for(var i = 0 ; i < train0.shape[3] ; i++){
     var features = train0.pick(null,null,null,i)
     features = features.reshape(1,120)
-    console.log(features)
+    console.log(features.toString())
     //knnClassifier.addExample(features.tolist(),currentLabel)
   }
   // var currentFeatures = irisData.pick(i).slice([0,4])
