@@ -48,18 +48,22 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   var normalizedPrevJoint = interactionBox.normalizePoint(bone.prevJoint,true);
   var normalizedNextJoint = interactionBox.normalizePoint(bone.nextJoint,true);
 
-  var canvasXStart = window.innerWidth * normalizedPrevJoint[0];
-  var canvasXEnd = window.innerWidth * normalizedNextJoint[0];
+  var x_start = normalizedPrevJoint[0;
+  var x_end =  normalizedNextJoint[0];
+  var y_start = 1 - normalizedPrevJoint[1];
+  var y_end = 1-normalizedNextJoint[1];
 
-  var canvasYStart = (1-window.innerHeight * normalizedPrevJoint[1]);
-  var canvasYEnd = (1- window.innerHeight * normalizedNextJoint[1]);
-
-  oneFrameOfData.set(fingerIndex,type,0,canvasXStart);
-  oneFrameOfData.set(fingerIndex,type,1,canvasYStart);
+  oneFrameOfData.set(fingerIndex,type,0,x_start);
+  oneFrameOfData.set(fingerIndex,type,1,y_start);
   oneFrameOfData.set(fingerIndex,type,2,bone_start[2]);
-  oneFrameOfData.set(fingerIndex,type,3,canvasXEnd);
-  oneFrameOfData.set(fingerIndex,type,4,canvasYEnd);
+  oneFrameOfData.set(fingerIndex,type,3,x_end);
+  oneFrameOfData.set(fingerIndex,type,4,y_end);
   oneFrameOfData.set(fingerIndex,type,5,bone_end[2]);
+
+  var canvasXStart = window.innerWidth * x_start;
+  var canvasXEnd = window.innerWidth * x_end;
+  var canvasYStart = window.innerHeight * y_start;
+  var canvasYEnd =  window.innerHeight * y_end;
 
   if(currentNumbHands == 1){
 
