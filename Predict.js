@@ -207,7 +207,44 @@ function DrawCircles(){
         var y = currentFeatures.get(1)
 
         circle(x*100,y*100,8)
+
+
+        if(currentLabel==0){
+          fill("red")
+          stroke("red")
+        }
+        else if (currentLabel==1) {
+          fill("green")
+          stroke("green")
+        }
+        else{
+          fill("blue")
+          stroke("blue")
+        }
       }
+
+    //     if(oe=="even"){//ex:6%2 = 0 == odd
+    //       var q = predictedClassLabels.get(i)
+    //       console.log(predictedClassLabels)
+    //       var p = parseInt(q)
+    //       switch(p){
+    //         case 0:
+    //           stroke("red")
+    //         break;
+    //         case 1:
+    //           stroke("green")
+    //         break;
+    //         case 2:
+    //           stroke("blue")
+    //         break;
+    //       }
+    //       oe="odd"
+    //     }
+    //     else{
+    //       oe="even"
+    //     }
+    //
+    // }
 }
 var l = true
 function draw(){
@@ -217,7 +254,7 @@ function draw(){
     trainingCompleted = true;
   }
   Test()
-  DrawCircles();
+
   // if(trainingCompleted == false){
   //   Train();
   //   trainingCompleted = true;
