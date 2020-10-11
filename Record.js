@@ -143,7 +143,9 @@ function RecordData(){
     background(51);
     console.log( framesOfData.toString() );
     currentSample++;
-
+    if(currentSample == numSamples{
+      currentSample = 0;
+    }
   }
 
 }
