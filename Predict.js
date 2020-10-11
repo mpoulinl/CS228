@@ -181,7 +181,7 @@ function Test(){
 function GotResults(err, result){
   predictedClassLabels.set(testingSampleIndex,parseInt(result.label))
   testingSampleIndex = testingSampleIndex + 2
-  if(testingSampleIndex > numRows){
+  if(testingSampleIndex >= numRows){
     testingSampleIndex = 1;
   }
 }
@@ -219,7 +219,7 @@ function DrawCircles(){
         }
         circle(x*100,y*100,8)
       }
-    
+
 
 }
 var l = true
