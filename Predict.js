@@ -251,7 +251,7 @@ function draw(){
     train();
     trainingCompleted = true;
   }
-  practice();
+  Test();
   // if(trainingCompleted == false){
   //   Train();
   //   trainingCompleted = true;
