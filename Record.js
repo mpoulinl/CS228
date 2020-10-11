@@ -122,7 +122,7 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
     }
 
   }
-  line(canvasXStart,canvasYStart,canvasXEnd,canvasYEnd);
+  line(canvasXStart,canvasYEnd,canvasXEnd,canvasYStart);
 
 }
 
