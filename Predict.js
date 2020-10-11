@@ -156,7 +156,7 @@ var numSamples = irisData.shape;
 var numFeatures = irisData.shape;
 
 function practice(){
-  console.log(numSamples);
+  console.log(numSamples[0]);
 }
 predictedClassLabels = nj.zeros(150)
 console.log(numFeatures[0]);
