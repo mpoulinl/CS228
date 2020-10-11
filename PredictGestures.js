@@ -11,7 +11,7 @@ function Train(){
     train0.pick(null,null,null,i).toString()
   }
   for(var i = 0 ; i < test.shape[3] ; i++){
-    test.pick(null,null,null,i).toString()
+    //test.pick(null,null,null,i).toString()
   }
 }
 
