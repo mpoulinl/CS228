@@ -42,8 +42,6 @@ function HandleFinger(finger,n,fingerIndex,interactionBox){
 
 
 function HandleBone(bone,type,fingerIndex,interactionBox){
-  var bone_start = bone.prevJoint;
-  var bone_end = bone.nextJoint;
 
   var normalizedPrevJoint = interactionBox.normalizePoint(bone.prevJoint,true);
   var normalizedNextJoint = interactionBox.normalizePoint(bone.nextJoint,true);
@@ -54,29 +52,12 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   var canvasYStart = window.innerHeight * (1 - normalizedPrevJoint[1]);
   var canvasYEnd =  window.innerHeight * (1-normalizedNextJoint[1]);
 
-  // var start = TransformCoordinates(bone_start[0],bone_start[1])
-  // var end = TransformCoordinates(bone_end[0],bone_end[1])
-  //
-  // var canvasXstart = window.innerWidth * normalizedPrevJoint;
-  // var canvasXend = window.innerWidth * normalizedNextJoint;
-
-  var z1 = bone_start[2];
-  var z2 = bone_end[2];
-  var sum = z1+z2+bone_start[0]+bone_end[0]+bone_start[1]+bone_end[1]
-
   oneFrameOfData.set(fingerIndex,type,0,canvasXStart);
   oneFrameOfData.set(fingerIndex,type,1,canvasYStart);
   oneFrameOfData.set(fingerIndex,type,2,bone_start[2]);
   oneFrameOfData.set(fingerIndex,type,3,canvasXEnd);
   oneFrameOfData.set(fingerIndex,type,4,canvasYEnd);
   oneFrameOfData.set(fingerIndex,type,5,bone_end[2]);
-  //
-  // oneFrameOfData.set(fingerIndex,type,0,start[0]);
-  // oneFrameOfData.set(fingerIndex,type,1,start[1]);
-  // oneFrameOfData.set(fingerIndex,type,2,bone_start[2]);
-  // oneFrameOfData.set(fingerIndex,type,3,end[0]);
-  // oneFrameOfData.set(fingerIndex,type,4,end[1]);
-  // oneFrameOfData.set(fingerIndex,type,5,bone_end[2]);
 
 
   if(currentNumbHands == 1){
