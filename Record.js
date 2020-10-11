@@ -1,4 +1,4 @@
-var framesOfData = nj.zeros([5,4,6,2]);
+var framesOfData = nj.zeros([5,4,2,6]);
 var numSamples = 2;
 var currentSample = 0;
 //four global variable for max/min width and innerHeight
@@ -65,12 +65,19 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   // framesOfData.set(currentSample,fingerIndex,type,3,x_end);
   // framesOfData.set(currentSample,fingerIndex,type,4,y_end);
   // framesOfData.set(currentSample,fingerIndex,type,5,z_end);
-  framesOfData.set(fingerIndex,type,0,x_start,currentSample);
-  framesOfData.set(fingerIndex,type,1,y_start,currentSample);
-  framesOfData.set(fingerIndex,type,2,z_start,currentSample);
-  framesOfData.set(fingerIndex,type,3,x_end,currentSample);
-  framesOfData.set(fingerIndex,type,4,y_end,currentSample);
-  framesOfData.set(fingerIndex,type,5,z_end,currentSample);
+  // framesOfData.set(fingerIndex,type,0,x_start,currentSample);
+  // framesOfData.set(fingerIndex,type,1,y_start,currentSample);
+  // framesOfData.set(fingerIndex,type,2,z_start,currentSample);
+  // framesOfData.set(fingerIndex,type,3,x_end,currentSample);
+  // framesOfData.set(fingerIndex,type,4,y_end,currentSample);
+  // framesOfData.set(fingerIndex,type,5,z_end,currentSample);
+
+  framesOfData.set(fingerIndex,type,0,currentSample,x_start);
+  framesOfData.set(fingerIndex,type,1,currentSample,y_start);
+  framesOfData.set(fingerIndex,type,2,currentSample,z_start);
+  framesOfData.set(fingerIndex,type,3,currentSample,x_end);
+  framesOfData.set(fingerIndex,type,4,currentSample,y_end);
+  framesOfData.set(fingerIndex,type,5,currentSample,z_end);
 
   var canvasXStart = window.innerWidth * x_start;
   var canvasXEnd = window.innerWidth * x_end;
