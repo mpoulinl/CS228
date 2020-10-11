@@ -187,7 +187,7 @@ function GotResults(err, result){
 }
 function DrawCircles(){
     for(var i = 0 ; i < numRows; i++){
-        console.log(predictedClassLabels.get(i))
+     //console.log(predictedClassLabels.get(i))
       // var currentFeatures = irisData.pick(i).slice([0,2])
       // var currentLabel = irisData.pick(i).get(4)
       //
@@ -237,6 +237,6 @@ function draw(){
     trainingCompleted = true;
   }
   Test()
-  DrawCircles();
+  //DrawCircles();
 
 }
