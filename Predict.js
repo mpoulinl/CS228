@@ -248,10 +248,10 @@ var l = true
 function draw(){
   clear();
   if(trainingCompleted == false){
-    train();
+    Train();
     trainingCompleted = true;
   }
-  Test();
+  Test()
   // if(trainingCompleted == false){
   //   Train();
   //   trainingCompleted = true;
