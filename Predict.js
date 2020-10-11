@@ -162,17 +162,17 @@ function practice(){
   //   console.log(irisData.pick(i).get(4)) //give the first 4 feature
   //
   // }
-  for(var i = 1 ; i < numRows; i = i+2){
-    console.log(irisData.pick(i).toString())
-    var currentFeatures = irisData.pick(i).slice([0,4])
-    var currentLabel = irisData.pick(i).get(4)
-  }
+  // for(var i = 1 ; i < numRows; i = i+2){
+  //   console.log(irisData.pick(i).toString())
+  //   var currentFeatures = irisData.pick(i).slice([0,4])
+  //   var currentLabel = irisData.pick(i).get(4)
+  // }
 }
 predictedClassLabels = nj.zeros(150)
 console.log(numFeatures[0]);
 
 function Train(){
-  for(var i = 0 ; i < numRows; i = i+2){
+  for(var i = 0 ; i < numRows ; i = i+2){
     var currentFeatures = irisData.pick(i).slice([0,4])
     var currentLabel = irisData.pick(i).get(4)
     knnClassifier.addExample(currentFeatures.tolist(),currentLabel)
@@ -180,25 +180,20 @@ function Train(){
 }
 
 function Test(){
-  for(var i = 1 ; i <= numRows; i = i+2){
-
-    //array
-    var currentFeatures = irisData.pick(testingSampleIndex).hi(4,1)
-    //integer
-    var curr = irisData.pick(testingSampleIndex).lo(4,4).hi(1,1)
-    var currentLabels = curr.get(0)-1
-
+  for(var i = 1 ; i <= numRows ; i = i+2){
+    var currentFeatures = irisData.pick(i).slice([0,4])
+    var currentLabel = irisData.pick(i).get(4)
     predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
  }
 }
 
 function GotResults(err, result){
-  // console.log(result);
+  console.log(result);
   // console.log(result.label);
-  if(testingSampleIndex <= numFeatures[0]-1){
-    predictedClassLabels[testingSampleIndex] = result.label
-    testingSampleIndex = testingSampleIndex + 2
-  }
+  // if(testingSampleIndex <= numFeatures[0]-1){
+  //   predictedClassLabels[testingSampleIndex] = result.label
+  //   testingSampleIndex = testingSampleIndex + 2
+  // }
 }
 var oe="odd"
 function DrawCircles(){
@@ -253,9 +248,10 @@ var l = true
 function draw(){
   clear();
   if(trainingCompleted == false){
-    practice();
+    train();
     trainingCompleted = true;
-  }
+
+  train();
   // if(trainingCompleted == false){
   //   Train();
   //   trainingCompleted = true;
