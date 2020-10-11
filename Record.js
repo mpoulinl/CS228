@@ -59,18 +59,6 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   var z_start = bone_start[2];
   var z_end = bone_end[2];
 
-  // framesOfData.set(currentSample,fingerIndex,type,0,x_start);
-  // framesOfData.set(currentSample,fingerIndex,type,1,y_start);
-  // framesOfData.set(currentSample,fingerIndex,type,2,z_start);
-  // framesOfData.set(currentSample,fingerIndex,type,3,x_end);
-  // framesOfData.set(currentSample,fingerIndex,type,4,y_end);
-  // framesOfData.set(currentSample,fingerIndex,type,5,z_end);
-  // framesOfData.set(fingerIndex,type,0,x_start,currentSample);
-  // framesOfData.set(fingerIndex,type,1,y_start,currentSample);
-  // framesOfData.set(fingerIndex,type,2,z_start,currentSample);
-  // framesOfData.set(fingerIndex,type,3,x_end,currentSample);
-  // framesOfData.set(fingerIndex,type,4,y_end,currentSample);
-  // framesOfData.set(fingerIndex,type,5,z_end,currentSample);
 
   framesOfData.set(fingerIndex,type,0,currentSample,x_start);
   framesOfData.set(fingerIndex,type,1,currentSample,y_start);
@@ -152,7 +140,7 @@ function TransformCoordinates(x,y) {
 function RecordData(){
   if(currentNumbHands == 1 && previousNumHands == 2){
     background(51);
-    console.log( framesOfData.pick(null,null,null,0).toString() );
+    console.log( framesOfData.pick(null,null,null,1).toString() );
 
   }
 }
