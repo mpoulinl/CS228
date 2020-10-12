@@ -1,6 +1,7 @@
 nj.config.printThreshold = 1000;
 const knnClassifier = ml5.KNNClassifier();
-var testingSampleIndex = 0
+var m = 0
+var n = 0
 var trainingCompleted = false
 var controllerOptions = {};
 
@@ -24,7 +25,10 @@ function Train(){
     knnClassifier.addExample(features.tolist(),9)
   }
 }
-
+function compute_prediction_7(c,d){
+  m = ()((n-1)*m) + (c==d))/n
+  n++;
+}
 function Test(){
   var currentFeatures = framesOfData
   currentFeatures = currentFeatures.reshape(1,120)
@@ -32,7 +36,8 @@ function Test(){
 }
 
 function GotResults(err, result){
-  console.log(result.label)
+  console.log("ji",4)
+  compute_prediction_7(result.label,7)
 }
 
 function HandleFrame(frame){
