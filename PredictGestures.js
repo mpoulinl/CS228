@@ -123,18 +123,18 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
 }
 
 
-function RecordData(){
-  if(currentNumbHands == 1){
-    currentSample++;
-    if(currentSample == numSamples){
-      currentSample = 0;
-    }
-  }
-  if(currentNumbHands == 2 && previousNumHands == 1){
-    console.log(framesOfData.toString())
-  }
-
-}
+// function RecordData(){
+//   if(currentNumbHands == 1){
+//     currentSample++;
+//     if(currentSample == numSamples){
+//       currentSample = 0;
+//     }
+//   }
+//   if(currentNumbHands == 2 && previousNumHands == 1){
+//     console.log(framesOfData.toString())
+//   }
+//
+// }
 
 var l = true
 Leap.loop(controllerOptions, function(frame){
@@ -144,10 +144,9 @@ Leap.loop(controllerOptions, function(frame){
     trainingCompleted = true;
   }
 
-  currentNumbHands = frame.hands.length;
+  //currentNumbHands = frame.hands.length;
   HandleFrame(frame);
-  RecordData();
-  previousNumHands = currentNumbHands;
+  //previousNumHands = currentNumbHands;
 
   Test()
 })
