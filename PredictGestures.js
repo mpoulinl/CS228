@@ -7,7 +7,7 @@ var controllerOptions = {};
 
 var previousNumHands = 0;
 var currentNumbHands = 0;
-var oneFramOfData = nj.zeros([5,4,6]);
+var oneFrameOfData = nj.zeros([5,4,6]);
 var numSamples = 100;
 var currentSample = 0;
 
