@@ -23,8 +23,8 @@ function Train(){
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),9)
 
-    features = train8ReckordGroten.pick(null,null,null,i)
-    features = train8ReckordGroten.reshape(1,120)
+    features = train8.pick(null,null,null,i)
+    features = train8.reshape(1,120)
     knnClassifier.addExample(features.tolist(),8)
   }
 }
