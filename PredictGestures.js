@@ -70,7 +70,7 @@ function CenterDataY(){
   for(var i = 0 ; i < 5 ; i++){
     for(var y = 0 ; y < 4 ; y ++){
       currentY = oneFrameOfData.get(i,y,0)
-      shiftedY = currenty + verticalShift
+      shiftedY = currentY + verticalShift
       oneFrameOfData.set(i,y,1,shiftedY)
       currentY = oneFrameOfData.get(i,y,0)
       shiftedY = currenty + verticalShift
