@@ -2,7 +2,7 @@ nj.config.printThreshold = 1000;
 const knnClassifier = ml5.KNNClassifier();
 var testingSampleIndex = 0
 var trainingCompleted = false
-
+var controllerOptions;
 
 function Train(){
   //console.log(train0.pick().toString())
@@ -35,12 +35,11 @@ function GotResults(err, result){
 }
 
 var l = true
-function draw(){
+leap.loop(controllerOptions, function(frame){
   clear();
   if(trainingCompleted == false){
     Train();
     trainingCompleted = true;
   }
   Test()
-
-}
+})
