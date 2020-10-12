@@ -23,9 +23,9 @@ function Train(){
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),9)
 
-    features = train6.pick(null,null,null,i)
+    features = train5.pick(null,null,null,i)
     features = features.reshape(1,120)
-    knnClassifier.addExample(features.tolist(),6)
+    knnClassifier.addExample(features.tolist(),5)
   }
 }
 function compute_prediction_7(c,d){
@@ -42,7 +42,7 @@ function Test(){
 }
 
 function GotResults(err, result){
-  compute_prediction_7(result.label,6);
+  compute_prediction_7(result.label,5);
 
 }
 function CenterDataX(){
