@@ -28,11 +28,11 @@ function Train(){
 function compute_prediction_7(c,d){
   n++
   m = (((n-1)*m) + (c==d))/n
-  //console.log(n,m,c)
+  console.log(n,m,c)
 }
 function Test(){
   var currentFeatures = oneFrameOfData
-  CenterDataX();
+  CenterDataX()
   CenterDataY()
   currentFeatures = currentFeatures.reshape(1,120)
   predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
@@ -79,7 +79,7 @@ function CenterDataY(){
   }
   yValues = oneFrameOfData.slice([],[],[1,6,3])
   currentMean = yValues.mean()
-  console.log(currentMean)
+  //console.log(currentMean)
 
 }
 
