@@ -28,22 +28,18 @@ function Train(){
 function compute_prediction_7(c,d){
   n++;
   m = (((n-1)*m) + (c==d))/n
-  
+  console.log(n,m,c)
 }
 function Test(){
   var currentFeatures = framesOfData
-  function CenterData()
   currentFeatures = currentFeatures.reshape(1,120)
   predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
 }
 
 function GotResults(err, result){
-  //compute_prediction_7(result.label,7)
+  compute_prediction_7(result.label,7)
 }
-function CenterData(){
-  var xValues = framesOfData.slice([],[],[0,6,3])
-  console.log(xValues.shape);
-}
+
 function HandleFrame(frame){
  clear();
 
