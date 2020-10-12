@@ -157,6 +157,7 @@ function RecordData(){
 }
 
 var l = true
+var v = false;
 Leap.loop(controllerOptions, function(frame){
   clear();
   if(trainingCompleted == false){
