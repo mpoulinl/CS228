@@ -98,32 +98,10 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   var canvasYStart = window.innerHeight * (1-y_start);
   var canvasYEnd =  window.innerHeight * (1-y_end);
 
-  if(currentNumbHands == 1){
-
     //line and line weight
     switch(type){
       case 0:
-      strokeWeight(5)
-      stroke(210)
-      break;
-      case 1:
-      strokeWeight(4)
-      stroke(70)
-      break;
-      case 2:
-      strokeWeight(3)
-      stroke(40)
-      break;
-      case 3:
-      strokeWeight(2)
-      stroke(10)
-      break;
-    }
-  }
-  else{
-    switch(type){
-      case 0:
-      strokeWeight(5)
+      strokeWeight(40)
       stroke(210)
       break;
       case 1:
@@ -140,7 +118,6 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
       break;
     }
 
-  }
   line(canvasXStart,canvasYStart,canvasXEnd,canvasYEnd);
 
 }
