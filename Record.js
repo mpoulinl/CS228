@@ -144,24 +144,17 @@ function RecordData(){
       currentSample = 0;
     }
   }
+  if(currentNumbHands == 2){
+    console.log(framesOfData.toString())
+  }
 
 }
-var v = false;
 //infinity loop
 Leap.loop(controllerOptions, function(frame){
   currentNumbHands = frame.hands.length;
   HandleFrame(frame);
-  if(v == false){
-    RecordData();
-    if(currentNumbHands == 2){
-      v = true;
-      console.log(framesOfData.toString() );
-    }
-  }
+  RecordData();
   previousNumHands = currentNumbHands;
-
-
-
 }
 
 );
