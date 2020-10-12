@@ -26,8 +26,11 @@ function Train(){
   }
 }
 function compute_prediction_7(c,d){
+  var r = (((n-1)*m) + (c==d))/n
   n++;
-  m = (((n-1)*m) + (c==d))/n
+  if(r!=0){
+    m = r
+  }
   console.log(n,m,c)
 }
 function Test(){
