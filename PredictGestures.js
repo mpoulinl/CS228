@@ -26,12 +26,13 @@ function Train(){
   }
 }
 function compute_prediction_7(c,d){
-  n++;
+  n++
   m = (((n-1)*m) + (c==d))/n
-  console.log(n,m,c)
+  //console.log(n,m,c)
 }
 function Test(){
   var currentFeatures = framesOfData
+  CenterData();
   currentFeatures = currentFeatures.reshape(1,120)
   predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
 }
@@ -39,7 +40,9 @@ function Test(){
 function GotResults(err, result){
   compute_prediction_7(result.label,7)
 }
-
+function CenterData(){
+  xValues = framesOfData.slice([],[],[0,6,3])
+}
 function HandleFrame(frame){
  clear();
 
