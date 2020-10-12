@@ -7,7 +7,7 @@ var controllerOptions = {};
 
 var previousNumHands = 0;
 var currentNumbHands = 0;
-var framesOfData = nj.zeros([5,4,6]);
+var oneFramOfData = nj.zeros([5,4,6]);
 var numSamples = 100;
 var currentSample = 0;
 
@@ -43,6 +43,20 @@ function GotResults(err, result){
 function CenterData(){
   var xValues = framesOfData.slice([],[],[0,6,3])
   var currentMean = xValues.mean()
+  var horizontalShift = 0.5 - currentMean
+
+  for(var i = 0 ; i < 5 ; i++){
+    for(var y = 0 ; y < 4 ; y ++){
+      currentX = oneFrameOfData.get(i,y,0)
+      shiftedX = currentX + horizontalShift
+      oneFrameOfData.set(i,y,0,shiftedX)
+      currentX = oneFrameOfData.get(i,y,3)
+      shiftedX = currentX + horizontalShift
+      oneFrameOfData.set(i,y,3,shiftedX)
+    }
+  }
+  xValues = framesOfData.slice([],[],[0,6,3])
+  currentMean = xValues.mean()
   console.log(currentMean)
 
 }
