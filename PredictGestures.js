@@ -39,7 +39,8 @@ function Test(){
 }
 
 function GotResults(err, result){
-  compute_prediction_7(result.label,9)
+  compute_prediction_7(result.label,9);
+   
 }
 function CenterDataX(){
   var xValues = oneFrameOfData.slice([],[],[0,6,3])
