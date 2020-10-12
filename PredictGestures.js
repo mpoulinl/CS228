@@ -42,7 +42,8 @@ function GotResults(err, result){
 }
 function CenterData(){
   xValues = framesOfData.slice([],[],[0,6,3])
-  console.log(xValues.toString())
+  console.log(xValues.shape)
+  
 }
 function HandleFrame(frame){
  clear();
