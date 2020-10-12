@@ -41,9 +41,10 @@ function GotResults(err, result){
   compute_prediction_7(result.label,7)
 }
 function CenterData(){
-  xValues = framesOfData.slice([],[],[0,6,3])
-  console.log(xValues.shape)
-  
+  var xValues = framesOfData.slice([],[],[0,6,3])
+  var currentMean = xValues.mean()
+  console.log(currentMean)
+
 }
 function HandleFrame(frame){
  clear();
