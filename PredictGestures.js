@@ -26,7 +26,7 @@ function Train(){
 }
 
 function Test(){
-  var currentFeatures = test.pick(null,null,null,testingSampleIndex)
+  var currentFeatures = framesOfData
   currentFeatures = currentFeatures.reshape(1,120)
   predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
 }
@@ -93,6 +93,8 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   framesOfData.set(fingerIndex,type,4,y_end);
   framesOfData.set(fingerIndex,type,5,1);
 
+  Test()
+
   var canvasXStart = window.innerWidth * x_start;
   var canvasXEnd = window.innerWidth * x_end;
   var canvasYStart = window.innerHeight * (1-y_start);
@@ -148,5 +150,5 @@ Leap.loop(controllerOptions, function(frame){
   HandleFrame(frame);
   //previousNumHands = currentNumbHands;
   console.log(framesOfData.toString())
-  Test()
+
 })
