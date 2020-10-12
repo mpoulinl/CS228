@@ -21,8 +21,11 @@ function Train(){
 
     features = train9.pick(null,null,null,i)
     features = features.reshape(1,120)
-
     knnClassifier.addExample(features.tolist(),9)
+
+    features = train8ReckordGroten.pick(null,null,null,i)
+    features = train8ReckordGroten.reshape(1,120)
+    knnClassifier.addExample(features.tolist(),8)
   }
 }
 function compute_prediction_7(c,d){
@@ -39,8 +42,8 @@ function Test(){
 }
 
 function GotResults(err, result){
-  compute_prediction_7(result.label,9);
-   
+  compute_prediction_7(result.label,8);
+
 }
 function CenterDataX(){
   var xValues = oneFrameOfData.slice([],[],[0,6,3])
