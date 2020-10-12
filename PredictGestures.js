@@ -26,7 +26,7 @@ function Train(){
   }
 }
 function compute_prediction_7(c,d){
-  m = ()((n-1)*m) + (c==d))/n
+  m = (((n-1)*m) + (c==d))/n
   n++;
 }
 function Test(){
