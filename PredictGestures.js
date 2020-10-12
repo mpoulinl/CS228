@@ -32,8 +32,8 @@ function Test(){
 }
 
 function GotResults(err, result){
-
-  console.log(result.label)
+  var log_result = [testingSampleIndex,result.label]
+  console.log(log_result)
   testingSampleIndex++;
   if(testingSampleIndex > train7.shape[3]){
     testingSampleIndex = 0;
@@ -149,6 +149,5 @@ Leap.loop(controllerOptions, function(frame){
   //currentNumbHands = frame.hands.length;
   HandleFrame(frame);
   //previousNumHands = currentNumbHands;
-  console.log(framesOfData.toString())
 
 })
