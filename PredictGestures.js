@@ -42,6 +42,7 @@ function GotResults(err, result){
 }
 function CenterData(){
   xValues = framesOfData.slice([],[],[0,6,3])
+  console.log(xValues.toString())
 }
 function HandleFrame(frame){
  clear();
