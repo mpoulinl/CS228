@@ -32,7 +32,8 @@ function compute_prediction_7(c,d){
 }
 function Test(){
   var currentFeatures = oneFrameOfData
-  CenterData();
+  CenterDataX();
+  CenterDataY()
   currentFeatures = currentFeatures.reshape(1,120)
   predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
 }
@@ -40,7 +41,7 @@ function Test(){
 function GotResults(err, result){
   compute_prediction_7(result.label,7)
 }
-function CenterData(){
+function CenterDataX(){
   var xValues = oneFrameOfData.slice([],[],[0,6,3])
   var currentMean = xValues.mean()
   var horizontalShift = 0.5 - currentMean
@@ -57,9 +58,33 @@ function CenterData(){
   }
   xValues = oneFrameOfData.slice([],[],[0,6,3])
   currentMean = xValues.mean()
+  //console.log(currentMean)
+
+}
+
+function CenterDataY(){
+  var yValues = oneFrameOfData.slice([],[],[1,6,3])
+  var currentMean = yValues.mean()
+  var verticalShift = 0.5 - currentMean
+
+  for(var i = 0 ; i < 5 ; i++){
+    for(var y = 0 ; y < 4 ; y ++){
+      currentY = oneFrameOfData.get(i,y,0)
+      shiftedY = currenty + verticalShift
+      oneFrameOfData.set(i,y,1,shiftedY)
+      currentY = oneFrameOfData.get(i,y,0)
+      shiftedY = currenty + verticalShift
+      oneFrameOfData.set(i,y,4,shiftedY)
+    }
+  }
+  yValues = oneFrameOfData.slice([],[],[1,6,3])
+  currentMean = yValues.mean()
   console.log(currentMean)
 
 }
+
+
+
 function HandleFrame(frame){
  clear();
 
@@ -144,19 +169,6 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
 
 }
 
-
-// function RecordData(){
-//   if(currentNumbHands == 1){
-//     currentSample++;
-//     if(currentSample == numSamples){
-//       currentSample = 0;
-//     }
-//   }
-//   if(currentNumbHands == 2 && previousNumHands == 1){
-//     console.log(oneFrameOfData.toString())
-//   }
-//
-// }
 
 var l = true
 Leap.loop(controllerOptions, function(frame){
