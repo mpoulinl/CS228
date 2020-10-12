@@ -153,11 +153,13 @@ function RecordData(){
       currentSample = 0;
     }
   }
+  if(currentNumbHands == 2 && previousNumHands == 1){
+    console.log(framesOfData.toString())
+  }
 
 }
 
 var l = true
-var v = false;
 Leap.loop(controllerOptions, function(frame){
   clear();
   if(trainingCompleted == false){
