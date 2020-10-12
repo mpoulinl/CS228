@@ -6,7 +6,7 @@ var controllerOptions = {};
 
 var previousNumHands = 0;
 var currentNumbHands = 0;
-var framesOfData = nj.zeros([5,4,6,100]);
+var framesOfData = nj.zeros([5,4,6]);
 var numSamples = 100;
 var currentSample = 0;
 
@@ -86,12 +86,12 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   var z_end = bone_end[2];
 
 
-  // framesOfData.set(fingerIndex,type,0,currentSample,x_start);
-  // framesOfData.set(fingerIndex,type,1,currentSample,y_start);
-  // framesOfData.set(fingerIndex,type,2,currentSample,1);
-  // framesOfData.set(fingerIndex,type,3,currentSample,x_end);
-  // framesOfData.set(fingerIndex,type,4,currentSample,y_end);
-  // framesOfData.set(fingerIndex,type,5,currentSample,1);
+  framesOfData.set(fingerIndex,type,0,x_start);
+  framesOfData.set(fingerIndex,type,1,y_start);
+  framesOfData.set(fingerIndex,type,2,1);
+  framesOfData.set(fingerIndex,type,3,x_end);
+  framesOfData.set(fingerIndex,type,4,y_end);
+  framesOfData.set(fingerIndex,type,5,1);
 
   var canvasXStart = window.innerWidth * x_start;
   var canvasXEnd = window.innerWidth * x_end;
