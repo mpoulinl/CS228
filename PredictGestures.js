@@ -28,6 +28,7 @@ function Train(){
 function compute_prediction_7(c,d){
   m = (((n-1)*m) + (c==d))/n
   n++;
+  console.log(n,m,c)
 }
 function Test(){
   var currentFeatures = framesOfData
@@ -36,7 +37,6 @@ function Test(){
 }
 
 function GotResults(err, result){
-  console.log("ji",4)
   compute_prediction_7(result.label,7)
 }
 
