@@ -33,7 +33,7 @@ function Test(){
 
 function GotResults(err, result){
   var log_result = [testingSampleIndex,result.label]
-  console.log(log_result)
+  console.log(log_result.toString())
   testingSampleIndex++;
   if(testingSampleIndex > train7.shape[3]){
     testingSampleIndex = 0;
