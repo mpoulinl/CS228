@@ -34,7 +34,7 @@ function GotResults(err, result){
 }
 
 var l = true
-leap.loop(controllerOptions, function(frame){
+Leap.loop(controllerOptions, function(frame){
   clear();
   if(trainingCompleted == false){
     Train();
