@@ -86,12 +86,12 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   var z_end = bone_end[2];
 
 
-  framesOfData.set(fingerIndex,type,0,currentSample,x_start);
-  framesOfData.set(fingerIndex,type,1,currentSample,y_start);
-  framesOfData.set(fingerIndex,type,2,currentSample,1);
-  framesOfData.set(fingerIndex,type,3,currentSample,x_end);
-  framesOfData.set(fingerIndex,type,4,currentSample,y_end);
-  framesOfData.set(fingerIndex,type,5,currentSample,1);
+  // framesOfData.set(fingerIndex,type,0,currentSample,x_start);
+  // framesOfData.set(fingerIndex,type,1,currentSample,y_start);
+  // framesOfData.set(fingerIndex,type,2,currentSample,1);
+  // framesOfData.set(fingerIndex,type,3,currentSample,x_end);
+  // framesOfData.set(fingerIndex,type,4,currentSample,y_end);
+  // framesOfData.set(fingerIndex,type,5,currentSample,1);
 
   var canvasXStart = window.innerWidth * x_start;
   var canvasXEnd = window.innerWidth * x_end;
@@ -104,19 +104,19 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
     switch(type){
       case 0:
       strokeWeight(5)
-      stroke('rgb(150,243,68)')
+      stroke(210)
       break;
       case 1:
       strokeWeight(4)
-      stroke('rgb(100,202,10)')
+      stroke(70)
       break;
       case 2:
       strokeWeight(3)
-      stroke('rgb(73,148,7)')
+      stroke(40)
       break;
       case 3:
       strokeWeight(2)
-      stroke('rgb(34,70,3)')
+      stroke(10)
       break;
     }
   }
@@ -124,19 +124,19 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
     switch(type){
       case 0:
       strokeWeight(5)
-      stroke('rgb(255,4,4)')
+      stroke(210)
       break;
       case 1:
       strokeWeight(4)
-      stroke('rgb(205,14,14)')
+      stroke(70)
       break;
       case 2:
       strokeWeight(3)
-      stroke('rgb(156,9,9)')
+      stroke(40)
       break;
       case 3:
       strokeWeight(2)
-      stroke('rgb(91,3,3)')
+      stroke(10)
       break;
     }
 
