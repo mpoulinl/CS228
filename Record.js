@@ -137,6 +137,7 @@ function TransformCoordinates(x,y) {
   return[x_pos,y_pos];
 }
 
+var print = false;
 function RecordData(){
   if(currentNumbHands == 1){
     currentSample++;
@@ -144,8 +145,9 @@ function RecordData(){
       currentSample = 0;
     }
   }
-  if(currentNumbHands == 2){
+  if(currentNumbHands == 2 && print == false){
     console.log(framesOfData.toString())
+    print = true;
   }
 
 }
