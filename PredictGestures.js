@@ -42,7 +42,7 @@ function Test(){
 }
 
 function GotResults(err, result){
-  compute_prediction_7(result.label,9);
+  compute_prediction_7(result.label,7);
 
 }
 function CenterDataX(){
