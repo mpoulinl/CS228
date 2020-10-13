@@ -75,7 +75,7 @@ function Test(){
 }
 
 function GotResults(err, result){
-  compute_prediction_7(result.label,1);
+  compute_prediction_7(result.label,5);
 
 }
 function CenterDataX(){
