@@ -15,17 +15,50 @@ function Train(){
   //console.log(train0.pick().toString())
   for(var i = 0 ; i < train7.shape[3] ; i++){
 
-    var features = train7.pick(null,null,null,i)
-    features = features.reshape(1,120)
-    knnClassifier.addExample(features.tolist(),7)
 
-    features = train9.pick(null,null,null,i)
+    features = train0.pick(null,null,null,i)
     features = features.reshape(1,120)
-    knnClassifier.addExample(features.tolist(),9)
+    knnClassifier.addExample(features.tolist(),0)
+
+    // features = train1.pick(null,null,null,i)
+    // features = features.reshape(1,120)
+    // knnClassifier.addExample(features.tolist(),1)
+    //
+    // features = train2.pick(null,null,null,i)
+    // features = features.reshape(1,120)
+    // knnClassifier.addExample(features.tolist(),2)
+    //
+    // features = train3.pick(null,null,null,i)
+    // features = features.reshape(1,120)
+    // knnClassifier.addExample(features.tolist(),3)
+    //
+    // features = train4.pick(null,null,null,i)
+    // features = features.reshape(1,120)
+    // knnClassifier.addExample(features.tolist(),4)
 
     features = train5.pick(null,null,null,i)
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),5)
+
+    // features = train6.pick(null,null,null,i)
+    // features = features.reshape(1,120)
+    // knnClassifier.addExample(features.tolist(),6)
+
+    var features = train7.pick(null,null,null,i)
+    features = features.reshape(1,120)
+    knnClassifier.addExample(features.tolist(),7)
+
+    // features = train8.pick(null,null,null,i)
+    // features = features.reshape(1,120)
+    // knnClassifier.addExample(features.tolist(),8)
+
+    features = train9.pick(null,null,null,i)
+    features = features.reshape(1,120)
+    knnClassifier.addExample(features.tolist(),9)
+    //
+    // features = train10.pick(null,null,null,i)
+    // features = features.reshape(1,120)
+    // knnClassifier.addExample(features.tolist(),10)
   }
 }
 function compute_prediction_7(c,d){
