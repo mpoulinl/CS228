@@ -23,10 +23,10 @@ function Train(){
     features = train1.pick(null,null,null,i)
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),1)
-    //
-    // features = train2.pick(null,null,null,i)
-    // features = features.reshape(1,120)
-    // knnClassifier.addExample(features.tolist(),2)
+
+    features = train2.pick(null,null,null,i)
+    features = features.reshape(1,120)
+    knnClassifier.addExample(features.tolist(),2)
     //
     // features = train3.pick(null,null,null,i)
     // features = features.reshape(1,120)
