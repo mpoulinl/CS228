@@ -27,7 +27,7 @@ function Train(){
     features = train2.pick(null,null,null,i)
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),2)
-    
+
     features = train3.pick(null,null,null,i)
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),3)
@@ -72,8 +72,8 @@ function Test(){
 }
 
 function GotResults(err, result){
-  compute_prediction_7(result.label,2);
-
+  //compute_prediction_7(result.label,2);
+  console.log(result.label)
 }
 function CenterDataX(){
   var xValues = oneFrameOfData.slice([],[],[0,6,3])
