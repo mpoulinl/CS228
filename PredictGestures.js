@@ -191,7 +191,7 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
       break;
       case 2:
       strokeWeight(10)
-      stroke(40)
+      stroke(70)
       break;
       case 3:
       strokeWeight(5)
