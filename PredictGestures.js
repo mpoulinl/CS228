@@ -38,7 +38,7 @@ function Train(){
 
 
 
-    features = train3Jing.pick(null,null,null,i)
+    features = train3maude.pick(null,null,null,i)
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),3)
 
