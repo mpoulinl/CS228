@@ -59,54 +59,6 @@ function Train(){
     features = train9.pick(null,null,null,i)
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),9)
-    // features = train2.pick(null,null,null,i)
-    // features = features.reshape(1,120)
-    // knnClassifier.addExample(features.tolist(),2)
-    //
-    // features = train2maude.pick(null,null,null,i)
-    // features = features.reshape(1,120)
-    // knnClassifier.addExample(features.tolist(),2)
-    //
-    //
-    //
-    // features = train3maude.pick(null,null,null,i)
-    // features = features.reshape(1,120)
-    // knnClassifier.addExample(features.tolist(),3)
-
-    // features = train4.pick(null,null,null,i)
-    // features = features.reshape(1,120)
-    // knnClassifier.addExample(features.tolist(),4)
-    //
-    // features = train5.pick(null,null,null,i)
-    // features = features.reshape(1,120)
-    // knnClassifier.addExample(features.tolist(),5)
-    //
-    // features = train6.pick(null,null,null,i)
-    // features = features.reshape(1,120)
-    // knnClassifier.addExample(features.tolist(),6)
-    //
-    // var features = train7.pick(null,null,null,i)
-    // features = features.reshape(1,120)
-    // knnClassifier.addExample(features.tolist(),7)
-    //
-    // features = train8.pick(null,null,null,i)
-    // features = features.reshape(1,120)
-    // knnClassifier.addExample(features.tolist(),8)
-    //
-    // features = train9.pick(null,null,null,i)
-    // features = features.reshape(1,120)
-    // knnClassifier.addExample(features.tolist(),9)
-    //
-    //
-    // features = train1Davis.pick(null,null,null,i)
-    // features = features.reshape(1,120)
-    // knnClassifier.addExample(features.tolist(),1)
-
-    // features = train1Li.pick(null,null,null,i)
-    // features = features.reshape(1,120)
-    // knnClassifier.addExample(features.tolist(),1)
-
-
 
   }
 }
@@ -117,9 +69,9 @@ function compute_prediction_7(c,d){
 }
 function Test(){
   var currentFeatures = oneFrameOfData
-  // CenterDataX()
-  // CenterDataY()
-  // CenterDataZ()
+  CenterDataX()
+  CenterDataY()
+  CenterDataZ()
   currentFeatures = currentFeatures.reshape(1,120)
   predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
 }
