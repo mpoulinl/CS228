@@ -34,7 +34,7 @@ function Train(){
 
     features = train2maude.pick(null,null,null,i)
     features = features.reshape(1,120)
-    knnClassifier.addExample(features.tolist(),3)
+    knnClassifier.addExample(features.tolist(),2)
 
 
     //
