@@ -77,6 +77,10 @@ function Train(){
     knnClassifier.addExample(features.tolist(),3)
 
 
+    features = train4OBrien.pick(null,null,null,i)
+    features = features.reshape(1,120)
+    knnClassifier.addExample(features.tolist(),4)
+
 
 
   }
