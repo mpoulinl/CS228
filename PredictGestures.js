@@ -16,9 +16,9 @@ function Train(){
   for(var i = 0 ; i < 100 ; i++){
 
 
-    // features = train0.pick(null,null,null,i)
-    // features = features.reshape(1,120)
-    // knnClassifier.addExample(features.tolist(),0)
+    features = train0.pick(null,null,null,i)
+    features = features.reshape(1,120)
+    knnClassifier.addExample(features.tolist(),0)
 
     features = train1.pick(null,null,null,i)
     features = features.reshape(1,120)
