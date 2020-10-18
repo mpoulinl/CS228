@@ -94,8 +94,8 @@ function Test(){
 }
 
 function GotResults(err, result){
-  //compute_prediction_7(result.label,1);
-  console.log(result.label)
+  compute_prediction_7(result.label,1);
+  //console.log(result.label)
 }
 function CenterDataX(){
   var xValues = oneFrameOfData.slice([],[],[0,6,3])
