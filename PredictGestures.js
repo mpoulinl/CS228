@@ -20,10 +20,6 @@ function Train(){
     // features = features.reshape(1,120)
     // knnClassifier.addExample(features.tolist(),0)
 
-    features = train1Rice.pick(null,null,null,i)
-    features = features.reshape(1,120)
-    knnClassifier.addExample(features.tolist(),1)
-
     features = train1.pick(null,null,null,i)
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),1)
@@ -32,15 +28,19 @@ function Train(){
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),2)
 
-    features = train2maude.pick(null,null,null,i)
-    features = features.reshape(1,120)
-    knnClassifier.addExample(features.tolist(),2)
-
-
-
-    features = train3maude.pick(null,null,null,i)
-    features = features.reshape(1,120)
-    knnClassifier.addExample(features.tolist(),3)
+    // features = train2.pick(null,null,null,i)
+    // features = features.reshape(1,120)
+    // knnClassifier.addExample(features.tolist(),2)
+    //
+    // features = train2maude.pick(null,null,null,i)
+    // features = features.reshape(1,120)
+    // knnClassifier.addExample(features.tolist(),2)
+    //
+    //
+    //
+    // features = train3maude.pick(null,null,null,i)
+    // features = features.reshape(1,120)
+    // knnClassifier.addExample(features.tolist(),3)
 
     // features = train4.pick(null,null,null,i)
     // features = features.reshape(1,120)
@@ -86,9 +86,9 @@ function compute_prediction_7(c,d){
 }
 function Test(){
   var currentFeatures = oneFrameOfData
-  CenterDataX()
-  CenterDataY()
-  CenterDataZ()
+  // CenterDataX()
+  // CenterDataY()
+  // CenterDataZ()
   currentFeatures = currentFeatures.reshape(1,120)
   predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
 }
