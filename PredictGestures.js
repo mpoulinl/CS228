@@ -17,7 +17,6 @@ function Train(){
 
     console.log(train7.shape[3])
 
-    console.log(train7.pick(null,null,null,3).toString())
     // features = train0.pick(null,null,null,i)
     // features = features.reshape(1,120)
     // knnClassifier.addExample(features.tolist(),0)
@@ -73,6 +72,7 @@ function Test(){
   var currentFeatures = oneFrameOfData
   CenterDataX()
   CenterDataY()
+  CenterDataZ()
   currentFeatures = currentFeatures.reshape(1,120)
   predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
 }
@@ -123,6 +123,26 @@ function CenterDataY(){
 
 }
 
+function CenterDataZ(){
+  var zValues = oneFrameOfData.slice([],[],[2,6,3])
+  var currentMean = zValues.mean()
+  var verticalShift = 0.5 - currentMean
+
+  for(var i = 0 ; i < 5 ; i++){
+    for(var y = 0 ; y < 4 ; y ++){
+      currentz = oneFrameOfData.get(i,y,2)
+      shiftedz = currentz + verticalShift
+      oneFrameOfData.set(i,y,2,shiftedY)
+      currentz = oneFrameOfData.get(i,y,5)
+      shiftedz = currentz + verticalShift
+      oneFrameOfData.set(i,y,5,shiftedz)
+    }
+  }
+  zValues = oneFrameOfData.slice([],[],[2,6,3])
+  currentMean = zValues.mean()
+  //console.log(currentMean)
+
+}
 
 
 function HandleFrame(frame){
