@@ -13,7 +13,7 @@ var currentSample = 0;
 
 function Train(){
   //console.log(train0.pick().toString())
-  for(var i = 0 ; i < train7.shape[3] ; i++){
+  for(var i = 0 ; i < 100 ; i++){
 
 
     features = train0.pick(null,null,null,i)
