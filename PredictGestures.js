@@ -43,6 +43,14 @@ function Train(){
     features = train6.pick(null,null,null,i)
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),6)
+
+    features = train7.pick(null,null,null,i)
+    features = features.reshape(1,120)
+    knnClassifier.addExample(features.tolist(),7)
+
+    features = train8.pick(null,null,null,i)
+    features = features.reshape(1,120)
+    knnClassifier.addExample(features.tolist(),8)
     // features = train2.pick(null,null,null,i)
     // features = features.reshape(1,120)
     // knnClassifier.addExample(features.tolist(),2)
