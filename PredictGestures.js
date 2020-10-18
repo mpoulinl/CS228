@@ -53,9 +53,9 @@ function Train(){
     // features = features.reshape(1,120)
     // knnClassifier.addExample(features.tolist(),8)
     //
-    // features = train9.pick(null,null,null,i)
-    // features = features.reshape(1,120)
-    // knnClassifier.addExample(features.tolist(),9)
+    features = train9.pick(null,null,null,i)
+    features = features.reshape(1,120)
+    knnClassifier.addExample(features.tolist(),9)
 
 
 
