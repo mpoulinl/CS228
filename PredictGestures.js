@@ -57,23 +57,12 @@ function Train(){
     knnClassifier.addExample(features.tolist(),9)
 
 
-    //extra
-    features = train1Bongard.pick(null,null,null,i)
-    features = features.reshape(1,120)
-    knnClassifier.addExample(features.tolist(),1)
-
-    features = train1Davis.pick(null,null,null,i)
-    features = features.reshape(1,120)
-    knnClassifier.addExample(features.tolist(),1)
 
 
     features = train2OBrien.pick(null,null,null,i)
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),2)
 
-    features = train2Bongard.pick(null,null,null,i)
-    features = features.reshape(1,120)
-    knnClassifier.addExample(features.tolist(),2)
   }
 }
 function compute_prediction_7(c,d){
