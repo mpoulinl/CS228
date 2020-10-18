@@ -81,6 +81,10 @@ function Train(){
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),4)
 
+    features = train5Luksevish.pick(null,null,null,i)
+    features = features.reshape(1,120)
+    knnClassifier.addExample(features.tolist(),5)
+
 
 
   }
