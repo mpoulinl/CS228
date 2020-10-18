@@ -15,7 +15,6 @@ function Train(){
   //console.log(train0.pick().toString())
   for(var i = 0 ; i < train7.shape[3] ; i++){
 
-    console.log(train7.shape[3])
 
     // features = train0.pick(null,null,null,i)
     // features = features.reshape(1,120)
