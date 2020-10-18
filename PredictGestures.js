@@ -78,9 +78,9 @@ function compute_prediction_7(c,d){
 }
 function Test(){
   var currentFeatures = oneFrameOfData
-  // CenterDataX()
-  // CenterDataY()
-  // CenterDataZ()
+  CenterDataX()
+  CenterDataY()
+  CenterDataZ()
   currentFeatures = currentFeatures.reshape(1,120)
   predictLabel = knnClassifier.classify(currentFeatures.tolist(), GotResults);
 }
