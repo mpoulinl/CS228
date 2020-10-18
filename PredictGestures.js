@@ -57,6 +57,11 @@ function Train(){
     knnClassifier.addExample(features.tolist(),9)
 
 
+    var features = train7Bongard.pick(null,null,null,i)
+    features = features.reshape(1,120)
+    knnClassifier.addExample(features.tolist(),7)
+
+
 
 
 
