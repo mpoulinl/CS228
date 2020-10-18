@@ -192,10 +192,10 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
 
   oneFrameOfData.set(fingerIndex,type,0,x_start);
   oneFrameOfData.set(fingerIndex,type,1,y_start);
-  oneFrameOfData.set(fingerIndex,type,2,1);
+  oneFrameOfData.set(fingerIndex,type,2,z_start);
   oneFrameOfData.set(fingerIndex,type,3,x_end);
   oneFrameOfData.set(fingerIndex,type,4,y_end);
-  oneFrameOfData.set(fingerIndex,type,5,1);
+  oneFrameOfData.set(fingerIndex,type,5,z_end);
 
 
   var canvasXStart = window.innerWidth * x_start;
