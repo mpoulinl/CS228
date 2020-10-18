@@ -24,13 +24,13 @@ function Train(){
     // features = features.reshape(1,120)
     // knnClassifier.addExample(features.tolist(),1)
     //
-    // features = train2.pick(null,null,null,i)
-    // features = features.reshape(1,120)
-    // knnClassifier.addExample(features.tolist(),2)
-    //
-    // features = train3.pick(null,null,null,i)
-    // features = features.reshape(1,120)
-    // knnClassifier.addExample(features.tolist(),3)
+    features = train2.pick(null,null,null,i)
+    features = features.reshape(1,120)
+    knnClassifier.addExample(features.tolist(),2)
+
+    features = train3.pick(null,null,null,i)
+    features = features.reshape(1,120)
+    knnClassifier.addExample(features.tolist(),3)
     //
     // features = train4.pick(null,null,null,i)
     // features = features.reshape(1,120)
@@ -43,28 +43,28 @@ function Train(){
     // features = train6.pick(null,null,null,i)
     // features = features.reshape(1,120)
     // knnClassifier.addExample(features.tolist(),6)
-
-    var features = train7.pick(null,null,null,i)
-    features = features.reshape(1,120)
-    knnClassifier.addExample(features.tolist(),7)
+    //
+    // var features = train7.pick(null,null,null,i)
+    // features = features.reshape(1,120)
+    // knnClassifier.addExample(features.tolist(),7)
 
     // features = train8.pick(null,null,null,i)
     // features = features.reshape(1,120)
     // knnClassifier.addExample(features.tolist(),8)
     //
-    features = train9.pick(null,null,null,i)
-    features = features.reshape(1,120)
-    knnClassifier.addExample(features.tolist(),9)
-
-
-    var features = train7Bongard.pick(null,null,null,i)
-    features = features.reshape(1,120)
-    knnClassifier.addExample(features.tolist(),7)
-
-
-    var features = train7Pooprasert.pick(null,null,null,i)
-    features = features.reshape(1,120)
-    knnClassifier.addExample(features.tolist(),7)
+    // features = train9.pick(null,null,null,i)
+    // features = features.reshape(1,120)
+    // knnClassifier.addExample(features.tolist(),9)
+    //
+    //
+    // var features = train7Bongard.pick(null,null,null,i)
+    // features = features.reshape(1,120)
+    // knnClassifier.addExample(features.tolist(),7)
+    //
+    //
+    // var features = train7Pooprasert.pick(null,null,null,i)
+    // features = features.reshape(1,120)
+    // knnClassifier.addExample(features.tolist(),7)
 
 
 
