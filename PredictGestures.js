@@ -264,7 +264,7 @@ function HandIsTooFarToTheRight(){
 
 function HandIsTooFarToHigh(){
   if(CenterDataY() < 0.25 ){
-    image(arrowUP, 0, 0, window.innerWidth/2, window.innerHeight/2);
+    image(arrowUP, 0, 0, window.innerWidth/2, window.innerHeight/1.95);
     return true;
   }
   else{
@@ -274,7 +274,7 @@ function HandIsTooFarToHigh(){
 
 function HandIsTooFarToLow(){
   if(CenterDataY() > 0.75 ){
-    image(arrowDown, 0, 0, window.innerWidth/2, window.innerHeight/1.9);
+    image(arrowDown, 0, 0, window.innerWidth/2, window.innerHeight/1.95);
     return true;
   }
   else{
