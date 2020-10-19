@@ -268,7 +268,7 @@ function DetermineState(frame){
 
 function HandIsUncentered(){
 
-  if(HandIsTooFarToTheLeft()){
+  if(HandIsTooFarToTheLeft() || HandIsTooFarToTheRight()){
     return true;
   }
   else{
@@ -279,6 +279,17 @@ function HandIsUncentered(){
 
 function HandIsTooFarToTheLeft(){
   if(CenterDataX() < 0.25 ){
+    image(arrowRight, 0, 0, window.innerWidth/2, window.innerHeight/2);
+    return true;
+    console.log("off")
+  }
+  else{
+    return false;
+  }
+}
+
+function HandIsTooFarToTheLeft(){
+  if(CenterDataX() > 0.50 ){
     image(arrowRight, 0, 0, window.innerWidth/2, window.innerHeight/2);
     return true;
     console.log("off")
