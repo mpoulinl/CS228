@@ -277,6 +277,7 @@ function DetermineState(frame){
 
 function HandIsUncentered(){
   HandIsTooFarToTheLeft()
+  return true;
 }
 
 function HandIsTooFarToTheLeft(){
