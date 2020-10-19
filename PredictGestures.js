@@ -285,6 +285,13 @@ function HandleState1(frame) {
 function DrawImageToHelpUserPutTheirHandOverTheDevice(){
 
 }
+
+function TrainKNNIfNotDoneYet() {
+  if(trainingCompleted == false){
+    // Train();
+    trainingCompleted = true;
+  }
+}
 Leap.loop(controllerOptions, function(frame){
   clear();
   DetermineState(frame);
