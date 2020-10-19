@@ -115,6 +115,7 @@ function GotResults(err, result){
   console.log(result.label)
 }
 function CenterDataX(){
+  var newFrameOfData = oneFrameOfData;
   var xValues = oneFrameOfData.slice([],[],[0,6,3])
   var currentMean = xValues.mean()
   var horizontalShift = 0.5 - currentMean
@@ -123,14 +124,15 @@ function CenterDataX(){
     for(var y = 0 ; y < 4 ; y ++){
       currentX = oneFrameOfData.get(i,y,0)
       shiftedX = currentX + horizontalShift
-      oneFrameOfData.set(i,y,0,shiftedX)
+      newFrameOfData.set(i,y,0,shiftedX)
       currentX = oneFrameOfData.get(i,y,3)
       shiftedX = currentX + horizontalShift
-      oneFrameOfData.set(i,y,3,shiftedX)
+      newFrameOfData.set(i,y,3,shiftedX)
     }
   }
-  xValues = oneFrameOfData.slice([],[],[0,6,3])
+  xValues = newFrameOfData.slice([],[],[0,6,3])
   currentMean = xValues.mean()
+  return currentMean
   //console.log(currentMean)
 
 }
@@ -276,11 +278,23 @@ function DetermineState(frame){
 }
 
 function HandIsUncentered(){
-  return true;
+  if(HandIsTooFarToTheLeft){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
+
 function HandIsTooFarToTheLeft(){
-  return true;
+  if(CenterDataX <= 0.25 ){
+    return true;
+    console.log("off")
+  }
+  else{
+    return false;
+  }
 }
 
 function HandleState0(frame) {
