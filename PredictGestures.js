@@ -293,7 +293,7 @@ function HandIsTooFarToLow(){
 
 function HandIsTooClose(){
   if(CenterDataZ() < 0.25 ){
-    image(arrowToward, 0, 0, window.innerWidth/2, window.innerHeight/1.95);
+    image(arrowAway, 0, 0, window.innerWidth/2, window.innerHeight/1.95);
     return true;
   }
   else{
