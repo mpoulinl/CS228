@@ -255,11 +255,14 @@ function DetermineState(frame){
   if(frame.hands.length  == 0){
     programState = 0
   }
-  else if(HandIsUncentered()){
-    programState = 1
-  }
   else{
-    programState = 2
+    HandleFrame(frame)
+    if(HandIsUncentered()){
+      programState = 1
+    }
+    else{
+      programState = 2
+    }
   }
 }
 
@@ -275,7 +278,6 @@ function HandIsUncentered(){
 
 
 function HandIsTooFarToTheLeft(){
-  HandleFrame(frame);
   if(CenterDataX() < 0.25 ){
     image(arrowRight, 10, 10, window.innerWidth/2.2, window.innerHeight/2.2);
     return true;
