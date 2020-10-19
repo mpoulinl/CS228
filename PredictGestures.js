@@ -129,6 +129,14 @@ function CenterDataY(){
 
 }
 
+function CenterDataZ(){
+  var zValues = oneFrameOfData.slice([],[],[2,6,3])
+  var currentMean = zValues.mean()
+  return currentMean
+
+
+}
+
 
 
 function HandleFrame(frame){
@@ -233,7 +241,7 @@ function DetermineState(frame){
 
 function HandIsUncentered(){
 
-  if(HandIsTooFarToTheLeft() || HandIsTooFarToTheRight() || HandIsTooFarToHigh() || HandIsTooFarToLow()){
+  if(HandIsTooFarToTheLeft() || HandIsTooFarToTheRight() || HandIsTooFarToHigh() || HandIsTooFarToLow() || HandIsTooFar() || HandIsTooClose() ){
     return true;
   }
   else{
@@ -275,6 +283,26 @@ function HandIsTooFarToHigh(){
 function HandIsTooFarToLow(){
   if(CenterDataY() > 0.75 ){
     image(arrowDown, 0, 0, window.innerWidth/2, window.innerHeight/1.95);
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+function HandIsTooClose(){
+  if(CenterDataZ() < 0.25 ){
+    image(arrowToward, 0, 0, window.innerWidth/2, window.innerHeight/1.95);
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+function HandIsTooFar(){
+  if(CenterDataZ() > 0.75 ){
+    image(arrowToward, 0, 0, window.innerWidth/2, window.innerHeight/1.95);
     return true;
   }
   else{
