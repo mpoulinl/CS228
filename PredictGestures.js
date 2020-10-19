@@ -288,7 +288,7 @@ function HandIsUncentered(){
 
 
 function HandIsTooFarToTheLeft(){
-  if(CenterDataX <= 0.25 ){
+  if(CenterDataX() <= 0.25 ){
     return true;
     console.log("off")
   }
