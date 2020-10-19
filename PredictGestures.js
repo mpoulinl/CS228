@@ -276,7 +276,6 @@ function DetermineState(frame){
 }
 
 function HandIsUncentered(){
-  HandIsTooFarToTheLeft()
   return true;
 }
 
@@ -289,7 +288,6 @@ function HandleState0(frame) {
   DrawImageToHelpUserPutTheirHandOverTheDevice()
 }
 function HandleState1(frame) {
-  HandleFrame(frame);
   //test
 }
 function HandleState2(frame) {
