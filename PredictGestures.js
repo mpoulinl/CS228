@@ -11,6 +11,8 @@ var oneFrameOfData = nj.zeros([5,4,6]);
 var numSamples = 100;
 var currentSample = 0;
 
+var programState = 0;
+
 function Train(){
   //console.log(train0.pick().toString())
   for(var i = 0 ; i < 100 ; i++){
@@ -261,15 +263,45 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
 
 }
 
+function DetermineState(frame){
+  if(frame.hands.length  == 1){
+    programState = 1
+  }
+  else{
+    programState = 0
+  }
+}
+
+function HandleState0(frame) {
+  TrainKNNIfNotDoneYet()
+  DrawImageToHelpUserPutTheirHandOverTheDevice()
+}
+
+function HandleState1(frame) {
+  HandleFrame(frame);
+  //test
+}
+
+function DrawImageToHelpUserPutTheirHandOverTheDevice(){
+
+}
 Leap.loop(controllerOptions, function(frame){
   clear();
-  if(trainingCompleted == false){
-    // Train();
-    trainingCompleted = true;
+  DetermineState(frame);
+  if(programState == 0){
+    HandleState0(frame)
   }
+  else if (programState == 1){
+    HandleState1(frame)
+  }
+  // clear();
+  // if(trainingCompleted == false){
+  //   // Train();
+  //   trainingCompleted = true;
+  // }
 
   //currentNumbHands = frame.hands.length;
-  HandleFrame(frame);
+  //HandleFrame(frame);
   //previousNumHands = currentNumbHands;
 
 })
