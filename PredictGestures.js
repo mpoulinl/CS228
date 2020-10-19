@@ -133,7 +133,7 @@ function CenterDataX(){
   xValues = newFrameOfData.slice([],[],[0,6,3])
   currentMean = xValues.mean()
   return currentMean
-  //console.log(currentMean)
+  console.log(currentMean)
 
 }
 
