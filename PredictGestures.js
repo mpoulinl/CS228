@@ -117,8 +117,6 @@ function GotResults(err, result){
 function CenterDataX(){
   var xValues = oneFrameOfData.slice([],[],[0,6,3])
   var currentMean = xValues.mean()
-  var horizontalShift = 0.5 - currentMean
-  console.log(currentMean)
   return currentMean
 
 }
@@ -126,44 +124,11 @@ function CenterDataX(){
 function CenterDataY(){
   var yValues = oneFrameOfData.slice([],[],[1,6,3])
   var currentMean = yValues.mean()
-  var verticalShift = 0.5 - currentMean
+  return currentMean
 
-  for(var i = 0 ; i < 5 ; i++){
-    for(var y = 0 ; y < 4 ; y ++){
-      currentY = oneFrameOfData.get(i,y,1)
-      shiftedY = currentY + verticalShift
-      oneFrameOfData.set(i,y,1,shiftedY)
-      currentY = oneFrameOfData.get(i,y,4)
-      shiftedY = currentY + verticalShift
-      oneFrameOfData.set(i,y,4,shiftedY)
-    }
-  }
-  yValues = oneFrameOfData.slice([],[],[1,6,3])
-  currentMean = yValues.mean()
-  //console.log(currentMean)
 
 }
 
-function CenterDataZ(){
-  var zValues = oneFrameOfData.slice([],[],[2,6,3])
-  var currentMean = zValues.mean()
-  var verticalShift = 0.5 - currentMean
-
-  for(var i = 0 ; i < 5 ; i++){
-    for(var y = 0 ; y < 4 ; y ++){
-      currentz = oneFrameOfData.get(i,y,2)
-      shiftedz = currentz + verticalShift
-      oneFrameOfData.set(i,y,2,shiftedY)
-      currentz = oneFrameOfData.get(i,y,5)
-      shiftedz = currentz + verticalShift
-      oneFrameOfData.set(i,y,5,shiftedz)
-    }
-  }
-  zValues = oneFrameOfData.slice([],[],[2,6,3])
-  currentMean = zValues.mean()
-  //console.log(currentMean)
-
-}
 
 
 function HandleFrame(frame){
@@ -268,7 +233,7 @@ function DetermineState(frame){
 
 function HandIsUncentered(){
 
-  if(HandIsTooFarToTheLeft() || HandIsTooFarToTheRight()){
+  if(HandIsTooFarToTheLeft() || HandIsTooFarToTheRight() || HandIsTooFarToHigh() || HandIsTooFarToLow()){
     return true;
   }
   else{
@@ -281,7 +246,6 @@ function HandIsTooFarToTheLeft(){
   if(CenterDataX() < 0.25 ){
     image(arrowRight, 0, 0, window.innerWidth/2, window.innerHeight/2);
     return true;
-    console.log("off")
   }
   else{
     return false;
@@ -292,13 +256,31 @@ function HandIsTooFarToTheRight(){
   if(CenterDataX() > 0.75 ){
     image(arrowLeft, 0, 0, window.innerWidth/1.95, window.innerHeight/2);
     return true;
-    console.log("off")
   }
   else{
     return false;
   }
 }
 
+function HandIsTooFarToHigh(){
+  if(CenterDataY() < 0.25 ){
+    image(arrowDown, 0, 0, window.innerWidth/2, window.innerHeight/2);
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+function HandIsTooFarToLow(){
+  if(CenterDatay() > 0.75 ){
+    image(arrowUp, 0, 0, window.innerWidth/1.95, window.innerHeight/2);
+    return true;
+  }
+  else{
+    return false;
+  }
+}
 function HandleState0(frame) {
   TrainKNNIfNotDoneYet()
   DrawImageToHelpUserPutTheirHandOverTheDevice()
