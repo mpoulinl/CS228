@@ -278,7 +278,6 @@ function DetermineState(frame){
 }
 
 function HandIsUncentered(){
-  console.log("in")
   if(HandIsTooFarToTheLeft()){
     return true;
   }
@@ -289,6 +288,7 @@ function HandIsUncentered(){
 
 
 function HandIsTooFarToTheLeft(){
+  console.log("in")
   if(CenterDataX() <= 0.25 ){
     return true;
     console.log("off")
