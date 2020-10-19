@@ -264,6 +264,7 @@ function DetermineState(frame){
 }
 
 function HandIsUncentered(){
+
   if(HandIsTooFarToTheLeft()){
     return true;
   }
@@ -274,7 +275,9 @@ function HandIsUncentered(){
 
 
 function HandIsTooFarToTheLeft(){
+  HandleFrame(frame);
   if(CenterDataX() < 0.25 ){
+    image(arrowRight, 10, 10, window.innerWidth/2.2, window.innerHeight/2.2);
     return true;
     console.log("off")
   }
