@@ -132,6 +132,7 @@ function CenterDataY(){
 function CenterDataZ(){
   var zValues = oneFrameOfData.slice([],[],[2,6,3])
   var currentMean = zValues.mean()
+  console.log(currentMean)
   return currentMean
 
 
