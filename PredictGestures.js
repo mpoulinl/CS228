@@ -264,20 +264,34 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
 }
 
 function DetermineState(frame){
-  if(frame.hands.length  == 1){
+  if(frame.hands.length  == 0){
+    programState = 0
+  }
+  else if(HandIsUncentered()){
     programState = 1
   }
   else{
-    programState = 0
+    programState = 2
   }
+}
+
+function HandIsUncentered(){
+  HandIsTooFarToTheLeft()
+}
+
+function HandIsTooFarToTheLeft(){
+
 }
 
 function HandleState0(frame) {
   TrainKNNIfNotDoneYet()
   DrawImageToHelpUserPutTheirHandOverTheDevice()
 }
-
 function HandleState1(frame) {
+  HandleFrame(frame);
+  //test
+}
+function HandleState2(frame) {
   HandleFrame(frame);
   //test
 }
