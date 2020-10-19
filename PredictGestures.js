@@ -230,29 +230,29 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   oneFrameOfData.set(fingerIndex,type,5,z_end);
 
 
-  Test()
+  // Test()
 
-  var canvasXStart = window.innerWidth * x_start;
-  var canvasXEnd = window.innerWidth * x_end;
-  var canvasYStart = window.innerHeight * (1-y_start);
-  var canvasYEnd =  window.innerHeight * (1-y_end);
+  var canvasXStart = (window.innerWidth * x_start) * 0.25;
+  var canvasXEnd = (window.innerWidth * x_end) * 0.25;
+  var canvasYStart = (window.innerHeight * (1-y_start)) * 0.75;
+  var canvasYEnd =  (window.innerHeight * (1-y_end)) * 0.75;
 
     //line and line weight
     switch(type){
       case 0:
-      strokeWeight(40)
+      strokeWeight(30)
       stroke(210)
       break;
       case 1:
-      strokeWeight(30)
+      strokeWeight(20)
       stroke(120)
       break;
       case 2:
-      strokeWeight(20)
+      strokeWeight(10)
       stroke(70)
       break;
       case 3:
-      strokeWeight(10)
+      strokeWeight(5)
       stroke(10)
       break;
     }
@@ -264,7 +264,7 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
 Leap.loop(controllerOptions, function(frame){
   clear();
   if(trainingCompleted == false){
-    Train();
+    // Train();
     trainingCompleted = true;
   }
 
