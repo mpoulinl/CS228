@@ -316,6 +316,9 @@ Leap.loop(controllerOptions, function(frame){
   else if (programState == 1){
     HandleState1(frame)
   }
+  else{
+    HandleState2(frame)
+  }
   // clear();
   // if(trainingCompleted == false){
   //   // Train();
