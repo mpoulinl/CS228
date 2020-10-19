@@ -9,7 +9,7 @@ var arrowAway;
 
 function setup() {
 createCanvas(window.innerWidth,window.innerHeight);
-img = loadImage('https://i.imgur.com/aK185Pb.jpg');
+img = loadImage('https://i.imgur.com/vezgISu.jpg');
 
 
 arrowLeft = loadImage('https://i.imgur.com/4JZmspc.jpg');
