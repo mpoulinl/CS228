@@ -232,10 +232,10 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
 
   // Test()
 
-  var canvasXStart = (window.innerWidth * x_start) * 0.25;
-  var canvasXEnd = (window.innerWidth * x_end) * 0.25;
-  var canvasYStart = (window.innerHeight * (1-y_start)) * 0.25;
-  var canvasYEnd =  (window.innerHeight * (1-y_end)) * 0.25;
+  var canvasXStart = (window.innerWidth * x_start) * 0.5;
+  var canvasXEnd = (window.innerWidth * x_end) * 0.5;
+  var canvasYStart = (window.innerHeight * (1-y_start)) * 0.5;
+  var canvasYEnd =  (window.innerHeight * (1-y_end)) * 0.5;
 
     //line and line weight
     switch(type){
