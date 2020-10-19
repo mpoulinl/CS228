@@ -284,7 +284,7 @@ function HandleState1(frame) {
 
 
 function DrawImageToHelpUserPutTheirHandOverTheDevice(){
-  image(img, 50, 0, 40, 20, 50, 50, 50, 50);
+  image(img, 10, 10, 50, 50);
 }
 
 function TrainKNNIfNotDoneYet() {
