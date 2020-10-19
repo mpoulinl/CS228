@@ -268,7 +268,7 @@ function DetermineState(frame){
     programState = 0
   }
   else if(HandIsUncentered()){
-    HandleFrame(frame);
+    programState = 2
   }
   else{
     programState = 2
