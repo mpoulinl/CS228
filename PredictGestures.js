@@ -289,8 +289,8 @@ function HandIsTooFarToTheLeft(){
 }
 
 function HandIsTooFarToTheRight(){
-  if(CenterDataX() > 0.74 ){
-    image(arrowLeft, 0, 0, window.innerWidth/1.8, window.innerHeight/2);
+  if(CenterDataX() > 0.75 ){
+    image(arrowLeft, 0, 0, window.innerWidth/1.95, window.innerHeight/2);
     return true;
     console.log("off")
   }
