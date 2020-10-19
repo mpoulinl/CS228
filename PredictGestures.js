@@ -115,24 +115,11 @@ function GotResults(err, result){
   console.log(result.label)
 }
 function CenterDataX(){
-  var newFrameOfData = oneFrameOfData;
   var xValues = oneFrameOfData.slice([],[],[0,6,3])
   var currentMean = xValues.mean()
   var horizontalShift = 0.5 - currentMean
-  for(var i = 0 ; i < 5 ; i++){
-    for(var y = 0 ; y < 4 ; y ++){
-      currentX = oneFrameOfData.get(i,y,0)
-      shiftedX = currentX + horizontalShift
-      newFrameOfData.set(i,y,0,shiftedX)
-      currentX = oneFrameOfData.get(i,y,3)
-      shiftedX = currentX + horizontalShift
-      newFrameOfData.set(i,y,3,shiftedX)
-    }
-  }
-  xValues = newFrameOfData.slice([],[],[0,6,3])
-  currentMean = xValues.mean()
+
   return currentMean
-  console.log(currentMean)
 
 }
 
