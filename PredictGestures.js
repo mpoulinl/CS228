@@ -282,7 +282,7 @@ function HandleState1(frame) {
   //test
 }
 
-let img;
+
 function DrawImageToHelpUserPutTheirHandOverTheDevice(){
   image(img, 0,0);
 }
