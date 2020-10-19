@@ -115,6 +115,7 @@ function GotResults(err, result){
   console.log(result.label)
 }
 function CenterDataX(){
+  console.log("Center")
   var newFrameOfData = oneFrameOfData;
   var xValues = oneFrameOfData.slice([],[],[0,6,3])
   var currentMean = xValues.mean()
@@ -288,8 +289,7 @@ function HandIsUncentered(){
 
 
 function HandIsTooFarToTheLeft(){
-  console.log("in")
-  if(CenterDataX() <= 0.25 ){
+  if(CenterDataX()) <= 0.25 ){
     return true;
     console.log("off")
   }
