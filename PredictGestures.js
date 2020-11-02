@@ -14,8 +14,9 @@ var currentSample = 0;
 var programState = 0;
 
 function IsNewUser(username,list){
-  console.log(list.innerHTML);
+  console.log(list);
   var users = list.children;
+  console.log("hi");
   console.log(users);
 }
 
