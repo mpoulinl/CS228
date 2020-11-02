@@ -17,8 +17,6 @@ function IsNewUser(username,list){
   var usernameFound = false;
   var users = list.children;
   for(var i = 0 ; i < users.length ; i++){
-    console.log(users[i].innerHTML)
-    console.log(username)
     if(username == users[i].innerHTML){
       usernameFound = true;
       console.log("user[i] vs user[i].html");
