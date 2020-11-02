@@ -13,6 +13,21 @@ var currentSample = 0;
 
 var programState = 0;
 
+
+function CreateNewUser(username,list){
+  var item = document.createElement('li');
+  item.innerHTML = String(username);
+  item.id = String(username) + "_name";
+  list.appendChild(item);
+}
+
+function CreateSignInItem(username,list2){
+  var item_signins = document.createElement('li');
+  item_signins.innerHTML = 1;
+  item_signins.id = String(username) + "_signins";
+  list2.appendChild(item_signins)
+}
+
 function IsNewUser(username,list){
   var usernameFound = false;
   var users = list.children;
@@ -30,22 +45,18 @@ function SignIn(){
   username = document.getElementById('username').value;
   var list = document.getElementById('users');
   if(IsNewUser(username,list)){
-    var item = document.createElement('li');
-    item.innerHTML = String(username);
-    item.id = String(username) + "_name";
-    list.appendChild(item);
-
+    CreateNewUser(username,list)
     //new list sign in
     var list2 = document.createElement('ul');
     list2.id = "users_signins";
-    //item go in signin
-    var item_signins = document.createElement('li');
-    item_signins.innerHTML = 1;
-    item_signins.id = String(username) + "_signins";
-    list2.appendChild(item_signins)
-
+    CreateNewUser(username,list2);
   }
-  console.log(list2.innerHTML);
+  else{
+    ID = String(username) + "_signins";
+    listItem = document.getElementById(ID);
+    listItem.innerHTML = parseInt(listItem.innerHTML) + 1;
+  }
+  console.log(list.innerHTML);
   return false;
 }
 function Train(){
