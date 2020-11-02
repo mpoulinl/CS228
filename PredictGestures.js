@@ -13,12 +13,20 @@ var currentSample = 0;
 
 var programState = 0;
 
+function IsNewUser(username,list){
+  console.log(list);
+  var users = list.children;
+  console.log(users);
+}
+
 function SignIn(){
   username = document.getElementById('username').value;
   var list = document.getElementById('users');
-  var item = document.createElement('li');
-  item.innerHTML = String(username);
-  list.appendChild(item);
+  if(IsNewUser(username,list)){
+    var item = document.createElement('li');
+    item.innerHTML = String(username);
+    list.appendChild(item);
+  }
   console.log(list.innerHTML);
   return false;
 }
