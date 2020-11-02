@@ -21,11 +21,11 @@ function CreateNewUser(username,list){
   list.appendChild(item);
 }
 
-function CreateSignInItem(username,list2){
+function CreateSignInItem(username,list){
   var item_signins = document.createElement('li');
   item_signins.innerHTML = 1;
   item_signins.id = String(username) + "_signins";
-  list2.appendChild(item_signins)
+  list.appendChild(item_signins)
 }
 
 function IsNewUser(username,list){
@@ -47,9 +47,7 @@ function SignIn(){
   if(IsNewUser(username,list)){
     CreateNewUser(username,list)
     //new list sign in
-    var list2 = document.createElement('ul');
-    list2.id = "users_signins";
-    CreateNewUser(username,list2);
+    CreateNewUser(username,list);
   }
   else{
     ID = String(username) + "_signins";
