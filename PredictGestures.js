@@ -132,7 +132,6 @@ function CenterDataY(){
 function CenterDataZ(){
   var zValues = oneFrameOfData.slice([],[],[2,6,3])
   var currentMean = zValues.mean()
-  console.log(currentMean)
   return currentMean
 
 
@@ -293,7 +292,7 @@ function HandIsTooFarToLow(){
 
 function HandIsTooClose(){
   if(CenterDataZ() < 0.25 ){
-    image(arrowAway, 0, 0, window.innerWidth/2, window.innerHeight/1.95);
+    image(arrowToward, 0, 0, window.innerWidth/2, window.innerHeight/1.95);
     return true;
   }
   else{
@@ -303,7 +302,7 @@ function HandIsTooClose(){
 
 function HandIsTooFar(){
   if(CenterDataZ() > 0.75 ){
-    image(arrowToward, 0, 0, window.innerWidth/2, window.innerHeight/1.95);
+    image(arrowAway, 0, 0, window.innerWidth/2, window.innerHeight/1.95);
     return true;
   }
   else{
