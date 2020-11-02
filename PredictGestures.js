@@ -14,7 +14,8 @@ var currentSample = 0;
 var programState = 0;
 
 function SignIn(){
-  console.log("Maude")
+  username = document.getElementById('username').value;
+  console.log(username)
 }
 function Train(){
   //console.log(train0.pick().toString())
