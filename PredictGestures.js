@@ -34,6 +34,15 @@ function SignIn(){
     item.innerHTML = String(username);
     item.id = String(username) + "_name";
     list.appendChild(item);
+    //new list sign in
+    var list_sign_in = document.createElement('ul');
+    list_sign_in.id = "users_signins";
+    //item go in signin
+    var item_signins = document.createElement('li');
+    item_signins.innerHTML = 1;
+    item_signins.id = String(username) + "_signins";
+    list_sign_in.appendChild(item_signins)
+
   }
   console.log(list.innerHTML);
   return false;
