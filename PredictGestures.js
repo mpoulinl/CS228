@@ -13,6 +13,9 @@ var currentSample = 0;
 
 var programState = 0;
 
+function SignIn(){
+  console.log("Maude")
+}
 function Train(){
   //console.log(train0.pick().toString())
   for(var i = 0 ; i < 100 ; i++){
