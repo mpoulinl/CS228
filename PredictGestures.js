@@ -19,9 +19,6 @@ function IsNewUser(username,list){
   for(var i = 0 ; i < users.length ; i++){
     if(username == users[i].innerHTML){
       usernameFound = true;
-      console.log("user[i] vs user[i].html");
-      console.log(users[i]);
-      console.log(users[i].innerHTML)
     }
   }
 
@@ -35,6 +32,7 @@ function SignIn(){
   if(IsNewUser(username,list)){
     var item = document.createElement('li');
     item.innerHTML = String(username);
+    item.id = String(username) + "_name";
     list.appendChild(item);
   }
   console.log(list.innerHTML);
