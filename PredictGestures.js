@@ -17,7 +17,7 @@ function IsNewUser(username,list){
   console.log(list.innerHTML);
   var users = list.children;
   console.log("hi");
-  console.log(users);
+  console.log(users.innerHTML);
 }
 
 function SignIn(){
