@@ -14,10 +14,19 @@ var currentSample = 0;
 var programState = 0;
 
 function IsNewUser(username,list){
-  console.log(list.innerHTML);
+  var usernameFound = false;
   var users = list.children;
-  console.log("hi");
-  console.log(users);
+  for(var i = 0 ; i < users.length ; i++){
+    if(username == users[i].innerHTML){
+      usernameFound = true;
+      console.log("user[i] vs user[i].html");
+      console.log(users[i]);
+      console.log(users[i].innerHTML)
+    }
+  }
+
+  return usernameFound == false;
+
 }
 
 function SignIn(){
