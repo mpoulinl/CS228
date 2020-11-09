@@ -391,7 +391,6 @@ function TimeToSwitchDigits(){
   var currentTime = new Date();
   var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
   var TimeInSeconds = TimeInMilliseconds/1000;
-  console.log(TimeInSeconds);
   if(TimeInSeconds > 10){
     timeSinceLastDigitChange = currentTime;
     return true;
