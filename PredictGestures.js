@@ -157,8 +157,8 @@ function Test(){
 }
 
 function GotResults(err, result){
-  //compute_prediction_7(result.label,3);
-  console.log(result.label)
+  compute_prediction_7(result.label,digitToshow);
+
 }
 function CenterDataX(){
   var xValues = oneFrameOfData.slice([],[],[0,6,3])
@@ -392,7 +392,7 @@ function TimeToSwitchDigits(){
   var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
   var TimeInSeconds = TimeInMilliseconds/1000;
   console.log(TimeInSeconds);
-  if(TimeInSeconds > 1){
+  if(TimeInSeconds > 10){
     timeSinceLastDigitChange = currentTime;
     return true;
   }
