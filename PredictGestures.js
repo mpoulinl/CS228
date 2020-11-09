@@ -391,7 +391,7 @@ function TimeToSwitchDigits(){
 }
 
 function DetermineWhetherToSwitch(){
-  if(TimeToSwitchDigits){
+  if(TimeToSwitchDigits == true){
     SwitchDigits();
   }
 }
