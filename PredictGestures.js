@@ -364,6 +364,7 @@ function HandleState1(frame) {
 }
 function HandleState2(frame) {
   HandleFrame(frame);
+  test();
   DrawLowerRightPanel();
   DetermineWhetherToSwitch();
   //test
@@ -417,6 +418,10 @@ function TrainKNNIfNotDoneYet() {
 }
 Leap.loop(controllerOptions, function(frame){
   clear();
+  if(trainingCompleted == false){
+    Train();
+    trainingCompleted = true;
+  }
   DetermineState(frame);
   if(programState == 0){
     HandleState0(frame)
@@ -428,10 +433,7 @@ Leap.loop(controllerOptions, function(frame){
     HandleState2(frame)
   }
   // clear();
-  // if(trainingCompleted == false){
-  //   // Train();
-  //   trainingCompleted = true;
-  // }
+
 
   //currentNumbHands = frame.hands.length;
   //HandleFrame(frame);
