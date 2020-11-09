@@ -387,7 +387,16 @@ function SwitchDigits(){
   }
 }
 function TimeToSwitchDigits(){
-  return false;
+  var currentTime = new Date();
+  var TimeInMilliseconds =  (timeSinceLastDigitChange - currentTime);
+  var TimeInSeconds = TimeInMilliseconds/1000;
+  if(TimeInSeconds > 1){
+    timeSinceLastDigitChange = currentTime;
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
 function DetermineWhetherToSwitch(){
