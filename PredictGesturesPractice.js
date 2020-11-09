@@ -205,7 +205,7 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
   oneFrameOfData.set(fingerIndex,type,5,z_end);
 
 
-  // Test()
+  Test()
 
   var canvasXStart = (window.innerWidth * x_start) * 0.5;
   var canvasXEnd = (window.innerWidth * x_end) * 0.5;
@@ -248,8 +248,7 @@ Leap.loop(controllerOptions, function(frame){
     Train();
     trainingCompleted = true;
   }
-  Test();
-  // clear();
+  HandleFrame(frame);
 
 
   //currentNumbHands = frame.hands.length;
