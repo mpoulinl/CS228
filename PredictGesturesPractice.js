@@ -16,49 +16,6 @@ var programState = 0;
 var digitToshow = 1;
 var timeSinceLastDigitChange = new Date();
 
-// function CreateNewUser(username,list){
-//   var item = document.createElement('li');
-//   item.innerHTML = String(username);
-//   item.id = String(username) + "_name";
-//   list.appendChild(item);
-// }
-//
-// function CreateSignInItem(username,list){
-//   var item_signins = document.createElement('li');
-//   item_signins.innerHTML = 1;
-//   item_signins.id = String(username) + "_signins";
-//   list.appendChild(item_signins)
-// }
-//
-// function IsNewUser(username,list){
-//   var usernameFound = false;
-//   var users = list.children;
-//   for(var i = 0 ; i < users.length ; i++){
-//     if(username == users[i].innerHTML){
-//       usernameFound = true;
-//     }
-//   }
-//
-//   return usernameFound == false;
-//
-// }
-//
-// function SignIn(){
-//   username = document.getElementById('username').value;
-//   var list = document.getElementById('users');
-//   if(IsNewUser(username,list)){
-//     CreateNewUser(username,list)
-//     //new list sign in
-//     CreateSignInItem(username,list);
-//   }
-//   else{
-//     ID = String(username) + "_signins";
-//     listItem = document.getElementById(ID);
-//     listItem.innerHTML = parseInt(listItem.innerHTML) + 1;
-//   }
-//   console.log(list.innerHTML);
-//   return false;
-// }
 function Train(){
   //console.log(train0.pick().toString())
   for(var i = 0 ; i < 100 ; i++){
@@ -155,12 +112,7 @@ function Train(){
 
   }
 }
-function compute_prediction_7(c,d){
-  n++
-  m = (((n-1)*m) + (c==d))/n
-  console.log(n,m,c)
 
-}
 function Test(){
   var currentFeatures = oneFrameOfData
   // CenterDataX()
@@ -171,7 +123,7 @@ function Test(){
 }
 
 function GotResults(err, result){
-  compute_prediction_7(result.label,digitToshow);
+  console.log(result.label)
 
 }
 function CenterDataX(){
@@ -284,149 +236,6 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
 
 }
 
-function DetermineState(frame){
-  if(frame.hands.length  == 0){
-    programState = 0
-  }
-  else{
-    HandleFrame(frame)
-    if(HandIsUncentered()){
-      programState = 1
-    }
-    else{
-      programState = 2
-    }
-  }
-}
-
-function HandIsUncentered(){
-
-  if(HandIsTooFarToTheLeft() || HandIsTooFarToTheRight() || HandIsTooFarToHigh() || HandIsTooFarToLow() || HandIsTooFar() || HandIsTooClose() ){
-    return true;
-  }
-  else{
-    return false;
-  }
-}
-
-
-function HandIsTooFarToTheLeft(){
-  if(CenterDataX() < 0.25 ){
-    image(arrowRight,window.innerWidth/2.1, 0, window.innerWidth/2.2, window.innerHeight/2.2);
-    return true;
-  }
-  else{
-    return false;
-  }
-}
-
-function HandIsTooFarToTheRight(){
-  if(CenterDataX() > 0.75 ){
-    image(arrowLeft,window.innerWidth/2.1, 0, window.innerWidth/2.2, window.innerHeight/2.2);
-    return true;
-  }
-  else{
-    return false;
-  }
-}
-
-function HandIsTooFarToHigh(){
-  if(CenterDataY() < 0.25 ){
-    image(arrowUP,window.innerWidth/2.1, 0, window.innerWidth/2.2, window.innerHeight/2.2);
-    return true;
-  }
-  else{
-    return false;
-  }
-}
-
-function HandIsTooFarToLow(){
-  if(CenterDataY() > 0.75 ){
-    image(arrowDown,window.innerWidth/2.1, 0, window.innerWidth/2.2, window.innerHeight/2.2);
-    return true;
-  }
-  else{
-    return false;
-  }
-}
-
-function HandIsTooClose(){
-  if(CenterDataZ() < 0.25 ){
-    image(arrowToward,window.innerWidth/2.1, 0, window.innerWidth/2.2, window.innerHeight/2.2)
-    return true;
-  }
-  else{
-    return false;
-  }
-}
-
-function HandIsTooFar(){
-  if(CenterDataZ() > 0.75 ){
-    image(arrowAway,window.innerWidth/2.1, 0, window.innerWidth/2.2, window.innerHeight/2.2);
-    return true;
-  }
-  else{
-    return false;
-  }
-}
-function HandleState0(frame) {
-  TrainKNNIfNotDoneYet()
-  DrawImageToHelpUserPutTheirHandOverTheDevice()
-}
-function HandleState1(frame) {
-  //test
-}
-function HandleState2(frame) {
-  HandleFrame(frame);
-  Test();
-  DrawLowerRightPanel();
-  DetermineWhetherToSwitch();
-  //test
-}
-
-function DrawLowerRightPanel(){
-  if(digitToshow == 1){
-    image(asl_1,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  else{
-    image(asl_2,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-
-}
-function SwitchDigits(){
-  if(digitToshow == 1){
-    digitToshow = 2;
-    n=0;
-    m=0;
-  }
-  else{
-    digitToshow = 1;
-    n=0;
-    m=0;
-  }
-}
-function TimeToSwitchDigits(){
-  var currentTime = new Date();
-  var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
-  var TimeInSeconds = TimeInMilliseconds/1000;
-  if(TimeInSeconds > 5){
-    timeSinceLastDigitChange = currentTime;
-    return true;
-  }
-  else{
-    return false;
-  }
-}
-
-function DetermineWhetherToSwitch(){
-  if(TimeToSwitchDigits()){
-    SwitchDigits();
-  }
-}
-function DrawImageToHelpUserPutTheirHandOverTheDevice(){
-  image(img,window.innerWidth/2.1, 0, window.innerWidth/2.2, window.innerHeight/2.2);
-}
-
 function TrainKNNIfNotDoneYet() {
   if(trainingCompleted == false){
     // Train();
@@ -439,16 +248,7 @@ Leap.loop(controllerOptions, function(frame){
     Train();
     trainingCompleted = true;
   }
-  DetermineState(frame);
-  if(programState == 0){
-    HandleState0(frame)
-  }
-  else if (programState == 1){
-    HandleState1(frame)
-  }
-  else{
-    HandleState2(frame)
-  }
+  Test();
   // clear();
 
 
