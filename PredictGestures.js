@@ -259,19 +259,19 @@ function HandleBone(bone,type,fingerIndex,interactionBox){
     switch(type){
       case 0:
       strokeWeight(20)
-      stroke(210)
+      stroke((255*(1-m)),0, (255*m));
       break;
       case 1:
       strokeWeight(15)
-      stroke(120)
+      stroke((255*(1-m)),0, (255*m));
       break;
       case 2:
       strokeWeight(10)
-      stroke(70)
+      stroke((255*(1-m)),0, (255*m));
       break;
       case 3:
       strokeWeight(5)
-      stroke(10)
+      stroke((255*(1-m)),0, (255*m));
       break;
     }
 
