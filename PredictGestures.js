@@ -390,6 +390,7 @@ function TimeToSwitchDigits(){
   var currentTime = new Date();
   var TimeInMilliseconds =  (timeSinceLastDigitChange - currentTime);
   var TimeInSeconds = TimeInMilliseconds/1000;
+  console.log(TimeInSeconds);
   if(TimeInSeconds > 1){
     timeSinceLastDigitChange = currentTime;
     return true;
