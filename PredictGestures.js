@@ -298,7 +298,7 @@ function HandIsUncentered(){
 
 function HandIsTooFarToTheLeft(){
   if(CenterDataX() < 0.25 ){
-    image(arrowRight, 0, 0, window.innerWidth/2, window.innerHeight/2);
+    image(arrowRight, window.innerWidth/2, 0, window.innerWidth, window.innerHeight/2);
     return true;
   }
   else{
@@ -308,7 +308,7 @@ function HandIsTooFarToTheLeft(){
 
 function HandIsTooFarToTheRight(){
   if(CenterDataX() > 0.75 ){
-    image(arrowLeft, 0, 0, window.innerWidth/1.95, window.innerHeight/2);
+    image(arrowLeft,window.innerWidth/2, 0, window.innerWidth, window.innerHeight/2);
     return true;
   }
   else{
@@ -318,7 +318,7 @@ function HandIsTooFarToTheRight(){
 
 function HandIsTooFarToHigh(){
   if(CenterDataY() < 0.25 ){
-    image(arrowUP, 0, 0, window.innerWidth/2, window.innerHeight/1.95);
+    image(arrowUP,window.innerWidth/2, 0, window.innerWidth, window.innerHeight/2);
     return true;
   }
   else{
@@ -328,7 +328,7 @@ function HandIsTooFarToHigh(){
 
 function HandIsTooFarToLow(){
   if(CenterDataY() > 0.75 ){
-    image(arrowDown, 0, 0, window.innerWidth/2, window.innerHeight/1.95);
+    image(arrowDown,window.innerWidth/2, 0, window.innerWidth, window.innerHeight/2);
     return true;
   }
   else{
@@ -338,7 +338,7 @@ function HandIsTooFarToLow(){
 
 function HandIsTooClose(){
   if(CenterDataZ() < 0.25 ){
-    image(arrowToward, 0, 0, window.innerWidth/2, window.innerHeight/1.95);
+    image(arrowToward, window.innerWidth/2, 0, window.innerWidth, window.innerHeight/2);
     return true;
   }
   else{
@@ -348,7 +348,7 @@ function HandIsTooClose(){
 
 function HandIsTooFar(){
   if(CenterDataZ() > 0.75 ){
-    image(arrowAway, 0, 0, window.innerWidth/2, window.innerHeight/1.95);
+    image(arrowAway,window.innerWidth/2, 0, window.innerWidth, window.innerHeight/2);
     return true;
   }
   else{
