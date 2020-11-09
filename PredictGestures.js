@@ -14,6 +14,7 @@ var currentSample = 0;
 var programState = 0;
 
 var digitToshow = 1;
+var timeSinceLastDigitChange = new Date();
 
 function CreateNewUser(username,list){
   var item = document.createElement('li');
@@ -375,13 +376,23 @@ function DrawLowerRightPanel(){
   else{
     image(asl_2,window.innerWidth/2, window.innerHeight/1.95,window.innerWidth,window.innerHeight);
   }
+
 }
-function DetermineWhetherToSwitch(){
+function SwitchDigits(){
   if(digitToshow == 1){
     digitToshow = 2;
   }
   else{
     digitToshow = 1;
+  }
+}
+function TimeToSwitchDigits(){
+  return false;
+}
+
+function DetermineWhetherToSwitch(){
+  if(TimeToSwitchDigits){
+    SwitchDigits();
   }
 }
 function DrawImageToHelpUserPutTheirHandOverTheDevice(){
