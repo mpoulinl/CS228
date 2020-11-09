@@ -18,4 +18,8 @@ arrowUP = loadImage('https://i.imgur.com/AQnm70s.jpg');
 arrowDown = loadImage('https://i.imgur.com/VlCRuC0.jpg');
 arrowToward = loadImage('https://i.imgur.com/0ShbKCa.jpg');
 arrowAway = loadImage('https://i.imgur.com/Lgjl8YM.jpg');
+
+asl_1 = loadImage('https://i.imgur.com/gs1Emzq.jpg');
+asl_2 = loadImage('https://i.imgur.com/AVxiMC7.png');
+
 }

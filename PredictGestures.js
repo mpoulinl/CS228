@@ -13,6 +13,7 @@ var currentSample = 0;
 
 var programState = 0;
 
+var digitToshow = 1;
 
 function CreateNewUser(username,list){
   var item = document.createElement('li');
@@ -362,9 +363,18 @@ function HandleState1(frame) {
 }
 function HandleState2(frame) {
   HandleFrame(frame);
+  DrawLowerRightPanel();
   //test
 }
 
+function DrawLowerRightPanel(){
+  if(digitToshow == 1){
+    image(asl_1, 0, 0, window.innerWidth/2, window.innerHeight/1.95);
+  }
+  else{
+    image(asl_2, 0, 0, window.innerWidth/2, window.innerHeight/1.95);
+  }
+}
 
 function DrawImageToHelpUserPutTheirHandOverTheDevice(){
   image(img, 10, 10, window.innerWidth/2.2, window.innerHeight/2.2);
