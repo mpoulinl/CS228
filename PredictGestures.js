@@ -383,16 +383,20 @@ function DrawLowerRightPanel(){
 function SwitchDigits(){
   if(digitToshow == 1){
     digitToshow = 2;
+    n=0;
+    m=0;
   }
   else{
     digitToshow = 1;
+    n=0;
+    m=0;
   }
 }
 function TimeToSwitchDigits(){
   var currentTime = new Date();
   var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
   var TimeInSeconds = TimeInMilliseconds/1000;
-  if(TimeInSeconds > 10){
+  if(TimeInSeconds > 8){
     timeSinceLastDigitChange = currentTime;
     return true;
   }
