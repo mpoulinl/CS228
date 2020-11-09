@@ -406,7 +406,7 @@ function DetermineWhetherToSwitch(){
   }
 }
 function DrawImageToHelpUserPutTheirHandOverTheDevice(){
-  image(img,window.innerWidth/2, 0, window.innerWidth/2.2, window.innerHeight/2);
+  image(img,window.innerWidth/2.1, 0, window.innerWidth/2.2, window.innerHeight/2.2);
 }
 
 function TrainKNNIfNotDoneYet() {
