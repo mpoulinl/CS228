@@ -145,7 +145,7 @@ function Train(){
 function compute_prediction_7(c,d){
   n++
   m = (((n-1)*m) + (c==d))/n
-  console.log(n,m,c)
+  // console.log(n,m,c)
   console.log(m,d)
 }
 function Test(){
