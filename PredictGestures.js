@@ -371,10 +371,10 @@ function HandleState2(frame) {
 
 function DrawLowerRightPanel(){
   if(digitToshow == 1){
-    image(asl_1,window.innerWidth/2, window.innerHeight/1.95,window.innerWidth,window.innerHeight);
+    image(asl_1,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
   else{
-    image(asl_2,window.innerWidth/2, window.innerHeight/1.95,window.innerWidth,window.innerHeight);
+    image(asl_2,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
 
 }
