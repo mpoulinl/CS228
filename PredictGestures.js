@@ -404,7 +404,7 @@ function TimeToSwitchDigits(){
   var currentTime = new Date();
   var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
   var TimeInSeconds = TimeInMilliseconds/1000;
-  if(TimeInSeconds > 8){
+  if(TimeInSeconds > 5){
     timeSinceLastDigitChange = currentTime;
     return true;
   }
