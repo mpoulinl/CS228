@@ -388,7 +388,7 @@ function SwitchDigits(){
 }
 function TimeToSwitchDigits(){
   var currentTime = new Date();
-  var TimeInMilliseconds =  (timeSinceLastDigitChange - currentTime);
+  var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
   var TimeInSeconds = TimeInMilliseconds/1000;
   console.log(TimeInSeconds);
   if(TimeInSeconds > 1){
