@@ -364,6 +364,7 @@ function HandleState1(frame) {
 function HandleState2(frame) {
   HandleFrame(frame);
   DrawLowerRightPanel();
+  DetermineWhetherToSwitch();
   //test
 }
 
@@ -375,7 +376,14 @@ function DrawLowerRightPanel(){
     image(asl_2,window.innerWidth/2, window.innerHeight/1.95,window.innerWidth,window.innerHeight);
   }
 }
-
+function DetermineWhetherToSwitch(){
+  if(digitToshow == 1){
+    digitToshow = 2;
+  }
+  else{
+    digitToshow = 1;
+  }
+}
 function DrawImageToHelpUserPutTheirHandOverTheDevice(){
   image(img, 10, 10, window.innerWidth/2.2, window.innerHeight/2.2);
 }
