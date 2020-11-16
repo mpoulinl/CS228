@@ -176,6 +176,10 @@ function Train(){
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),9)
 
+    features = train9two.pick(null,null,null,i)
+    features = features.reshape(1,120)
+    knnClassifier.addExample(features.tolist(),9)
+
   }
 }
 function compute_prediction_7(c,d){
