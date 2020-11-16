@@ -13,12 +13,13 @@ var currentSample = 0;
 
 var programState = 0;
 
-var digitToshow = 1;
+var digitToshow = 0;
 var timeSinceLastDigitChange = new Date();
 
 var phase1 = [0,1,2,3,4,5,6,7,8,9];
 var phase2 = [];
 var num_remove = 0;
+var index = 0;
 // function CreateNewUser(username,list){
 //   var item = document.createElement('li');
 //   item.innerHTML = String(username);
@@ -448,56 +449,10 @@ function DrawLowerRightPanel(){
 function SwitchDigits(){
 
   console.log(phase1.length)
-  if(digitToshow == 0){
-    digitToshow = 1;
-    n=0;
-    m=0;
-  }
-  else if (digitToshow == 1) {
-    digitToshow = 2;
-    n=0;
-    m=0;
-  }
-  else if (digitToshow == 2) {
-    digitToshow = 3;
-    n=0;
-    m=0;
-  }
-  else if (digitToshow ==3) {
-    digitToshow = 4;
-    n=0;
-    m=0;
-  }
-  else if (digitToshow == 4) {
-    digitToshow = 5;
-    n=0;
-    m=0;
-  }
-  else if (digitToshow ==5) {
-    digitToshow = 6;
-    n=0;
-    m=0;
-  }
-  else if (digitToshow == 6) {
-    digitToshow = 7;
-    n=0;
-    m=0;
-  }
-  else if (digitToshow == 7) {
-    digitToshow = 8;
-    n=0;
-    m=0;
-  }
-  else if (digitToshow == 8) {
-    digitToshow = 9;
-    n=0;
-    m=0;
-  }
-  else if (digitToshow == 9) {
-    digitToshow = 0;
-    n=0;
-    m=0;
-  }
+  digitToshow = phase1[index];
+  n=0;
+  m=0;
+
 }
 function TimeToSwitchDigits(){
   var currentTime = new Date();
@@ -511,7 +466,13 @@ function TimeToSwitchDigits(){
     }
     return true;
   }
-  else{
+  else if ((m < 0.50 && TimeInSeconds >8)){
+    if(index < ((phase1.length)-1){
+      index = index+1
+    }
+    else{
+      index = 0;
+    }
     return false;
   }
 }
