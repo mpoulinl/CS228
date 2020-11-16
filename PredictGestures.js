@@ -158,7 +158,7 @@ function Train(){
 function compute_prediction_7(c,d){
   n++
   m = (((n-1)*m) + (c==d))/n
-  console.log(d)
+  
 
 }
 function Test(){
@@ -172,6 +172,7 @@ function Test(){
 
 function GotResults(err, result){
   compute_prediction_7(result.label,digitToshow);
+  console.log(result.label)
 
 }
 function CenterDataX(){
