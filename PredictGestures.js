@@ -391,7 +391,7 @@ function DrawLowerRightPanel(){
   if(digitToshow == 2){
     image(asl_2,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 3){}
+  if(digitToshow == 3){
     image(asl_3,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
 
