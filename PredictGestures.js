@@ -18,6 +18,7 @@ var timeSinceLastDigitChange = new Date();
 
 var phase1 = [0,1,2,3,4,5,6,7,8,9];
 var phase2 = [];
+var num_remove = 0;
 // function CreateNewUser(username,list){
 //   var item = document.createElement('li');
 //   item.innerHTML = String(username);
@@ -447,8 +448,6 @@ function DrawLowerRightPanel(){
 function SwitchDigits(){
 
   console.log(phase1.length)
-  pahse1 = phase1.splice(1,1)
-  console.log(phase1.length)
   if(digitToshow == 0){
     digitToshow = 1;
     n=0;
@@ -504,8 +503,12 @@ function TimeToSwitchDigits(){
   var currentTime = new Date();
   var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
   var TimeInSeconds = TimeInMilliseconds/1000;
-  if((m >= 0.50 && TimeInSeconds >1)|| TimeInSeconds > 5){
+  if((m >= 0.50 && TimeInSeconds >1)){
     timeSinceLastDigitChange = currentTime;
+    pahse1 = phase1.splice(digitToshow-(num_remove),digitToshow-(num_remove));
+    if(num_remove < 10){
+      num_remove = num_remove + 1;
+    }
     return true;
   }
   else{
