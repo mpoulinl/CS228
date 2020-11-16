@@ -459,13 +459,14 @@ function TimeToSwitchDigits(){
   var currentTime = new Date();
   var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
   var TimeInSeconds = TimeInMilliseconds/1000;
-  if((m >= 0.50 && TimeInSeconds >1)){
-    pahse1 = phase1.splice(digitToshow-(num_remove),digitToshow-(num_remove));
-    if(num_remove < 10){
-      num_remove = num_remove + 1;
-    }
-    timeSinceLastDigitChange = currentTime;
+  if((m >= 0.50 && TimeInSeconds > 2)){
 
+      for(var i = 0 ; i < phase1.length ; i++){
+        if(digitToshow == phase1[i]){
+          phase1 = phase1.splice(i);
+        }
+      }
+    timeSinceLastDigitChange = currentTime;
     return true;
   }
   else if ((m < 0.50 && TimeInSeconds > 5)){
