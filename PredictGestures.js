@@ -388,8 +388,11 @@ function DrawLowerRightPanel(){
   if(digitToshow == 1){
     image(asl_1,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  else{
+  if(digitToshow == 2){
     image(asl_2,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 3){}
+    image(asl_3,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
 
 }
@@ -399,7 +402,12 @@ function SwitchDigits(){
     n=0;
     m=0;
   }
-  else{
+  else if (digitToshow == 2) {
+    digitToshow = 3;
+    n=0;
+    m=0;
+  }
+  else if (digitToshow ==3) {
     digitToshow = 1;
     n=0;
     m=0;

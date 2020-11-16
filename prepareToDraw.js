@@ -21,5 +21,7 @@ arrowAway = loadImage('https://i.imgur.com/Lgjl8YM.jpg');
 
 asl_1 = loadImage('https://i.imgur.com/gs1Emzq.jpg');
 asl_2 = loadImage('https://i.imgur.com/AVxiMC7.png');
+asl_3 = loadImage('https://i.imgur.com/1MoLVrk.jpg');
+
 
 }
