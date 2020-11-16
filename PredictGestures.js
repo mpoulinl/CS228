@@ -17,6 +17,7 @@ var digitToshow = 1;
 var timeSinceLastDigitChange = new Date();
 
 var phase1 = [0,1,2,3,4,5,6,7,8,9];
+var phase2 = [];
 // function CreateNewUser(username,list){
 //   var item = document.createElement('li');
 //   item.innerHTML = String(username);
@@ -445,7 +446,7 @@ function DrawLowerRightPanel(){
 }
 function SwitchDigits(){
 
-  console.log(phase1.length)
+  console.log(phase2.length)
   if(digitToshow == 0){
     digitToshow = 1;
     n=0;
