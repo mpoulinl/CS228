@@ -459,20 +459,24 @@ function TimeToSwitchDigits(){
   var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
   var TimeInSeconds = TimeInMilliseconds/1000;
   if((m >= 0.50 && TimeInSeconds >1)){
-    timeSinceLastDigitChange = currentTime;
     pahse1 = phase1.splice(digitToshow-(num_remove),digitToshow-(num_remove));
     if(num_remove < 10){
       num_remove = num_remove + 1;
     }
+    timeSinceLastDigitChange = currentTime;
     return true;
   }
-  else if ((m < 0.50 && TimeInSeconds >8)){
+  else if ((m < 0.50 && TimeInSeconds > 5)){
     if(index < ((phase1.length)-1)){
       index = index+1
     }
     else{
       index = 0;
     }
+    timeSinceLastDigitChange = currentTime;
+    return true;
+  }
+  else{
     return false;
   }
 }
