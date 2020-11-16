@@ -447,7 +447,7 @@ function DrawLowerRightPanel(){
 function SwitchDigits(){
 
   console.log(phase1.length)
-  delete phase1[1]
+  pahse1 = phase1.splice(1,1)
   console.log(phase1.length)
   if(digitToshow == 0){
     digitToshow = 1;
