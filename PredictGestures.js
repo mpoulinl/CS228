@@ -463,7 +463,7 @@ function TimeToSwitchDigits(){
 
       for(var i = 0 ; i < phase1.length ; i++){
         if(digitToshow == phase1[i]){
-          phase1 = phase1.splice(i);
+          phase1 = phase1.splice(i,i);
         }
       }
     timeSinceLastDigitChange = currentTime;
