@@ -16,6 +16,7 @@ var programState = 0;
 var digitToshow = 1;
 var timeSinceLastDigitChange = new Date();
 
+var phase1 = [0,1,2,3,4,5,6,7,8,9];
 // function CreateNewUser(username,list){
 //   var item = document.createElement('li');
 //   item.innerHTML = String(username);
@@ -157,8 +158,6 @@ function Train(){
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),7)
 
-
-
     features = train8.pick(null,null,null,i)
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),8)
@@ -170,7 +169,6 @@ function Train(){
     features = train8three.pick(null,null,null,i)
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),8)
-
 
     features = train9.pick(null,null,null,i)
     features = features.reshape(1,120)
@@ -446,6 +444,8 @@ function DrawLowerRightPanel(){
 
 }
 function SwitchDigits(){
+  phase1.size();
+  console.log(phase1.size())
   if(digitToshow == 0){
     digitToshow = 1;
     n=0;
