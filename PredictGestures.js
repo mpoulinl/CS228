@@ -422,10 +422,36 @@ function DrawLowerRightPanel(){
   if(digitToshow == 3){
     image(asl_3,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
+  if(digitToshow == 4){
+    image(asl_4,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 5){
+    image(asl_5,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 6){
+    image(asl_6,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 7){
+    image(asl_7,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 8){
+    image(asl_8,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 9){
+    image(asl_9,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 0){
+    image(asl_0,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
 
 }
 function SwitchDigits(){
-  if(digitToshow == 1){
+  if(digitToshow == 0){
+    digitToshow = 1;
+    n=0;
+    m=0;
+  }
+  else if (digitToshow == 1) {
     digitToshow = 2;
     n=0;
     m=0;
@@ -436,7 +462,37 @@ function SwitchDigits(){
     m=0;
   }
   else if (digitToshow ==3) {
-    digitToshow = 1;
+    digitToshow = 4;
+    n=0;
+    m=0;
+  }
+  else if (digitToshow == 4) {
+    digitToshow = 5;
+    n=0;
+    m=0;
+  }
+  else if (digitToshow ==5) {
+    digitToshow = 6;
+    n=0;
+    m=0;
+  }
+  else if (digitToshow == 6) {
+    digitToshow = 7;
+    n=0;
+    m=0;
+  }
+  else if (digitToshow == 7) {
+    digitToshow = 8;
+    n=0;
+    m=0;
+  }
+  else if (digitToshow == 8) {
+    digitToshow = 9;
+    n=0;
+    m=0;
+  }
+  else if (digitToshow == 9) {
+    digitToshow = 0;
     n=0;
     m=0;
   }
@@ -445,7 +501,7 @@ function TimeToSwitchDigits(){
   var currentTime = new Date();
   var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
   var TimeInSeconds = TimeInMilliseconds/1000;
-  if(TimeInSeconds > 5){
+  if(TimeInSeconds > 1){
     timeSinceLastDigitChange = currentTime;
     return true;
   }
