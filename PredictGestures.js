@@ -463,6 +463,7 @@ function TimeToSwitchDigits(){
 
       for(var i = 0 ; i < phase1.length ; i++){
         if(digitToshow == phase1[i]){
+          console.log("digit :", digitToshow, " index : ", i)
           phase1 = phase1.splice(i,i);
           i = 100;
         }
