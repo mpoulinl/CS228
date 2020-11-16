@@ -467,7 +467,7 @@ function TimeToSwitchDigits(){
     return true;
   }
   else if ((m < 0.50 && TimeInSeconds >8)){
-    if(index < ((phase1.length)-1){
+    if(index < ((phase1.length)-1)){
       index = index+1
     }
     else{
