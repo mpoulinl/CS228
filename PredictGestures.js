@@ -158,7 +158,7 @@ function Train(){
 function compute_prediction_7(c,d){
   n++
   m = (((n-1)*m) + (c==d))/n
-  
+
 
 }
 function Test(){
@@ -312,7 +312,7 @@ function HandIsUncentered(){
 
 
 function HandIsTooFarToTheLeft(){
-  if(CenterDataX() < 0.25 ){
+  if(CenterDataX() < 0.20 ){
     image(arrowRight,window.innerWidth/2.1, 0, window.innerWidth/2.2, window.innerHeight/2.2);
     return true;
   }
@@ -322,7 +322,7 @@ function HandIsTooFarToTheLeft(){
 }
 
 function HandIsTooFarToTheRight(){
-  if(CenterDataX() > 0.75 ){
+  if(CenterDataX() > 0.80 ){
     image(arrowLeft,window.innerWidth/2.1, 0, window.innerWidth/2.2, window.innerHeight/2.2);
     return true;
   }
@@ -332,7 +332,7 @@ function HandIsTooFarToTheRight(){
 }
 
 function HandIsTooFarToHigh(){
-  if(CenterDataY() < 0.25 ){
+  if(CenterDataY() < 0.20 ){
     image(arrowUP,window.innerWidth/2.1, 0, window.innerWidth/2.2, window.innerHeight/2.2);
     return true;
   }
@@ -342,7 +342,7 @@ function HandIsTooFarToHigh(){
 }
 
 function HandIsTooFarToLow(){
-  if(CenterDataY() > 0.75 ){
+  if(CenterDataY() > 0.80 ){
     image(arrowDown,window.innerWidth/2.1, 0, window.innerWidth/2.2, window.innerHeight/2.2);
     return true;
   }
@@ -352,7 +352,7 @@ function HandIsTooFarToLow(){
 }
 
 function HandIsTooClose(){
-  if(CenterDataZ() < 0.25 ){
+  if(CenterDataZ() < 0.20 ){
     image(arrowToward,window.innerWidth/2.1, 0, window.innerWidth/2.2, window.innerHeight/2.2)
     return true;
   }
@@ -362,7 +362,7 @@ function HandIsTooClose(){
 }
 
 function HandIsTooFar(){
-  if(CenterDataZ() > 0.75 ){
+  if(CenterDataZ() > 0.80 ){
     image(arrowAway,window.innerWidth/2.1, 0, window.innerWidth/2.2, window.innerHeight/2.2);
     return true;
   }
