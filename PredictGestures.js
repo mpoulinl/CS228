@@ -501,7 +501,7 @@ function TimeToSwitchDigits(){
   var currentTime = new Date();
   var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
   var TimeInSeconds = TimeInMilliseconds/1000;
-  if(m >= 0.50){
+  if(m >= 0.50 || TimeInSeconds > 5){
     timeSinceLastDigitChange = currentTime;
     return true;
   }
