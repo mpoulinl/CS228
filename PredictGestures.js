@@ -465,6 +465,9 @@ function TimeToSwitchDigits(){
       num_remove = num_remove + 1;
     }
     timeSinceLastDigitChange = currentTime;
+    if(!(index < ((phase1.length)-1))){
+      index = 0;
+    }
     return true;
   }
   else if ((m < 0.50 && TimeInSeconds > 5)){
