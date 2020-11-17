@@ -30,5 +30,16 @@ asl_7 = loadImage('https://i.imgur.com/Ss5FJr2.jpg');
 asl_8 = loadImage('https://i.imgur.com/iqr7Nto.jpg');
 asl_9 = loadImage('https://i.imgur.com/NmfkDHf.jpg');
 
+num_0 = loadImage('https://i.imgur.com/jS4BSgm.jpg');
+num_1 = loadImage('https://i.imgur.com/gVAQxW0.jpg');
+num_2 = loadImage('https://i.imgur.com/upXqkEr.jpg');
+num_3 = loadImage('https://i.imgur.com/1MQfCvQ.jpg');
+num_4 = loadImage('https://i.imgur.com/00OTFk9.jpg');
+num_5 = loadImage('https://i.imgur.com/JP1wXlj.jpg');
+num_6 = loadImage('https://i.imgur.com/ejf5c2M.jpg');
+num_7 = loadImage('https://i.imgur.com/cOjZwYD.jpg');
+num_8 = loadImage('https://i.imgur.com/U9VAPZM.jpg');
+num_9 = loadImage('https://i.imgur.com/RdVj6E1.jpg');
+
 
 }

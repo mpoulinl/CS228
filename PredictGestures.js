@@ -17,9 +17,10 @@ var digitToshow = 0;
 var timeSinceLastDigitChange = new Date();
 
 var phase1 = [0,1,2,3,4,5,6,7,8,9];
-var phase2 = [];
+var phase2 = [0,1,2,3,4,5,6,7,8,9];
 var num_remove = 0;
 var index = 0;
+var num_phase = 1;
 // function CreateNewUser(username,list){
 //   var item = document.createElement('li');
 //   item.innerHTML = String(username);
@@ -226,8 +227,6 @@ function CenterDataZ(){
 
 }
 
-
-
 function HandleFrame(frame){
  clear();
 
@@ -255,7 +254,6 @@ function HandleFinger(finger,n,fingerIndex,interactionBox){
 
       HandleBone(finger.bones[n],n,fingerIndex,interactionBox);
 }
-
 
 function HandleBone(bone,type,fingerIndex,interactionBox){
   var bone_start = bone.prevJoint;
@@ -338,7 +336,6 @@ function HandIsUncentered(){
   }
 }
 
-
 function HandIsTooFarToTheLeft(){
   if(CenterDataX() < 0.20 ){
     image(arrowRight,window.innerWidth/2.1, 0, window.innerWidth/2.2, window.innerHeight/2.2);
@@ -398,10 +395,12 @@ function HandIsTooFar(){
     return false;
   }
 }
+
 function HandleState0(frame) {
   TrainKNNIfNotDoneYet()
   DrawImageToHelpUserPutTheirHandOverTheDevice()
 }
+
 function HandleState1(frame) {
   //test
 }
@@ -414,47 +413,83 @@ function HandleState2(frame) {
 }
 
 function DrawLowerRightPanel(){
-  if(digitToshow == 1){
+  if(digitToshow == 1 && num_phase==1){
     image(asl_1,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 2){
+  if(digitToshow == 2 && num_phase==1){
     image(asl_2,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 3){
+  if(digitToshow == 3 && num_phase==1){
     image(asl_3,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 4){
+  if(digitToshow == 4 && num_phase==1){
     image(asl_4,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 5){
+  if(digitToshow == 5 && num_phase==1){
     image(asl_5,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 6){
+  if(digitToshow == 6 && num_phase==1){
     image(asl_6,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 7){
+  if(digitToshow == 7 && num_phase==1){
     image(asl_7,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 8){
+  if(digitToshow == 8 && num_phase==1){
     image(asl_8,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 9){
+  if(digitToshow == 9 && num_phase==1){
     image(asl_9,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 0){
+  if(digitToshow == 0 && num_phase==1){
     image(asl_0,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
+  if(digitToshow == 1 && num_phase==2){
+    image(asl_1,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 2 && num_phase==2){
+    image(asl_2,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 3 && num_phase==2){
+    image(asl_3,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 4 && num_phase==2){
+    image(asl_4,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 5 && num_phase==2){
+    image(asl_5,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 6 && num_phase==2){
+    image(asl_6,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 7 && num_phase==2){
+    image(asl_7,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 8 && num_phase==2){
+    image(asl_8,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 9 && num_phase==2){
+    image(asl_9,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 0 && num_phase==2){
+    image(asl_0,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+
 
 }
 function SwitchDigits(){
 
-  console.log("array ",phase1.length)
   console.log("index ",index)
   digitToshow = phase1[index];
   n=0;
   m=0;
+  if(index < 0){
+    phase1= [0,1,2,3,4,5,6,7,8,9];
+    index=0;
+    num_phase = 2;
+  }
 
 }
+
 function TimeToSwitchDigits(){
   var currentTime = new Date();
   var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
