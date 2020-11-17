@@ -21,11 +21,15 @@ function Train(){
   for(var i = 0 ; i < 100 ; i++){
 
 
-        features = train0.pick(null,null,null,i)
+        features = train0one.pick(null,null,null,i)
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),0)
 
-        features = train1.pick(null,null,null,i)
+        features = train0two.pick(null,null,null,i)
+        features = features.reshape(1,120)
+        knnClassifier.addExample(features.tolist(),0)
+
+        features = train1one.pick(null,null,null,i)
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),1)
 
@@ -33,11 +37,7 @@ function Train(){
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),1)
 
-        features = train1three.pick(null,null,null,i)
-        features = features.reshape(1,120)
-        knnClassifier.addExample(features.tolist(),1)
-
-        features = train2.pick(null,null,null,i)
+        features = train2one.pick(null,null,null,i)
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),2)
 
@@ -45,11 +45,7 @@ function Train(){
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),2)
 
-        features = train2three.pick(null,null,null,i)
-        features = features.reshape(1,120)
-        knnClassifier.addExample(features.tolist(),2)
-
-        features = train3.pick(null,null,null,i)
+        features = train3one.pick(null,null,null,i)
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),3)
 
@@ -57,15 +53,7 @@ function Train(){
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),3)
 
-        features = train3Three.pick(null,null,null,i)
-        features = features.reshape(1,120)
-        knnClassifier.addExample(features.tolist(),3)
-
-        features = train3four.pick(null,null,null,i)
-        features = features.reshape(1,120)
-        knnClassifier.addExample(features.tolist(),3)
-
-        features = train4.pick(null,null,null,i)
+        features = train4one.pick(null,null,null,i)
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),4)
 
@@ -73,15 +61,7 @@ function Train(){
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),4)
 
-        features = train4three.pick(null,null,null,i)
-        features = features.reshape(1,120)
-        knnClassifier.addExample(features.tolist(),4)
-
-        features = train4four.pick(null,null,null,i)
-        features = features.reshape(1,120)
-        knnClassifier.addExample(features.tolist(),4)
-
-        features = train5.pick(null,null,null,i)
+        features = train5one.pick(null,null,null,i)
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),5)
 
@@ -89,19 +69,7 @@ function Train(){
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),5)
 
-        features = train5three.pick(null,null,null,i)
-        features = features.reshape(1,120)
-        knnClassifier.addExample(features.tolist(),5)
-
-        features = train5four.pick(null,null,null,i)
-        features = features.reshape(1,120)
-        knnClassifier.addExample(features.tolist(),5)
-
-        features = train5five.pick(null,null,null,i)
-        features = features.reshape(1,120)
-        knnClassifier.addExample(features.tolist(),5)
-
-        features = train6.pick(null,null,null,i)
+        features = train6one.pick(null,null,null,i)
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),6)
 
@@ -109,11 +77,7 @@ function Train(){
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),6)
 
-        features = train6three.pick(null,null,null,i)
-        features = features.reshape(1,120)
-        knnClassifier.addExample(features.tolist(),6)
-
-        features = train7.pick(null,null,null,i)
+        features = train7one.pick(null,null,null,i)
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),7)
 
@@ -121,11 +85,7 @@ function Train(){
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),7)
 
-        features = train7three.pick(null,null,null,i)
-        features = features.reshape(1,120)
-        knnClassifier.addExample(features.tolist(),7)
-
-        features = train8.pick(null,null,null,i)
+        features = train8one.pick(null,null,null,i)
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),8)
 
@@ -133,17 +93,14 @@ function Train(){
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),8)
 
-        features = train8three.pick(null,null,null,i)
-        features = features.reshape(1,120)
-        knnClassifier.addExample(features.tolist(),8)
-
-        features = train9.pick(null,null,null,i)
+        features = train9one.pick(null,null,null,i)
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),9)
 
         features = train9two.pick(null,null,null,i)
         features = features.reshape(1,120)
         knnClassifier.addExample(features.tolist(),9)
+
 
   }
 }
