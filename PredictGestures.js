@@ -507,7 +507,7 @@ function DrawLowerLeftPanel(){
   }
 }
 function SwitchDigits(){
-  console.log(phase1.length, " index : ",index);
+  console.log(phase1.length, " index : ",index, " phase : ", num_phase);
   digitToshow = phase1[index];
   n=0;
   m=0;
