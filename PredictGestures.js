@@ -562,12 +562,10 @@ function display_yes(){
   }
 }
 function display_no(){
-  var currentTime = new Date();
-  var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
-  var TimeInSeconds = TimeInMilliseconds/1000;
+  var cur = new Date();
+  var TimeInSeconds = cur/1000;
   while(TimeInSeconds != 2){
-    var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
-    var TimeInSeconds = TimeInMilliseconds/1000;
+    var TimeInSeconds = cur/1000;
     image(no,0,0, window.innerWidth, window.innerHeight);
   }
 }
