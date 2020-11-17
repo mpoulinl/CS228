@@ -535,7 +535,7 @@ function phase_choice(time_min, time_max){
         num_phase = num_phase+1;
       }
     timeSinceLastDigitChange = currentTime;
-    display_yes();
+    //display_yes();
     return true;
   }
   else if ((m < 0.50 && TimeInSeconds > time_max)){
@@ -545,7 +545,7 @@ function phase_choice(time_min, time_max){
     else{
       index = 0;
     }
-    display_no();
+    //display_no();
     timeSinceLastDigitChange = currentTime;
     return true;
   }
