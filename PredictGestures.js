@@ -747,12 +747,12 @@ function DetermineWhetherToSwitch(){
     }
   }
   else if(num_phase == 4){
-    if(phase_choice(2,2)){
+    if(phase_choice(2,3)){
       SwitchDigits();
     }
   }
   else if(num_phase == 5){
-    if(phase_choice(0.75,1.25)){
+    if(phase_choice(0.75,2)){
       SwitchDigits();
     }
   }
