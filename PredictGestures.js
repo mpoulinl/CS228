@@ -554,12 +554,22 @@ function phase_choice(time_min, time_max){
   }
 }
 function display_yes(){
-  for(var i = 0 ; i < 1000 ; i++){
+  var currentTime = new Date();
+  var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
+  var TimeInSeconds = TimeInMilliseconds/1000;
+  while(TimeInSeconds != 2){
+    var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
+    var TimeInSeconds = TimeInMilliseconds/1000;
     image(yes,0,0, window.innerWidth, window.innerHeight);
   }
 }
 function display_no(){
-  for(var i = 0 ; i < 1000 ; i++){
+  var currentTime = new Date();
+  var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
+  var TimeInSeconds = TimeInMilliseconds/1000;
+  while(TimeInSeconds != 2){
+    var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
+    var TimeInSeconds = TimeInMilliseconds/1000;
     image(no,0,0, window.innerWidth, window.innerHeight);
   }
 }
