@@ -465,8 +465,10 @@ function TimeToSwitchDigits(){
         if(digitToshow == phase1[i]){
           console.log("digit :", digitToshow, " index : ", i)
           phase1.splice(i,1);
-          i = 100;
         }
+      }
+      if(index == phase1.length){
+        index = index - 1;
       }
     timeSinceLastDigitChange = currentTime;
     return true;
