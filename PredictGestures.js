@@ -554,14 +554,16 @@ function TimeToSwitchDigits(){
       return false;
     }
   }
+
   else if (num_phase == 2) {
-    if(TimeInSeconds >= 2 && phase2[digitToshow] ==3){
+    if(TimeInSeconds <= 2 && phase2[digitToshow] == 3){
       DrawLowerRightPanel();
     }
-    if(TimeInSeconds >= 0.75 && phase2[digitToshow] ==2){
+    if(TimeInSeconds <= 0.75 && phase2[digitToshow] ==2){
       DrawLowerRightPanel();
     }
-    if((m >= 0.50 && TimeInSeconds > 3)){
+
+    if((m >= 0.50 && TimeInSeconds > 1)){
       phase2[digitToshow] = phase2[digitToshow] - 1;
       if(phase2[digitToshow] == 0){
         for(var i = 0 ; i < phase1.length ; i++){
