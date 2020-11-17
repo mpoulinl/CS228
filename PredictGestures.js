@@ -21,6 +21,7 @@ var phase2 = [3,3,3,3,3,3,3,3,3,3];
 var num_remove = 0;
 var index = 0;
 var num_phase = 1;
+var c;
 // function CreateNewUser(username,list){
 //   var item = document.createElement('li');
 //   item.innerHTML = String(username);
