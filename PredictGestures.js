@@ -545,23 +545,22 @@ function phase_choice(time_min, time_max){
     else{
       index = 0;
     }
-    display_yes();
+    display_no();
     timeSinceLastDigitChange = currentTime;
     return true;
   }
   else{
-    display_no();
     return false;
   }
 }
 function display_yes(){
   for(var i = 0 ; i < 1000 ; i++){
-    image(yes,window.innerWidth/1.5, window.innerHeight/1.5, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(yes,0,0, window.innerWidth, window.innerHeight);
   }
 }
 function display_no(){
   for(var i = 0 ; i < 1000 ; i++){
-    image(no,window.innerWidth/1.5, window.innerHeight/1.5, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(no,0,0, window.innerWidth, window.innerHeight);
   }
 }
 function TimeToSwitchDigits(){
