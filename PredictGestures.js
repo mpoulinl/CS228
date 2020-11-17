@@ -109,6 +109,9 @@ function Train(){
     features = features.reshape(1,120)
     knnClassifier.addExample(features.tolist(),3)
 
+    features = train3four.pick(null,null,null,i)
+    features = features.reshape(1,120)
+    knnClassifier.addExample(features.tolist(),3)
 
     features = train4.pick(null,null,null,i)
     features = features.reshape(1,120)
