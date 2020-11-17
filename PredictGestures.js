@@ -423,7 +423,7 @@ function HandleState2(frame) {
     DrawLowerLeftPanel();
   }
   else{
-    if(phase2[digitToshow] ==3){
+    if(phase2[digitToshow] == 3){
       DrawLowerLeftPanel();
     }
     else if (phase2[digitToshow] == 2) {
@@ -518,7 +518,7 @@ function TimeToSwitchDigits(){
   var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
   var TimeInSeconds = TimeInMilliseconds/1000;
   if(num_phase == 1){
-    if((m >= 0.50 && TimeInSeconds > 2)){
+    if((m >= 0.50 && TimeInSeconds >= 2) || (TimeInSeconds == 5 && c == digitToshow)){
 
         for(var i = 0 ; i < phase1.length ; i++){
           if(digitToshow == phase1[i]){
@@ -553,14 +553,56 @@ function TimeToSwitchDigits(){
   }
 
   else if (num_phase == 2) {
-    if(TimeInSeconds <= 2 && phase2[digitToshow] == 3){
+    if(TimeInSeconds <= 2.5 && phase2[digitToshow] == 3){
       DrawLowerRightPanel();
     }
     if(TimeInSeconds <= 0.75 && phase2[digitToshow] ==2){
       DrawLowerRightPanel();
     }
 
-    if((m >= 0.50 && TimeInSeconds > 1)){
+    if(((m >= 0.50 && TimeInSeconds >= 2) || (TimeInSeconds == 4 && c == digitToshow)) && phase2[digitToshow] == 3){
+      phase2[digitToshow] = phase2[digitToshow] - 1;
+      if(phase2[digitToshow] == 0){
+        for(var i = 0 ; i < phase1.length ; i++){
+          if(digitToshow == phase1[i]){
+
+            phase1.splice(i,1);
+          }
+        }
+        if(index == phase1.length){
+          index = index - 1;
+        }
+        if(index < 0){
+          phase1= [0,1,2,3,4,5,6,7,8,9];
+          index=0;
+          num_phase = 3;
+        }
+      }
+      timeSinceLastDigitChange = currentTime;
+      return true;
+    }
+    else if(((m >= 0.50 && TimeInSeconds >= 1) || (TimeInSeconds == 2 && c == digitToshow)) && phase2[digitToshow] == 2){
+      phase2[digitToshow] = phase2[digitToshow] - 1;
+      if(phase2[digitToshow] == 0){
+        for(var i = 0 ; i < phase1.length ; i++){
+          if(digitToshow == phase1[i]){
+
+            phase1.splice(i,1);
+          }
+        }
+        if(index == phase1.length){
+          index = index - 1;
+        }
+        if(index < 0){
+          phase1= [0,1,2,3,4,5,6,7,8,9];
+          index=0;
+          num_phase = 3;
+        }
+      }
+      timeSinceLastDigitChange = currentTime;
+      return true;
+    }
+    else if(((m >= 0.50 && TimeInSeconds >= 1) || (TimeInSeconds == 1 && c == digitToshow)) && phase2[digitToshow] == 1){
       phase2[digitToshow] = phase2[digitToshow] - 1;
       if(phase2[digitToshow] == 0){
         for(var i = 0 ; i < phase1.length ; i++){
