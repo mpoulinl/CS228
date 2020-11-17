@@ -17,7 +17,7 @@ var digitToshow = 0;
 var timeSinceLastDigitChange = new Date();
 
 var phase1 = [0,1,2,3,4,5,6,7,8,9];
-var phase2 = [0,1,2,3,4,5,6,7,8,9];
+var phase2 = [3,3,3,3,3,3,3,3,3,3];
 var num_remove = 0;
 var index = 0;
 var num_phase = 1;
@@ -423,7 +423,18 @@ function HandleState2(frame) {
     DrawLowerLeftPanel();
   }
   else{
-    DrawLowerLeftPanel();
+    if(phase2[digitToshow] ==3){
+      DrawLowerRightPanel();
+      DrawLowerLeftPanel();
+    }
+    else if (phase2[digitToshow] == 2) {
+      DrawLowerRightPanel();
+      DrawLowerLeftPanel();
+    }
+    else{
+      DrawLowerLeftPanel();
+    }
+
   }
 
   DetermineWhetherToSwitch();
@@ -509,38 +520,83 @@ function TimeToSwitchDigits(){
   var currentTime = new Date();
   var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
   var TimeInSeconds = TimeInMilliseconds/1000;
-  if((m >= 0.50 && TimeInSeconds > 2)){
+  if(num_phase == 1){
+    if((m >= 0.50 && TimeInSeconds > 2)){
 
-      for(var i = 0 ; i < phase1.length ; i++){
-        if(digitToshow == phase1[i]){
-          console.log("digit :", digitToshow, " index : ", i)
-          phase1.splice(i,1);
+        for(var i = 0 ; i < phase1.length ; i++){
+          if(digitToshow == phase1[i]){
+            console.log("digit :", digitToshow, " index : ", i)
+            phase1.splice(i,1);
+          }
         }
+        if(index == phase1.length){
+          index = index - 1;
+        }
+        if(index < 0){
+          phase1= [0,1,2,3,4,5,6,7,8,9];
+          index=0;
+          num_phase = 2;
+        }
+      timeSinceLastDigitChange = currentTime;
+      return true;
+    }
+    else if ((m < 0.50 && TimeInSeconds > 5)){
+      if(index < ((phase1.length)-1)){
+        index = index+1
       }
-      if(index == phase1.length){
-        index = index - 1;
+      else{
+        index = 0;
       }
-      if(index < 0){
-        phase1= [0,1,2,3,4,5,6,7,8,9];
-        index=0;
-        num_phase = 2;
-      }
-    timeSinceLastDigitChange = currentTime;
-    return true;
-  }
-  else if ((m < 0.50 && TimeInSeconds > 5)){
-    if(index < ((phase1.length)-1)){
-      index = index+1
+      timeSinceLastDigitChange = currentTime;
+      return true;
     }
     else{
-      index = 0;
+      return false;
     }
-    timeSinceLastDigitChange = currentTime;
-    return true;
   }
-  else{
-    return false;
+  else if (num_phase == 2) {
+    if(TimeInSeconds >= 2 && phase2[digitToshow] ==3){
+      DrawLowerRightPanel();
+    }
+    if(TimeInSeconds >= 0.75 && phase2[digitToshow] ==2){
+      DrawLowerRightPanel();
+    }
+    if((m >= 0.50 && TimeInSeconds > 3)){
+      phase2[digitToshow] = phase2[digitToshow] - 1;
+      if(phase2[digitToshow] == 0){
+        for(var i = 0 ; i < phase1.length ; i++){
+          if(digitToshow == phase1[i]){
+            console.log("digit :", digitToshow, " index : ", i)
+            phase1.splice(i,1);
+          }
+        }
+        if(index == phase1.length){
+          index = index - 1;
+        }
+        if(index < 0){
+          phase1= [0,1,2,3,4,5,6,7,8,9];
+          index=0;
+          num_phase = 3;
+        }
+      }
+      timeSinceLastDigitChange = currentTime;
+      return true;
+    }
+    else if ((m < 0.50 && TimeInSeconds > 5)){
+      if(index < ((phase1.length)-1)){
+        index = index+1
+      }
+      else{
+        index = 0;
+      }
+      timeSinceLastDigitChange = currentTime;
+      return true;
+    }
+    else{
+      return false;
+    }
   }
+
 }
 
 function DetermineWhetherToSwitch(){
