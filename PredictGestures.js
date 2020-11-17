@@ -423,6 +423,9 @@ function HandleState2(frame) {
     DrawLowerRightPanel();
     DrawLowerLeftPanel();
   }
+  else if (num_phase ==3) {
+    DrawLowerLeftPanel();
+  }
   else{
     if(phase2[digitToshow] == 3){
       DrawLowerLeftPanel();
@@ -554,10 +557,10 @@ function TimeToSwitchDigits(){
   }
 
   else if (num_phase == 2) {
-    if(TimeInSeconds <= 2.5 && phase2[digitToshow] == 3){
+    if(TimeInSeconds <= 2 && phase2[digitToshow] == 3){
       DrawLowerRightPanel();
     }
-    if(TimeInSeconds <= 0.75 && phase2[digitToshow] ==2){
+    if(TimeInSeconds <= 1 && phase2[digitToshow] ==2){
       DrawLowerRightPanel();
     }
 
@@ -625,6 +628,40 @@ function TimeToSwitchDigits(){
       return true;
     }
     else if ((m < 0.50 && TimeInSeconds > 5)){
+      if(index < ((phase1.length)-1)){
+        index = index+1
+      }
+      else{
+        index = 0;
+      }
+      timeSinceLastDigitChange = currentTime;
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+  else if (num_phase = 3) {
+    if((m >= 0.50 && TimeInSeconds >= 1) || (TimeInSeconds == 1 && c == digitToshow)){
+
+        for(var i = 0 ; i < phase1.length ; i++){
+          if(digitToshow == phase1[i]){
+
+            phase1.splice(i,1);
+          }
+        }
+        if(index == phase1.length){
+          index = index - 1;
+        }
+        if(index < 0){
+          phase1= [0,1,2,3,4,5,6,7,8,9];
+          index=0;
+          num_phase = 4;
+        }
+      timeSinceLastDigitChange = currentTime;
+      return true;
+    }
+    else if ((m < 0.50 && TimeInSeconds > 1)){
       if(index < ((phase1.length)-1)){
         index = index+1
       }
