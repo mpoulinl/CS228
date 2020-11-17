@@ -555,12 +555,12 @@ function phase_choice(time_min, time_max){
   }
 }
 function display_yes(){
-  for(int i = 0 ; i < 1000 ; i++){
+  for(var i = 0 ; i < 1000 ; i++){
     image(yes,window.innerWidth/1.5, window.innerHeight/1.5, window.innerWidth/2.2, window.innerHeight/2.2);
   }
 }
 function display_no(){
-  for(int i = 0 ; i < 1000 ; i++){
+  for(var i = 0 ; i < 1000 ; i++){
     image(no,window.innerWidth/1.5, window.innerHeight/1.5, window.innerWidth/2.2, window.innerHeight/2.2);
   }
 }
