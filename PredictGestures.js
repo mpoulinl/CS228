@@ -507,8 +507,7 @@ function DrawLowerLeftPanel(){
   }
 }
 function SwitchDigits(){
-
-  console.log("index ",index)
+  console.log(phase1.length, " index : ",index);
   digitToshow = phase1[index];
   n=0;
   m=0;
@@ -525,7 +524,7 @@ function TimeToSwitchDigits(){
 
         for(var i = 0 ; i < phase1.length ; i++){
           if(digitToshow == phase1[i]){
-            console.log("digit :", digitToshow, " index : ", i)
+
             phase1.splice(i,1);
           }
         }
@@ -568,7 +567,7 @@ function TimeToSwitchDigits(){
       if(phase2[digitToshow] == 0){
         for(var i = 0 ; i < phase1.length ; i++){
           if(digitToshow == phase1[i]){
-            console.log("digit :", digitToshow, " index : ", i)
+
             phase1.splice(i,1);
           }
         }
