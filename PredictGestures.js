@@ -423,19 +423,9 @@ function HandleState2(frame) {
     DrawLowerRightPanel();
     DrawLowerLeftPanel();
   }
-  else if (num_phase ==3) {
+  else{
     DrawLowerLeftPanel();
   }
-  else{
-    if(phase2[digitToshow] == 3){
-      DrawLowerLeftPanel();
-    }
-    else if (phase2[digitToshow] == 2) {
-      DrawLowerLeftPanel();
-    }
-    else{
-      DrawLowerLeftPanel();
-    }
 
   }
 
@@ -515,6 +505,51 @@ function SwitchDigits(){
   m=0;
 
 
+}
+
+function phase_choice(time_min, time_max){
+  var currentTime = new Date();
+  var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
+  var TimeInSeconds = TimeInMilliseconds/1000;
+  if(num_phase == 2 && TimeInSeconds <= 2){
+    DrawLowerRightPanel();
+  }
+  if(num_phase == 3 && TimeInSeconds <= 1){
+    DrawLowerRightPanel();
+  }
+
+  if((m >= 0.50 && TimeInSeconds >= time_min) || (TimeInSeconds == time_max && c == digitToshow)){
+
+      for(var i = 0 ; i < phase1.length ; i++){
+        if(digitToshow == phase1[i]){
+
+          phase1.splice(i,1);
+        }
+      }
+      if(index == phase1.length){
+        index = index - 1;
+      }
+      if(index < 0){
+        phase1= [0,1,2,3,4,5,6,7,8,9];
+        index=0;
+        num_phase = num_phase+1;
+      }
+    timeSinceLastDigitChange = currentTime;
+    return true;
+  }
+  else if ((m < 0.50 && TimeInSeconds > time_max)){
+    if(index < ((phase1.length)-1)){
+      index = index+1
+    }
+    else{
+      index = 0;
+    }
+    timeSinceLastDigitChange = currentTime;
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
 function TimeToSwitchDigits(){
@@ -679,9 +714,32 @@ function TimeToSwitchDigits(){
 }
 
 function DetermineWhetherToSwitch(){
-  if(TimeToSwitchDigits()){
-    SwitchDigits();
+  if(num_phase == 1){
+    if(phase_choice(2,5)){
+      SwitchDigits();
+    }
   }
+  else if(num_phase == 2){
+    if(phase_choice(2,4)){
+      SwitchDigits();
+    }
+  }
+  else if(num_phase == 3){
+    if(phase_choice(2,3)){
+      SwitchDigits();
+    }
+  }
+  else if(num_phase == 4){
+    if(phase_choice(2,2)){
+      SwitchDigits();
+    }
+  }
+  else if(num_phase == 5){
+    if(phase_choice(0.75,1.25)){
+      SwitchDigits();
+    }
+  }
+
 }
 function DrawImageToHelpUserPutTheirHandOverTheDevice(){
   image(img,window.innerWidth/2.1, 0, window.innerWidth/2.2, window.innerHeight/2.2);
