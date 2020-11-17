@@ -444,34 +444,34 @@ function DrawLowerRightPanel(){
     image(asl_0,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
   if(digitToshow == 1 && num_phase==2){
-    image(asl_1,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(num_1,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
   if(digitToshow == 2 && num_phase==2){
-    image(asl_2,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(num_2,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
   if(digitToshow == 3 && num_phase==2){
-    image(asl_3,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(num_3,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
   if(digitToshow == 4 && num_phase==2){
-    image(asl_4,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(num_4,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
   if(digitToshow == 5 && num_phase==2){
-    image(asl_5,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(num_5,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
   if(digitToshow == 6 && num_phase==2){
-    image(asl_6,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(num_6,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
   if(digitToshow == 7 && num_phase==2){
-    image(asl_7,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(num_7,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
   if(digitToshow == 8 && num_phase==2){
-    image(asl_8,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(num_8,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
   if(digitToshow == 9 && num_phase==2){
-    image(asl_9,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(num_9,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
   if(digitToshow == 0 && num_phase==2){
-    image(asl_0,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(num_0,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
 
 
@@ -482,11 +482,7 @@ function SwitchDigits(){
   digitToshow = phase1[index];
   n=0;
   m=0;
-  if(index < 0){
-    phase1= [0,1,2,3,4,5,6,7,8,9];
-    index=0;
-    num_phase = 2;
-  }
+
 
 }
 
@@ -504,6 +500,11 @@ function TimeToSwitchDigits(){
       }
       if(index == phase1.length){
         index = index - 1;
+      }
+      if(index < 0){
+        phase1= [0,1,2,3,4,5,6,7,8,9];
+        index=0;
+        num_phase = 2;
       }
     timeSinceLastDigitChange = currentTime;
     return true;
