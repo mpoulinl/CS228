@@ -424,11 +424,9 @@ function HandleState2(frame) {
   }
   else{
     if(phase2[digitToshow] ==3){
-      DrawLowerRightPanel();
       DrawLowerLeftPanel();
     }
     else if (phase2[digitToshow] == 2) {
-      DrawLowerRightPanel();
       DrawLowerLeftPanel();
     }
     else{
