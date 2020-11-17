@@ -427,7 +427,7 @@ function HandleState2(frame) {
     DrawLowerLeftPanel();
   }
 
-  }
+  
 
   DetermineWhetherToSwitch();
   //test
