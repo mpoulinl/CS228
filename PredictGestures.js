@@ -407,74 +407,82 @@ function HandleState1(frame) {
 function HandleState2(frame) {
   HandleFrame(frame);
   Test();
-  DrawLowerRightPanel();
+  if(num_phase = 1){
+    DrawLowerRightPanel();
+    DrawLowerLeftPanel();
+  }
+  else{
+    DrawLowerLeftPanel();
+  }
+
   DetermineWhetherToSwitch();
   //test
 }
 
 function DrawLowerRightPanel(){
-  if(digitToshow == 1 && num_phase==1){
+  if(digitToshow == 1){
     image(asl_1,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 2 && num_phase==1){
+  if(digitToshow == 2){
     image(asl_2,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 3 && num_phase==1){
+  if(digitToshow == 3){
     image(asl_3,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 4 && num_phase==1){
+  if(digitToshow == 4){
     image(asl_4,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 5 && num_phase==1){
+  if(digitToshow == 5){
     image(asl_5,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 6 && num_phase==1){
+  if(digitToshow == 6){
     image(asl_6,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 7 && num_phase==1){
+  if(digitToshow == 7){
     image(asl_7,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 8 && num_phase==1){
+  if(digitToshow == 8){
     image(asl_8,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 9 && num_phase==1){
+  if(digitToshow == 9){
     image(asl_9,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 0 && num_phase==1){
+  if(digitToshow == 0){
     image(asl_0,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  if(digitToshow == 1 && num_phase==2){
-    image(num_1,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 2 && num_phase==2){
-    image(num_2,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 3 && num_phase==2){
-    image(num_3,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 4 && num_phase==2){
-    image(num_4,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 5 && num_phase==2){
-    image(num_5,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 6 && num_phase==2){
-    image(num_6,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 7 && num_phase==2){
-    image(num_7,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 8 && num_phase==2){
-    image(num_8,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 9 && num_phase==2){
-    image(num_9,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 0 && num_phase==2){
-    image(num_0,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
 
-
+}
+function DrawLowerLeftPanel(){
+  if(digitToshow == 1){
+    image(num_1,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 2){
+    image(num_2,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 3){
+    image(num_3,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 4){
+    image(num_4,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 5){
+    image(num_5,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 6){
+    image(num_6,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 7){
+    image(num_7,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 8){
+    image(num_8,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 9){
+    image(num_9,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 0){
+    image(num_0,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
 }
 function SwitchDigits(){
 
