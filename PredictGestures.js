@@ -427,7 +427,7 @@ function HandleState2(frame) {
     DrawLowerLeftPanel();
   }
 
-  
+
 
   DetermineWhetherToSwitch();
   //test
@@ -535,6 +535,7 @@ function phase_choice(time_min, time_max){
         num_phase = num_phase+1;
       }
     timeSinceLastDigitChange = currentTime;
+    display_yes();
     return true;
   }
   else if ((m < 0.50 && TimeInSeconds > time_max)){
@@ -544,14 +545,25 @@ function phase_choice(time_min, time_max){
     else{
       index = 0;
     }
+    display_yes();
     timeSinceLastDigitChange = currentTime;
     return true;
   }
   else{
+    display_no();
     return false;
   }
 }
-
+function display_yes(){
+  for(int i = 0 ; i < 1000 ; i++){
+    image(yes,window.innerWidth/1.5, window.innerHeight/1.5, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+}
+function display_no(){
+  for(int i = 0 ; i < 1000 ; i++){
+    image(no,window.innerWidth/1.5, window.innerHeight/1.5, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+}
 function TimeToSwitchDigits(){
   var currentTime = new Date();
   var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
