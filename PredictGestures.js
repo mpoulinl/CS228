@@ -420,7 +420,7 @@ function HandleState2(frame) {
   HandleFrame(frame);
   Test();
   if(num_phase == 1){
-    DrawLowerRightPanel();
+    DrawLowerRightPanel_2();
     DrawLowerLeftPanel();
   }
   else{
@@ -438,9 +438,8 @@ function HandleState2(frame) {
 function DrawLowerLeftPanel_yes_no(){
 }
 function DrawLowerLeftPanel_2(){
-  if(digitToshow == 7 && wrong == false){
     image(three_plus_four,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
+
 }
 function DrawLowerRightPanel(){
   if(digitToshow == 1){
@@ -521,10 +520,10 @@ function phase_choice(time_min, time_max){
   var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
   var TimeInSeconds = TimeInMilliseconds/1000;
   if(num_phase == 2 && TimeInSeconds <= 2){
-    DrawLowerRightPanel();
+    DrawLowerRightPanel_2();
   }
   if(num_phase == 3 && TimeInSeconds <= 1){
-    DrawLowerRightPanel();
+    DrawLowerRightPanel_2();
   }
 
   if((m >= 0.50 && TimeInSeconds >= time_min) || (TimeInSeconds == time_max && c == digitToshow)){
@@ -619,10 +618,10 @@ function TimeToSwitchDigits(){
 
   else if (num_phase == 2) {
     if(TimeInSeconds <= 2 && phase2[digitToshow] == 3){
-      DrawLowerRightPanel();
+      DrawLowerRightPanel_2();
     }
     if(TimeInSeconds <= 1 && phase2[digitToshow] ==2){
-      DrawLowerRightPanel();
+      DrawLowerRightPanel_2();
     }
 
     if(((m >= 0.50 && TimeInSeconds >= 2) || (TimeInSeconds == 4 && c == digitToshow)) && phase2[digitToshow] == 3){
