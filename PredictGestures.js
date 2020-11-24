@@ -476,36 +476,36 @@ function DrawLowerRightPanel(){
   DrawLowerLeftPanel_2;
 }
 function DrawLowerLeftPanel(){
-  if(digitToshow == 1){
-    image(num_1,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 2){
-    image(num_2,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 3){
-    image(num_3,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 4){
-    image(num_4,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 5){
-    image(num_5,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 6){
-    image(num_6,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 7){
-    image(num_7,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 8){
-    image(num_8,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 9){
-    image(num_9,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 0){
-    image(num_0,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
+  // if(digitToshow == 1){
+  //   image(num_1,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  // }
+  // if(digitToshow == 2){
+  //   image(num_2,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  // }
+  // if(digitToshow == 3){
+  //   image(num_3,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  // }
+  // if(digitToshow == 4){
+  //   image(num_4,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  // }
+  // if(digitToshow == 5){
+  //   image(num_5,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  // }
+  // if(digitToshow == 6){
+  //   image(num_6,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  // }
+  // if(digitToshow == 7){
+  //   image(num_7,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  // }
+  // if(digitToshow == 8){
+  //   image(num_8,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  // }
+  // if(digitToshow == 9){
+  //   image(num_9,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  // }
+  // if(digitToshow == 0){
+  //   image(num_0,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  // }
 }
 function SwitchDigits(){
   console.log(phase1.length, " index : ",index, " phase : ", num_phase);
