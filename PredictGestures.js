@@ -439,7 +439,7 @@ function DrawLowerLeftPanel_yes_no(){
 }
 function DrawLowerLeftPanel_2(){
   if(digitToshow == 7 && wrong == false){
-    image(asl_1,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(three_plus_four,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
 }
 function DrawLowerRightPanel(){
