@@ -15,7 +15,7 @@ var programState = 0;
 
 var digitToshow = 0;
 var timeSinceLastDigitChange = new Date();
-
+var wrong = false;
 var phase1 = [0,1,2,3,4,5,6,7,8,9];
 var phase2 = [3,3,3,3,3,3,3,3,3,3];
 var num_remove = 0;
@@ -433,6 +433,15 @@ function HandleState2(frame) {
   //test
 }
 
+
+
+function DrawLowerLeftPanel_yes_no(){
+}
+function DrawLowerLeftPanel_2(){
+  if(digitToshow == 7 && wrong == false){
+    image(asl_1,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+}
 function DrawLowerRightPanel(){
   if(digitToshow == 1){
     image(asl_1,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
@@ -464,7 +473,7 @@ function DrawLowerRightPanel(){
   if(digitToshow == 0){
     image(asl_0,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-
+  DrawLowerLeftPanel_2;
 }
 function DrawLowerLeftPanel(){
   if(digitToshow == 1){

@@ -41,6 +41,8 @@ num_7 = loadImage('https://i.imgur.com/cOjZwYD.jpg');
 num_8 = loadImage('https://i.imgur.com/U9VAPZM.jpg');
 num_9 = loadImage('https://i.imgur.com/RdVj6E1.jpg');
 
+three_plus_four = loadImage('https://i.imgur.com/700aePU.png');
+
 yes = loadImage('https://i.imgur.com/CdNouYK.png');
 no = loadImage('https://i.imgur.com/ceZsav1.jpg');
 
