@@ -553,6 +553,7 @@ function phase_choice(time_min, time_max){
     return true;
   }
   else if ((m < 0.50 && TimeInSeconds > time_max)){
+    denominator++;
     if(index < ((phase1.length)-1)){
       index = index+1
     }
@@ -610,6 +611,7 @@ function TimeToSwitchDigits(){
       return true;
     }
     else if ((m < 0.50 && TimeInSeconds > 5)){
+      denominator++;
       if(index < ((phase1.length)-1)){
         index = index+1
       }
@@ -702,6 +704,7 @@ function TimeToSwitchDigits(){
       return true;
     }
     else if ((m < 0.50 && TimeInSeconds > 5)){
+      denominator++;
       if(index < ((phase1.length)-1)){
         index = index+1
       }
@@ -738,6 +741,7 @@ function TimeToSwitchDigits(){
       return true;
     }
     else if ((m < 0.50 && TimeInSeconds > 1)){
+      denominator++;
       if(index < ((phase1.length)-1)){
         index = index+1
       }
