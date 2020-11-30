@@ -14,7 +14,7 @@ var currentSample = 0;
 var programState = 0;
 var last_performance;
 var numerator = 0;
-var denominator 0;
+var denominator = 0;
 var current_performance;
 var digitToshow = 0;
 var timeSinceLastDigitChange = new Date();
