@@ -472,7 +472,7 @@ function DrawLowerRightPanel(){
   if(digitToshow == 0){
     image(asl_0,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  DrawLowerLeftPanel_2;
+  DrawLowerLeftPanel;
 }
 function DrawLowerLeftPanel(){
   if(digitToshow == 1){
