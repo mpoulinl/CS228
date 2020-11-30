@@ -66,7 +66,6 @@ function SignIn(){
     ID = String(username) + "_signins";
     listItem = document.getElementById(ID);
     listItem.innerHTML = parseInt(listItem.innerHTML) + 1;
-
   }
   //console.log(list.innerHTML);
   return false;
