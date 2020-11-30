@@ -711,43 +711,11 @@ function TimeToSwitchDigits(){
       return false;
     }
   }
-  else if (num_phase = 3) {
-    if((m >= 0.50 && TimeInSeconds >= 1) || (TimeInSeconds == 1 && c == digitToshow)){
-
-        for(var i = 0 ; i < phase1.length ; i++){
-          if(digitToshow == phase1[i]){
-            denominator++;
-            numerator++;
-            console.log(numerator/denominator);
-            phase1.splice(i,1);
-          }
-        }
-        if(index == phase1.length){
-          index = index - 1;
-        }
-        if(index < 0){
-          phase1= [0,1,2,3,4,5,6,7,8,9];
-          index=0;
-          num_phase = 4;
-        }
-      timeSinceLastDigitChange = currentTime;
-      return true;
-    }
-    else if ((m < 0.50 && TimeInSeconds > 1)){
-      denominator++;
-      if(index < ((phase1.length)-1)){
-        index = index+1
-      }
-      else{
-        index = 0;
-      }
-      timeSinceLastDigitChange = currentTime;
-      return true;
-    }
-    else{
-      return false;
-    }
+  else if (num_phase == 3) {
+    console.log("done");
+    //done
   }
+
 
 }
 
