@@ -38,7 +38,7 @@ function CreateSignInItem(username,list){
   item_signins.innerHTML = 1;
   item_signins.id = String(username) + "_signins";
   list.appendChild(item_signins)
-  
+
 }
 
 function IsNewUser(username,list){
@@ -67,9 +67,6 @@ function SignIn(){
     listItem = document.getElementById(ID);
     listItem.innerHTML = parseInt(listItem.innerHTML) + 1;
 
-    ID = String(username) + "_last_performance";
-    listItem = document.getElementById(ID);
-    listItem.innerHTML = parseInt(listItem.innerHTML);
   }
   //console.log(list.innerHTML);
   return false;
