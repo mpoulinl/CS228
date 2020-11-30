@@ -34,7 +34,7 @@ function CreateNewUser(username,list){
 
 function CreateSignInItem(username,list){
   var item_signins = document.createElement('li');
-  item_signins.innerHTML = 0;
+  item_signins.innerHTML = 1;
   item_signins.id = String(username) + "_signins";
   list.appendChild(item_signins)
 }
@@ -423,7 +423,7 @@ function HandleState2(frame) {
   HandleFrame(frame);
   Test();
   if(num_phase == 1){
-    DrawLowerRightPanel();
+    DrawLowerRightPanel_();
     DrawLowerLeftPanel();
   }
   else{
@@ -436,7 +436,7 @@ function HandleState2(frame) {
   //test
 }
 
-function DrawLowerRightPanel(){
+function DrawLowerRightPanel_2(){
     DrawLowerLeftPanel();
     image(three_plus_four,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
 
@@ -472,7 +472,7 @@ function DrawLowerRightPanel(){
   if(digitToshow == 0){
     image(asl_0,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
-  DrawLowerLeftPanel;
+  DrawLowerLeftPanel_2;
 }
 function DrawLowerLeftPanel(){
   if(digitToshow == 1){
@@ -521,6 +521,10 @@ function phase_choice(time_min, time_max){
   if(num_phase == 2 && TimeInSeconds <= 2){
     DrawLowerRightPanel();
   }
+  if(num_phase == 3 && TimeInSeconds <= 1){
+    DrawLowerRightPanel();
+  }
+
   if((m >= 0.50 && TimeInSeconds >= time_min) || (TimeInSeconds == time_max && c == digitToshow)){
 
       for(var i = 0 ; i < phase1.length ; i++){
@@ -560,22 +564,22 @@ function phase_choice(time_min, time_max){
     return false;
   }
 }
-// function display_yes(){
-//   var cur = new Date();
-//   var TimeInSeconds = cur/1000;
-//   while(TimeInSeconds != 2){
-//     var TimeInSeconds = cur/1000;
-//     image(yes,0,0, window.innerWidth, window.innerHeight);
-//   }
-// }
-// function display_no(){
-//   var cur = new Date();
-//   var TimeInSeconds = cur/1000;
-//   while(TimeInSeconds != 2){
-//     var TimeInSeconds = cur/1000;
-//     image(no,0,0, window.innerWidth, window.innerHeight);
-//   }
-// }
+function display_yes(){
+  var cur = new Date();
+  var TimeInSeconds = cur/1000;
+  while(TimeInSeconds != 2){
+    var TimeInSeconds = cur/1000;
+    image(yes,0,0, window.innerWidth, window.innerHeight);
+  }
+}
+function display_no(){
+  var cur = new Date();
+  var TimeInSeconds = cur/1000;
+  while(TimeInSeconds != 2){
+    var TimeInSeconds = cur/1000;
+    image(no,0,0, window.innerWidth, window.innerHeight);
+  }
+}
 
 function TimeToSwitchDigits(){
   var currentTime = new Date();
@@ -621,7 +625,7 @@ function TimeToSwitchDigits(){
 
   else if (num_phase == 2) {
     if(TimeInSeconds <= 2 && phase2[digitToshow] == 3){
-      DrawLowerRightPanel();
+      DrawLowerRightPanel_2();
     }
     if(TimeInSeconds <= 1 && phase2[digitToshow] ==2){
       DrawLowerRightPanel_2();
@@ -711,11 +715,43 @@ function TimeToSwitchDigits(){
       return false;
     }
   }
-  else if (num_phase == 3) {
-    console.log("done");
-    //done
-  }
+  else if (num_phase = 3) {
+    if((m >= 0.50 && TimeInSeconds >= 1) || (TimeInSeconds == 1 && c == digitToshow)){
 
+        for(var i = 0 ; i < phase1.length ; i++){
+          if(digitToshow == phase1[i]){
+            denominator++;
+            numerator++;
+            console.log(numerator/denominator);
+            phase1.splice(i,1);
+          }
+        }
+        if(index == phase1.length){
+          index = index - 1;
+        }
+        if(index < 0){
+          phase1= [0,1,2,3,4,5,6,7,8,9];
+          index=0;
+          num_phase = 4;
+        }
+      timeSinceLastDigitChange = currentTime;
+      return true;
+    }
+    else if ((m < 0.50 && TimeInSeconds > 1)){
+      denominator++;
+      if(index < ((phase1.length)-1)){
+        index = index+1
+      }
+      else{
+        index = 0;
+      }
+      timeSinceLastDigitChange = currentTime;
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
 
 }
 
