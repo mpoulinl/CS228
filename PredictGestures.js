@@ -534,7 +534,7 @@ function phase_choice(time_min, time_max){
       for(var i = 0 ; i < phase1.length ; i++){
         if(digitToshow == phase1[i]){
           phase1.splice(i,1);
-          maude_current_performance =
+    
         }
       }
       if(index == phase1.length){
