@@ -53,12 +53,18 @@ function IsNewUser(username,list){
 }
 
 function SignIn(){
+  ID = String(username) + "_last_performance";
+  listItem = document.getElementById(ID);
+  listItem.innerHTML = parseInt(current_performance);
   username = document.getElementById('username').value;
   var list = document.getElementById('users');
   if(IsNewUser(username,list)){
     CreateNewUser(username,list)
     //new list sign in
     CreateSignInItem(username,list);
+    ID = String(username) + "_last_performance";
+    listItem = document.getElementById(ID);
+    listItem.innerHTML = parseInt(0);
   }
   else{
     ID = String(username) + "_signins";
