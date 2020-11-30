@@ -423,7 +423,7 @@ function HandleState2(frame) {
   HandleFrame(frame);
   Test();
   if(num_phase == 1){
-    DrawLowerRightPanel_();
+    DrawLowerRightPanel();
     DrawLowerLeftPanel();
   }
   else{
