@@ -11,6 +11,7 @@ var oneFrameOfData = nj.zeros([5,4,6]);
 var numSamples = 100;
 var currentSample = 0;
 
+var current_usrname = "none";
 var programState = 0;
 var last_performance;
 var numerator = 0;
@@ -53,6 +54,13 @@ function IsNewUser(username,list){
 }
 
 function SignIn(){
+  if(current_usrname != "none"){
+    ID = String(current_usrname) + "_signins";
+    listItem = document.getElementById(ID);
+    listItem.innerHTML = 2;    
+  }
+  current_usrname = document.getElementById('username').value;
+
   username = document.getElementById('username').value;
   var list = document.getElementById('users');
   if(IsNewUser(username,list)){
