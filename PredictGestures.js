@@ -5,12 +5,14 @@ var n = 0
 var trainingCompleted = false
 var controllerOptions = {};
 
+var num_sucess = 0;
 var previousNumHands = 0;
 var currentNumbHands = 0;
 var oneFrameOfData = nj.zeros([5,4,6]);
 var numSamples = 100;
 var currentSample = 0;
 
+var num_failure = 0;
 var vec_name;
 var num_user = 0;
 var current_usrname = "none";
@@ -684,7 +686,7 @@ function phase_choice(time_min, time_max){
         if(digitToshow == phase1[i]){
           denominator++;
           numerator++;
-
+          num_sucess++;
           phase1.splice(i,1);
 
         }
@@ -692,7 +694,8 @@ function phase_choice(time_min, time_max){
       if(index == phase1.length){
         index = index - 1;
       }
-      if(index < 0){
+      if(index < 0 || num_sucess == 2){
+        num_sucess = 0;
         phase1= [0,1,2,3,4,5,6,7,8,9];
         index=0;
         num_phase = num_phase+1;
@@ -703,6 +706,8 @@ function phase_choice(time_min, time_max){
   }
   else if ((m < 0.50 && TimeInSeconds > time_max)){
     denominator++;
+    num_sucess = 0;
+    num_failure++;
     if(index < ((phase1.length)-1)){
       index = index+1
     }
@@ -745,14 +750,16 @@ function TimeToSwitchDigits(){
           if(digitToshow == phase1[i]){
             denominator++;
             numerator++;
-
+            num_sucess++;
+            num_failure = 0;
             phase1.splice(i,1);
           }
         }
         if(index == phase1.length){
           index = index - 1;
         }
-        if(index < 0){
+        if(index < 0 || num_sucess == 2){
+          num_sucess = 0;
           phase1= [0,1,2,3,4,5,6,7,8,9];
           index=0;
           num_phase = 2;
@@ -762,6 +769,8 @@ function TimeToSwitchDigits(){
     }
     else if ((m < 0.50 && TimeInSeconds > 5)){
       denominator++;
+      num_failure++;
+      num_sucess = 0;
       if(index < ((phase1.length)-1)){
         index = index+1
       }
@@ -791,7 +800,8 @@ function TimeToSwitchDigits(){
           if(digitToshow == phase1[i]){
             denominator++;
             numerator++;
-
+            num_sucess++;
+            num_failure= 0;
             phase1.splice(i,1);
           }
         }
@@ -802,6 +812,10 @@ function TimeToSwitchDigits(){
           phase1= [0,1,2,3,4,5,6,7,8,9];
           index=0;
           num_phase = 3;
+        }
+        if(num_failure== 5){
+          num_failure = 0;
+          num_phase = 1;
         }
       }
       timeSinceLastDigitChange = currentTime;
@@ -814,17 +828,23 @@ function TimeToSwitchDigits(){
           if(digitToshow == phase1[i]){
             denominator++;
             numerator++;
-
+            num_sucess++;
+            num_failure = 0;
             phase1.splice(i,1);
           }
         }
         if(index == phase1.length){
           index = index - 1;
         }
-        if(index < 0){
+        if(index < 0 || num_sucess == 2){
+          num_sucess = 0;
           phase1= [0,1,2,3,4,5,6,7,8,9];
           index=0;
           num_phase = 3;
+        }
+        if(num_failure == 5){
+          num_phase = 2;
+          num_failure = 0;
         }
       }
       timeSinceLastDigitChange = currentTime;
@@ -837,7 +857,8 @@ function TimeToSwitchDigits(){
           if(digitToshow == phase1[i]){
             denominator++;
             numerator++;
-
+            num_sucess++;
+            num_failure = 0;
             phase1.splice(i,1);
           }
         }
@@ -849,12 +870,18 @@ function TimeToSwitchDigits(){
           index=0;
           num_phase = 3;
         }
+        if(num_failure == 5){
+          num_failure = 0;
+          num_phase = 2;
+        }
       }
       timeSinceLastDigitChange = currentTime;
       return true;
     }
     else if ((m < 0.50 && TimeInSeconds > 5)){
       denominator++;
+      num_failure++;
+      num_sucess = 0;
       if(index < ((phase1.length)-1)){
         index = index+1
       }
@@ -875,7 +902,8 @@ function TimeToSwitchDigits(){
           if(digitToshow == phase1[i]){
             denominator++;
             numerator++;
-
+            num_sucess++;
+            num_failure = 0;
             phase1.splice(i,1);
           }
         }
@@ -887,11 +915,17 @@ function TimeToSwitchDigits(){
           index=0;
           num_phase = 4;
         }
+        if(num_failure == 5){
+          num_failure = 0;
+          num_phase = 3;
+        }
       timeSinceLastDigitChange = currentTime;
       return true;
     }
     else if ((m < 0.50 && TimeInSeconds > 1)){
       denominator++;
+      num_failure++;
+      num_sucess = 0;
       if(index < ((phase1.length)-1)){
         index = index+1
       }
