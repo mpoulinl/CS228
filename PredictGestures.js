@@ -12,8 +12,10 @@ var numSamples = 100;
 var currentSample = 0;
 
 var programState = 0;
-var maude_last_performance;
-var maude_current_performance = 1;
+var last_performance;
+var numerator = 0;
+var denominator 0;
+var current_performance;
 var digitToshow = 0;
 var timeSinceLastDigitChange = new Date();
 var wrong = false;
@@ -514,7 +516,6 @@ function SwitchDigits(){
   n=0;
   m=0;
 
-
 }
 
 function phase_choice(time_min, time_max){
@@ -532,8 +533,8 @@ function phase_choice(time_min, time_max){
 
       for(var i = 0 ; i < phase1.length ; i++){
         if(digitToshow == phase1[i]){
-
           phase1.splice(i,1);
+          maude_current_performance =
         }
       }
       if(index == phase1.length){
@@ -708,7 +709,9 @@ function TimeToSwitchDigits(){
 
         for(var i = 0 ; i < phase1.length ; i++){
           if(digitToshow == phase1[i]){
-
+            denominator++;
+            numerator++;
+            console.log(numerator/denominator);
             phase1.splice(i,1);
           }
         }
