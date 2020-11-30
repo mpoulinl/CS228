@@ -65,7 +65,7 @@ function SignIn(){
     listItem = document.getElementById(ID);
     listItem.innerHTML = parseInt(listItem.innerHTML) + 1;
   }
-  console.log(list.innerHTML);
+  //console.log(list.innerHTML);
   return false;
 }
 function Train(){
@@ -216,7 +216,7 @@ function Test(){
 
 function GotResults(err, result){
   compute_prediction_7(result.label,digitToshow);
-  console.log(result.label)
+  //console.log(result.label)
 
 }
 function CenterDataX(){
@@ -511,7 +511,7 @@ function DrawLowerLeftPanel(){
   }
 }
 function SwitchDigits(){
-  console.log(phase1.length, " index : ",index, " phase : ", num_phase);
+  //console.log(phase1.length, " index : ",index, " phase : ", num_phase);
   digitToshow = phase1[index];
   n=0;
   m=0;
