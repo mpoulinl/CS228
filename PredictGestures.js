@@ -38,11 +38,7 @@ function CreateSignInItem(username,list){
   item_signins.innerHTML = 1;
   item_signins.id = String(username) + "_signins";
   list.appendChild(item_signins)
-
-  var item_performance = document.createElement('li');
-  item_performance.innerHTML = 1;
-  item_performance.id = String(username) + "_last_performance";
-  list.appendChild(item_signins)
+  
 }
 
 function IsNewUser(username,list){
