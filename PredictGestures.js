@@ -59,18 +59,13 @@ function SignIn(){
     CreateNewUser(username,list)
     //new list sign in
     CreateSignInItem(username,list);
-    ID = String(username) + "_last_performance";
-    listItem = document.getElementById(ID);
-    listItem.innerHTML = parseInt(0);
   }
   else{
     ID = String(username) + "_signins";
     listItem = document.getElementById(ID);
     listItem.innerHTML = parseInt(listItem.innerHTML) + 1;
 
-    ID = String(username) + "_last_performance";
-    listItem = document.getElementById(ID);
-    listItem.innerHTML = parseInt(last_performance);
+    
   }
   //console.log(list.innerHTML);
   return false;
