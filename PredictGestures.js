@@ -533,6 +533,9 @@ function phase_choice(time_min, time_max){
 
       for(var i = 0 ; i < phase1.length ; i++){
         if(digitToshow == phase1[i]){
+          denominator++;
+          numerator++;
+          console.log(numerator/denominator);
           phase1.splice(i,1);
 
         }
@@ -589,7 +592,9 @@ function TimeToSwitchDigits(){
 
         for(var i = 0 ; i < phase1.length ; i++){
           if(digitToshow == phase1[i]){
-
+            denominator++;
+            numerator++;
+            console.log(numerator/denominator);
             phase1.splice(i,1);
           }
         }
@@ -632,7 +637,9 @@ function TimeToSwitchDigits(){
       if(phase2[digitToshow] == 0){
         for(var i = 0 ; i < phase1.length ; i++){
           if(digitToshow == phase1[i]){
-
+            denominator++;
+            numerator++;
+            console.log(numerator/denominator);
             phase1.splice(i,1);
           }
         }
@@ -653,7 +660,9 @@ function TimeToSwitchDigits(){
       if(phase2[digitToshow] == 0){
         for(var i = 0 ; i < phase1.length ; i++){
           if(digitToshow == phase1[i]){
-
+            denominator++;
+            numerator++;
+            console.log(numerator/denominator);
             phase1.splice(i,1);
           }
         }
@@ -674,7 +683,9 @@ function TimeToSwitchDigits(){
       if(phase2[digitToshow] == 0){
         for(var i = 0 ; i < phase1.length ; i++){
           if(digitToshow == phase1[i]){
-
+            denominator++;
+            numerator++;
+            console.log(numerator/denominator);
             phase1.splice(i,1);
           }
         }
