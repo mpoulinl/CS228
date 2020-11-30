@@ -30,7 +30,6 @@ function CreateNewUser(username,list){
   item.innerHTML = String(username);
   item.id = String(username) + "_name";
   list.appendChild(item);
-
 }
 
 function CreateSignInItem(username,list){
@@ -38,7 +37,6 @@ function CreateSignInItem(username,list){
   item_signins.innerHTML = 1;
   item_signins.id = String(username) + "_signins";
   list.appendChild(item_signins)
-
 }
 
 function IsNewUser(username,list){
@@ -630,7 +628,7 @@ function TimeToSwitchDigits(){
       DrawLowerRightPanel();
     }
     if(TimeInSeconds <= 1 && phase2[digitToshow] ==2){
-      DrawLowerRightPanel();
+      DrawLowerRightPanel_2();
     }
 
     if(((m >= 0.50 && TimeInSeconds >= 2) || (TimeInSeconds == 4 && c == digitToshow)) && phase2[digitToshow] == 3){
