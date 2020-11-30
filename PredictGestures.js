@@ -12,7 +12,8 @@ var numSamples = 100;
 var currentSample = 0;
 
 var programState = 0;
-
+var maude_last_performance;
+var maude_current_performance = 1;
 var digitToshow = 0;
 var timeSinceLastDigitChange = new Date();
 var wrong = false;
@@ -476,36 +477,36 @@ function DrawLowerRightPanel(){
   DrawLowerLeftPanel_2;
 }
 function DrawLowerLeftPanel(){
-  // if(digitToshow == 1){
-  //   image(num_1,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  // }
-  // if(digitToshow == 2){
-  //   image(num_2,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  // }
-  // if(digitToshow == 3){
-  //   image(num_3,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  // }
-  // if(digitToshow == 4){
-  //   image(num_4,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  // }
-  // if(digitToshow == 5){
-  //   image(num_5,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  // }
-  // if(digitToshow == 6){
-  //   image(num_6,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  // }
-  // if(digitToshow == 7){
-  //   image(num_7,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  // }
-  // if(digitToshow == 8){
-  //   image(num_8,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  // }
-  // if(digitToshow == 9){
-  //   image(num_9,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  // }
-  // if(digitToshow == 0){
-  //   image(num_0,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  // }
+  if(digitToshow == 1){
+    image(num_1,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 2){
+    image(num_2,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 3){
+    image(num_3,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 4){
+    image(num_4,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 5){
+    image(num_5,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 6){
+    image(num_6,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 7){
+    image(num_7,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 8){
+    image(num_8,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 9){
+    image(num_9,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
+  if(digitToshow == 0){
+    image(num_0,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+  }
 }
 function SwitchDigits(){
   console.log(phase1.length, " index : ",index, " phase : ", num_phase);
@@ -521,10 +522,10 @@ function phase_choice(time_min, time_max){
   var TimeInMilliseconds =  (currentTime - timeSinceLastDigitChange);
   var TimeInSeconds = TimeInMilliseconds/1000;
   if(num_phase == 2 && TimeInSeconds <= 2){
-    DrawLowerRightPanel_2();
+    DrawLowerRightPanel();
   }
   if(num_phase == 3 && TimeInSeconds <= 1){
-    DrawLowerRightPanel_2();
+    DrawLowerRightPanel();
   }
 
   if((m >= 0.50 && TimeInSeconds >= time_min) || (TimeInSeconds == time_max && c == digitToshow)){
