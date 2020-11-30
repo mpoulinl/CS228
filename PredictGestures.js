@@ -30,12 +30,18 @@ function CreateNewUser(username,list){
   item.innerHTML = String(username);
   item.id = String(username) + "_name";
   list.appendChild(item);
+
 }
 
 function CreateSignInItem(username,list){
   var item_signins = document.createElement('li');
   item_signins.innerHTML = 1;
   item_signins.id = String(username) + "_signins";
+  list.appendChild(item_signins)
+
+  var item_performance = document.createElement('li');
+  item_performance.innerHTML = 1;
+  item_performance.id = String(username) + "_last_performance";
   list.appendChild(item_signins)
 }
 
@@ -65,7 +71,9 @@ function SignIn(){
     listItem = document.getElementById(ID);
     listItem.innerHTML = parseInt(listItem.innerHTML) + 1;
 
-    
+    ID = String(username) + "_last_performance";
+    listItem = document.getElementById(ID);
+    listItem.innerHTML = parseInt(listItem.innerHTML);
   }
   //console.log(list.innerHTML);
   return false;
