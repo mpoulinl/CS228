@@ -521,10 +521,6 @@ function phase_choice(time_min, time_max){
   if(num_phase == 2 && TimeInSeconds <= 2){
     DrawLowerRightPanel();
   }
-  if(num_phase == 3 && TimeInSeconds <= 1){
-    DrawLowerRightPanel();
-  }
-
   if((m >= 0.50 && TimeInSeconds >= time_min) || (TimeInSeconds == time_max && c == digitToshow)){
 
       for(var i = 0 ; i < phase1.length ; i++){
@@ -564,22 +560,22 @@ function phase_choice(time_min, time_max){
     return false;
   }
 }
-function display_yes(){
-  var cur = new Date();
-  var TimeInSeconds = cur/1000;
-  while(TimeInSeconds != 2){
-    var TimeInSeconds = cur/1000;
-    image(yes,0,0, window.innerWidth, window.innerHeight);
-  }
-}
-function display_no(){
-  var cur = new Date();
-  var TimeInSeconds = cur/1000;
-  while(TimeInSeconds != 2){
-    var TimeInSeconds = cur/1000;
-    image(no,0,0, window.innerWidth, window.innerHeight);
-  }
-}
+// function display_yes(){
+//   var cur = new Date();
+//   var TimeInSeconds = cur/1000;
+//   while(TimeInSeconds != 2){
+//     var TimeInSeconds = cur/1000;
+//     image(yes,0,0, window.innerWidth, window.innerHeight);
+//   }
+// }
+// function display_no(){
+//   var cur = new Date();
+//   var TimeInSeconds = cur/1000;
+//   while(TimeInSeconds != 2){
+//     var TimeInSeconds = cur/1000;
+//     image(no,0,0, window.innerWidth, window.innerHeight);
+//   }
+// }
 
 function TimeToSwitchDigits(){
   var currentTime = new Date();
