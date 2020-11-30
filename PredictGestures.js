@@ -22,49 +22,49 @@ var num_remove = 0;
 var index = 0;
 var num_phase = 1;
 var c;
-// function CreateNewUser(username,list){
-//   var item = document.createElement('li');
-//   item.innerHTML = String(username);
-//   item.id = String(username) + "_name";
-//   list.appendChild(item);
-// }
-//
-// function CreateSignInItem(username,list){
-//   var item_signins = document.createElement('li');
-//   item_signins.innerHTML = 1;
-//   item_signins.id = String(username) + "_signins";
-//   list.appendChild(item_signins)
-// }
-//
-// function IsNewUser(username,list){
-//   var usernameFound = false;
-//   var users = list.children;
-//   for(var i = 0 ; i < users.length ; i++){
-//     if(username == users[i].innerHTML){
-//       usernameFound = true;
-//     }
-//   }
-//
-//   return usernameFound == false;
-//
-// }
-//
-// function SignIn(){
-//   username = document.getElementById('username').value;
-//   var list = document.getElementById('users');
-//   if(IsNewUser(username,list)){
-//     CreateNewUser(username,list)
-//     //new list sign in
-//     CreateSignInItem(username,list);
-//   }
-//   else{
-//     ID = String(username) + "_signins";
-//     listItem = document.getElementById(ID);
-//     listItem.innerHTML = parseInt(listItem.innerHTML) + 1;
-//   }
-//   console.log(list.innerHTML);
-//   return false;
-// }
+function CreateNewUser(username,list){
+  var item = document.createElement('li');
+  item.innerHTML = String(username);
+  item.id = String(username) + "_name";
+  list.appendChild(item);
+}
+
+function CreateSignInItem(username,list){
+  var item_signins = document.createElement('li');
+  item_signins.innerHTML = 1;
+  item_signins.id = String(username) + "_signins";
+  list.appendChild(item_signins)
+}
+
+function IsNewUser(username,list){
+  var usernameFound = false;
+  var users = list.children;
+  for(var i = 0 ; i < users.length ; i++){
+    if(username == users[i].innerHTML){
+      usernameFound = true;
+    }
+  }
+
+  return usernameFound == false;
+
+}
+
+function SignIn(){
+  username = document.getElementById('username').value;
+  var list = document.getElementById('users');
+  if(IsNewUser(username,list)){
+    CreateNewUser(username,list)
+    //new list sign in
+    CreateSignInItem(username,list);
+  }
+  else{
+    ID = String(username) + "_signins";
+    listItem = document.getElementById(ID);
+    listItem.innerHTML = parseInt(listItem.innerHTML) + 1;
+  }
+  console.log(list.innerHTML);
+  return false;
+}
 function Train(){
   //console.log(train0.pick().toString())
   for(var i = 0 ; i < 100 ; i++){
