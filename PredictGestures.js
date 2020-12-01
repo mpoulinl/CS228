@@ -62,7 +62,7 @@ function SignIn(){
     ID = String(current_usrname) + "_signins";
     listItem = document.getElementById(ID);
     console.log(listItem.innerHTML);
-    if(;istItem.innerHTML == NaN){
+    if(listItem.innerHTML == NaN){
       console.log("HI")
     }
     listItem.innerHTML = (numerator/denominator);
