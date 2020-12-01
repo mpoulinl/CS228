@@ -78,6 +78,9 @@ function SignIn(){
 
   //paragraph
   var user_playing = document.getElementById("user-play");
+  if(document.getElementById(username+"_signins") == null){
+    console.log("hi");
+  }
   user_playing.innerHTML = String("User : " + username + "    Last Score: " + str(document.getElementById(username+"_signins").value));
   if(IsNewUser(username,list)){
     CreateNewUser(username,list)
