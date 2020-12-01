@@ -77,7 +77,7 @@ function SignIn(){
 
   //paragraph
   var user_playing = document.getElementById("user-play");
-  user_playing.innerHTML = String(username);
+  user_playing.innerHTML = String(username + "hi");
   if(IsNewUser(username,list)){
     CreateNewUser(username,list)
     //new list sign in
