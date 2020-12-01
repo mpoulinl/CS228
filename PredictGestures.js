@@ -39,7 +39,7 @@ function CreateNewUser(username,list){
 
 function CreateSignInItem(username,list){
   var item_signins = document.createElement('th');
-  item_signins.innerHTML = 0+ (numerator/denominator);
+  item_signins.innerHTML = numerator/denominator;
   item_signins.id = String(username) + "_signins";
   list.appendChild(item_signins)
 }
@@ -87,8 +87,9 @@ function SignIn(){
   else{
     ID = String(username) + "_signins";
     listItem = document.getElementById(ID);
-    console.log(listItem.innerHTML);
     if(double(listItem.innerHTML) < (numerator/denominator)){
+    }
+    else{
       listItem.innerHTML = numerator/denominator;
     }
   }
