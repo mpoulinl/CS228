@@ -38,7 +38,7 @@ function CreateNewUser(username,list){
 
 function CreateSignInItem(username,list){
   var item_signins = document.createElement('th');
-  item_signins.innerHTML = 1;
+  item_signins.innerHTML = numerator/denominator;
   item_signins.id = String(username) + "_signins";
   list.appendChild(item_signins)
 }
