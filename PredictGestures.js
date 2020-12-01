@@ -61,13 +61,8 @@ function SignIn(){
   if(current_usrname != "none"){
     ID = String(current_usrname) + "_signins";
     listItem = document.getElementById(ID);
-    if(document.getElementById(ID) == NaN){
-       listItem.innerHTML = (numerator/denominator);
-    }
-    else if (listItem.innerHTML.value < (numerator/denominator)) {
-      listItem.innerHTML = (numerator/denominator);
-    }
-    console.log((numerator/denominator));
+    console.log(listItem.innerHTML);
+    listItem.innerHTML = (numerator/denominator);
   }
   numerator = 0;
   denominator = 0;
