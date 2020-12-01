@@ -68,7 +68,7 @@ function SignIn(){
 
   //paragraph
   var user_playing = document.getElementById("user-play");
-  var l = userame + "hi";
+  var l = str(userame) + "hi";
   user_playing.innerHTML = String(l);
 
   username = document.getElementById('username').value;
