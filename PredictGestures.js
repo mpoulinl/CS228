@@ -28,9 +28,12 @@ var num_phase = 1;
 var c;
 function CreateNewUser(username,list){
   var item = document.createElement('th');
+  var item2 = document.createElement('tr');
   item.innerHTML = String(username);
   item.id = String(username) + "_name";
-  list.appendChild(item);
+  list.appendChild(item2);
+  item2.appendChild(item);
+  CreateSignInItem(username,item2)
 }
 
 function CreateSignInItem(username,list){
