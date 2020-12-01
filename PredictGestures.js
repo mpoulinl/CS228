@@ -86,7 +86,11 @@ function SignIn(){
   else{
     ID = String(username) + "_signins";
     listItem = document.getElementById(ID);
-    listItem.innerHTML = parseInt(listItem.innerHTML) + 1;
+    if(int(listItem.innerHTML) > (numerator/denominator)){
+    }
+    else{
+      listItem.innerHTML = numerator/denominator;
+    }
   }
   //console.log(list.innerHTML);
   return false;
