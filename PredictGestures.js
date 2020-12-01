@@ -87,6 +87,7 @@ function SignIn(){
   else{
     ID = String(username) + "_signins";
     listItem = document.getElementById(ID);
+    console.log(listItem.innerHTML);
     if(double(listItem.innerHTML) < (numerator/denominator)){
       listItem.innerHTML = numerator/denominator;
     }
