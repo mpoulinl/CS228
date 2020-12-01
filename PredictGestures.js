@@ -45,6 +45,7 @@ function CreateSignInItem(username,list){
 
 function IsNewUser(username,list){
   var usernameFound = false;
+  var user = list.children;
   var users = list.children;
   for(var i = 0 ; i < users.length ; i++){
     if(username == users[i].innerHTML){
