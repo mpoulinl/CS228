@@ -67,11 +67,14 @@ function SignIn(){
   current_usrname = document.getElementById('username').value;
 
   //paragraph
-  var user_playing = document.getElementById("user-play");
-  user_playing.innerHTML = String(username);
+
 
   username = document.getElementById('username').value;
   var list = document.getElementById('users');
+
+  //paragraph
+  var user_playing = document.getElementById("user-play");
+  user_playing.innerHTML = String(username);
   if(IsNewUser(username,list)){
     CreateNewUser(username,list)
     //new list sign in
