@@ -85,13 +85,7 @@ function SignIn(){
     //CreateSignInItem(username,list);
   }
   else{
-    ID = String(username) + "_signins";
-    listItem = document.getElementById(ID);
-    if(double(listItem.innerHTML) < (numerator/denominator)){
-    }
-    else{
-      listItem.innerHTML = numerator/denominator;
-    }
+    
   }
   //console.log(list.innerHTML);
   return false;
