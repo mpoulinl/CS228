@@ -63,9 +63,12 @@ function SignIn(){
     listItem = document.getElementById(ID);
     console.log(listItem.innerHTML);
 
-    if (listItem.innerHTML < (numerator/denominator)) {
+    if (listItem.innerHTML > (numerator/denominator)) {
       console.log("HI2")
-        listItem.innerHTML = (numerator/denominator);
+
+    }
+    else{
+      listItem.innerHTML = (numerator/denominator);
     }
 
   }
