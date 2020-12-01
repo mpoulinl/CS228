@@ -81,7 +81,7 @@ function SignIn(){
   if(IsNewUser(username,list)){
     CreateNewUser(username,list)
     //new list sign in
-    CreateSignInItem(username,list);
+    //CreateSignInItem(username,list);
   }
   else{
     ID = String(username) + "_signins";
