@@ -61,7 +61,7 @@ function SignIn(){
   if(current_usrname != "none"){
     ID = String(current_usrname) + "_signins";
     listItem = document.getElementById(ID);
-    if(document.getElementById(ID); == null){
+    if(document.getElementById(ID) == null){
        listItem.innerHTML = (numerator/denominator);
     }
     else if (listItem.innerHTML.value < (numerator/denominator)) {
