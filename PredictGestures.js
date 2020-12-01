@@ -31,7 +31,7 @@ function CreateNewUser(username,list){
   var item2 = document.createElement('tr');
   item.innerHTML = String(username);
   item.id = String(username) + "_name";
-  item2.id = String(username) + "_name";
+  item2.id = String(username);
   list.appendChild(item2);
   item2.appendChild(item);
   CreateSignInItem(username,item2)
@@ -48,7 +48,7 @@ function IsNewUser(username,list){
   var usernameFound = false;
   var users = list.children;
   for(var i = 0 ; i < users.length ; i++){
-    if(username == users[i].innerHTML){
+    if(username == users[i].id){
       usernameFound = true;
     }
   }
