@@ -61,7 +61,8 @@ function SignIn(){
   if(current_usrname != "none"){
     ID = String(current_usrname) + "_signins";
     listItem = document.getElementById(ID);
-    listItem.innerHTML = str(numerator/denominator);
+    listItem.innerHTML = (numerator/denominator);
+    console.log((numerator/denominator));
   }
   numerator = 0;
   denominator = 0;
@@ -79,7 +80,7 @@ function SignIn(){
   //paragraph
   var user_playing = document.getElementById("user-play");
   if(document.getElementById(username+"_signins") == null){
-    user_playing.innerHTML = String("User : " + username + "    Last Score: None");
+     user_playing.innerHTML = String("User : " + username + "    Last Score: None");
   }
   else{
       user_playing.innerHTML = String("User : " + username + "    Last Score: " + str(document.getElementById(username+"_signins").value));
