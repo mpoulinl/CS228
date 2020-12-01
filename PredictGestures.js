@@ -57,8 +57,13 @@ function SignIn(){
   if(current_usrname != "none"){
     ID = String(current_usrname) + "_signins";
     listItem = document.getElementById(ID);
-    listItem.innerHTML = str(numerator/denominator);    
+    listItem.innerHTML = str(numerator/denominator);
   }
+  numerator = 0;
+  denominator = 0;
+  phase1 = [0,1,2,3,4,5,6,7,8,9];
+  phase2 = [3,3,3,3,3,3,3,3,3,3];
+  num_phase = 1;
   current_usrname = document.getElementById('username').value;
 
   username = document.getElementById('username').value;
@@ -808,15 +813,18 @@ Leap.loop(controllerOptions, function(frame){
     trainingCompleted = true;
   }
   DetermineState(frame);
-  if(programState == 0){
-    HandleState0(frame)
+  if(current_usrname != "none"){
+    if(programState == 0){
+      HandleState0(frame)
+    }
+    else if (programState == 1){
+      HandleState1(frame)
+    }
+    else{
+      HandleState2(frame)
+    }
   }
-  else if (programState == 1){
-    HandleState1(frame)
-  }
-  else{
-    HandleState2(frame)
-  }
+
   // clear();
 
 
