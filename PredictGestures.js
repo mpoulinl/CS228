@@ -64,8 +64,12 @@ function SignIn(){
     console.log(listItem.innerHTML.value);
     if(listItem.innerHTML.value == null){
       console.log("HI")
+      listItem.innerHTML = (numerator/denominator);
     }
-    listItem.innerHTML = (numerator/denominator);
+    else if (listItem.innerHTML.value < (numerator/denominator)) {
+        listItem.innerHTML = (numerator/denominator);
+    }
+
   }
   numerator = 0;
   denominator = 0;
