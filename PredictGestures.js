@@ -57,7 +57,7 @@ function SignIn(){
   if(current_usrname != "none"){
     ID = String(current_usrname) + "_signins";
     listItem = document.getElementById(ID);
-    listItem.innerHTML = parseInt(numerator/denominator);    
+    listItem.innerHTML = str(numerator/denominator);    
   }
   current_usrname = document.getElementById('username').value;
 
