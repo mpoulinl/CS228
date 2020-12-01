@@ -27,14 +27,14 @@ var index = 0;
 var num_phase = 1;
 var c;
 function CreateNewUser(username,list){
-  var item = document.createElement('li');
+  var item = document.createElement('th');
   item.innerHTML = String(username);
   item.id = String(username) + "_name";
   list.appendChild(item);
 }
 
 function CreateSignInItem(username,list){
-  var item_signins = document.createElement('li');
+  var item_signins = document.createElement('th');
   item_signins.innerHTML = 1;
   item_signins.id = String(username) + "_signins";
   list.appendChild(item_signins)
