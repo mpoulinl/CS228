@@ -39,9 +39,16 @@ function CreateNewUser(username,list){
 
 function CreateSignInItem(username,list){
   var item_signins = document.createElement('th');
-  item_signins.innerHTML = numerator/denominator;
-  item_signins.id = String(username) + "_signins";
-  list.appendChild(item_signins)
+  if(denominator == 0){
+    item_signins.innerHTML = 0;
+    item_signins.id = String(username) + "_signins";
+    list.appendChild(item_signins)
+  }
+  else{
+    item_signins.innerHTML = numerator/denominator;
+    item_signins.id = String(username) + "_signins";
+    list.appendChild(item_signins)
+  }
 }
 
 function IsNewUser(username,list){
@@ -62,14 +69,16 @@ function SignIn(){
     ID = String(current_usrname) + "_signins";
     listItem = document.getElementById(ID);
     console.log(listItem.innerHTML);
-
-    if (listItem.innerHTML > (numerator/denominator)) {
-      console.log("HI2")
+    if(denominator == 0){
 
     }
     else{
-      listItem.innerHTML = (numerator/denominator);
+      if (listItem.innerHTML < (numerator/denominator)) {
+        listItem.innerHTML = (numerator/denominator);
+
+      }
     }
+
 
   }
   numerator = 0;
