@@ -597,36 +597,7 @@ function DrawLowerRightPanel_2(){
 
 }
 function DrawLowerRightPanel(){
-  if(digitToshow == 1){
-    image(asl_1,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 2){
-    image(asl_2,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 3){
-    image(num_one_two_three,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 4){
-    image(num_two_two_four,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 5){
-    image(num_three_two_five,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 6){
-    image(asl_6,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 7){
-    image(asl_7,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 8){
-    image(asl_8,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 9){
-    image(asl_9,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
-  if(digitToshow == 0){
-    image(asl_0,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
-  }
+
   DrawLowerLeftPanel;
 }
 function DrawLowerLeftPanel(){
