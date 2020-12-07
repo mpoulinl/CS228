@@ -100,7 +100,7 @@ function SignIn(){
      user_playing.innerHTML = String("User : " + username + "    Last Score: None");
   }
   else{
-      user_playing.innerHTML = String("User : " + username + "    Last Score: " + str(document.getElementById(username+"_signins")));
+      user_playing.innerHTML = String("User : " + username + "    Last Score: " + str(document.getElementById(username+"_signins").value));
   }
 
   if(IsNewUser(username,list)){
