@@ -30,10 +30,10 @@ var num_phase = 1;
 var c;
 function CreateNewUser(username,list){
   if(num_user == 0){
-    vec_name = username;
+    vec_name = [username];
   }
   else{
-    vec_name = vec_name + " " + username
+    vec_name.append(username);
   }
   console.log(vec_name);
   num_user++;
