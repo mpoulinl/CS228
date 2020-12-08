@@ -76,11 +76,11 @@ function IsNewUser(username,list){
 }
 function ranking(){
     console.log("lenght");
-    console.log(num_user.length);
-  for(var i = 0 ; i < num_user.length ; i++){
+    console.log(vec_name.length);
+  for(var i = 0 ; i < vec_name.length ; i++){
     document.getElementById(username+"_signins").innerHTML
     var initial = i;
-    for(var y = 0 ; y < num_user.length ; i++){
+    for(var y = 0 ; y < vec_name.length ; i++){
 
       console.log("lenght");
       console.log(num_user.length);
