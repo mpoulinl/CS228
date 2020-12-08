@@ -109,6 +109,7 @@ function ranking(){
 }
 function SignIn(){
   if(current_usrname != "none"){
+    ranking();
     ID = String(current_usrname) + "_signins";
     listItem = document.getElementById(ID);
     console.log(listItem.innerHTML);
