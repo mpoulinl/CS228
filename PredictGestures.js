@@ -78,7 +78,7 @@ function ranking(){
   for(var i = 0 ; i < vec_name.length ; i++){
     document.getElementById(username+"_signins").innerHTML
     var initial = i;
-    for(var y = 0 ; y < vec_name.length ; i++){
+    for(var y = 0 ; y < vec_name.length ; y++){
 
       console.log("lenght");
       console.log(vec_name.length);
@@ -114,7 +114,10 @@ function ranking(){
 }
 function SignIn(){
   if(current_usrname != "none"){
-    ranking();
+    if(num_user >= 2){
+      ranking();
+    }
+
     ID = String(current_usrname) + "_signins";
     listItem = document.getElementById(ID);
     if(denominator == 0){
