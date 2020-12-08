@@ -100,7 +100,7 @@ function SignIn(){
      user_playing.innerHTML = String("User : " + username + "    Last Score: None");
   }
   else{
-      user_playing.innerHTML = String("User : " + username + "    Last Score: " + str(document.getElementById(username+"_signins").value));
+      user_playing.innerHTML = String("User : " + username + "    Last Score: " + document.getElementById(username+"_signins").value);
   }
 
   if(IsNewUser(username,list)){
@@ -847,7 +847,13 @@ Leap.loop(controllerOptions, function(frame){
   DetermineState(frame);
   if(current_usrname != "none"){
     var user_playing = document.getElementById("user-play2");
-    user_playing.innerHTML = String("Current Score : " + numerator/denominator);
+    if(denominator == 0){
+      user_playing.innerHTML = String("Current Score : 0");
+    }
+    else{
+      user_playing.innerHTML = String("Current Score : " + numerator/denominator);
+    }
+
     if(programState == 0){
       HandleState0(frame)
     }
