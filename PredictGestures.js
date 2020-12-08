@@ -34,9 +34,9 @@ function CreateNewUser(username,list){
   }
   else{
     vec_name.push(username);
-    console.log(vec_name[1]);
+
   }
-  console.log(vec_name[0]);
+
   num_user++;
   var item = document.createElement('th');
   var item2 = document.createElement('tr');
@@ -76,7 +76,33 @@ function IsNewUser(username,list){
 }
 function ranking(){
   for(var i = 0 ; i < num_user.length ; i++){
-   document.getElementById(username+"_signins").innerHTML
+   var initial = i;
+   for(var y = 0 ; y < num_user.length ; i++){
+     if(y != i){
+       if(document.getElementById(vec_name[i]+"_signins").innerHTML <  document.getElementById(vec_name[y]+"_signins").innerHTML){
+         var i_id_num = document.getElementById(vec_name[i]+"_signins");
+         var y_id_num = document.getElementById(vec_name[y]+"_signins");
+         var i_value_num = document.getElementById(vec_name[i]+"_signins").innerHTML;
+         var y_value_num = document.getElementById(vec_name[y]+"_signins").innerHTML;
+
+         var i_id_name = document.getElementById(vec_name[i]+"_name");
+         var y_id_name = document.getElementById(vec_name[y]+"_name");
+         var i_value_name = document.getElementById(vec_name[i]+"_name").innerHTML;
+         var y_value_name = document.getElementById(vec_name[y]+"_name").innerHTML;
+
+         i_id_num.id = vec_name[y]+"_signins";
+         y_id_num.id = vec_name[i]+"_signins";
+
+         i_id_name.id = vec_name[y]+"_name";
+         y_id_name.id = vec_name[i]+"_name";
+
+         i = y;
+
+       }
+       if(i!=initial){
+         i = 0;
+       }
+     }
   }
 }
 function SignIn(){
