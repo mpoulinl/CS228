@@ -102,9 +102,9 @@ function SignIn(){
   else{
       user_playing.innerHTML = String("User : " + username + "    Last Score: " + document.getElementById(username+"_signins").value);
       console.log(username);
-      console.log( document.getElementById(username+"_signins").value)
+      console.log( document.getElementById(username+"_signins"))
       console.log( str(document.getElementById(username+"_signins").value))
-      console.log(str(document.getElementById(username+"_signins")))
+      console.log(document.getElementById(username+"_signins"))
 
   }
 
