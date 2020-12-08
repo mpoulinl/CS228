@@ -35,7 +35,7 @@ function CreateNewUser(username,list){
   else{
     vec_name = np.concatenate([vec_name, username])
   }
-  console.console.log(vec_name);
+  console.log(vec_name);
   num_user++;
   vec_name = np.concatenate
   var item = document.createElement('th');
