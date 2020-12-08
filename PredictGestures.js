@@ -34,6 +34,7 @@ function CreateNewUser(username,list){
   }
   else{
     vec_name.push(username);
+    console.log(vec_name[1]);
   }
   console.log(vec_name[0]);
   num_user++;
