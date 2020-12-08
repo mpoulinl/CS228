@@ -593,39 +593,39 @@ function HandleState2(frame) {
 
 function DrawLowerRightPanel_2(){
     DrawLowerLeftPanel();
-    image(three_plus_four,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(three_plus_four,window.innerWidth/2.5, window.innerHeight/2.5, window.innerWidth/2.5, window.innerHeight/2.5);
 
 }
 function DrawLowerRightPanel(){
   if(digitToshow == 1){
-    image(asl_1,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(asl_1,window.innerWidth/2.5, window.innerHeight/2.5, window.innerWidth/2.5, window.innerHeight/2.5);
   }
   if(digitToshow == 2){
-    image(asl_2,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(asl_2,window.innerWidth/2.5, window.innerHeight/2.5, window.innerWidth/2.5, window.innerHeight/2.5);
   }
   if(digitToshow == 3){
-    image(asl_3,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(asl_3,window.innerWidth/2.5, window.innerHeight/2.5, window.innerWidth/2.5, window.innerHeight/2.5);
   }
   if(digitToshow == 4){
-    image(asl_4,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(asl_4,window.innerWidth/2.5, window.innerHeight/2.5, window.innerWidth/2.5, window.innerHeight/2.5);
   }
   if(digitToshow == 5){
-    image(asl_5,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(asl_5,window.innerWidth/2.5, window.innerHeight/2.5, window.innerWidth/2.5, window.innerHeight/2.5);
   }
   if(digitToshow == 6){
-    image(asl_6,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(asl_6,window.innerWidth/2.5, window.innerHeight/2.5, window.innerWidth/2.5, window.innerHeight/2.5);
   }
   if(digitToshow == 7){
-    image(asl_7,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(asl_7,window.innerWidth/2.5, window.innerHeight/2.5, window.innerWidth/2.5, window.innerHeight/2.5);
   }
   if(digitToshow == 8){
-    image(asl_8,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(asl_8,window.innerWidth/2.5, window.innerHeight/2.5, window.innerWidth/2.5, window.innerHeight/2.5);
   }
   if(digitToshow == 9){
-    image(asl_9,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(asl_9,window.innerWidth/2.5, window.innerHeight/2.5, window.innerWidth/2.5, window.innerHeight/2.5);
   }
   if(digitToshow == 0){
-    image(asl_0,window.innerWidth/2.1, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(asl_0,window.innerWidth/2.5, window.innerHeight/2.5, window.innerWidth/2.5, window.innerHeight/2.5);
   }
   DrawLowerLeftPanel;
 }
