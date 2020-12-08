@@ -114,9 +114,7 @@ function ranking(){
 }
 function SignIn(){
   if(current_usrname != "none"){
-    if(num_user >= 2){
-      ranking();
-    }
+
 
     ID = String(current_usrname) + "_signins";
     listItem = document.getElementById(ID);
@@ -165,6 +163,9 @@ function SignIn(){
   else{
   }
   //console.log(list.innerHTML);
+  if(num_user >= 2){
+    ranking();
+  }
   return false;
 }
 function Train(){
