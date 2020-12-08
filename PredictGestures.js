@@ -75,17 +75,33 @@ function IsNewUser(username,list){
 
 }
 function ranking(){
-
+var s1;
+var s2;
 if(num_user == 3){
   if(document.getElementById(vec_name[0]+"_signins").innerHTML <  document.getElementById(vec_name[1]+"_signins").innerHTML){
     console.log("1");
     console.log(document.getElementById(vec_name[0]+"_signins").innerHTML);
     console.log(document.getElementById(vec_name[1]+"_signins").innerHTML);
     switch_pos(0,1);
+    s1=vec_name[0];
+    s2=vec_name[1];
+
+    vec_name[0] = s2;
+    vec_name[1] = s1;
     if(document.getElementById(vec_name[1]+"_signins").innerHTML <  document.getElementById(vec_name[2]+"_signins").innerHTML){
       switch_pos(1,2);
+      s1=vec_name[1];
+      s2=vec_name[2];
+
+      vec_name[1] = s2;
+      vec_name[2] = s1;
       if(document.getElementById(vec_name[0]+"_signins").innerHTML <  document.getElementById(vec_name[1]+"_signins").innerHTML){
         switch_pos(0,1);
+        s1=vec_name[0];
+        s2=vec_name[1];
+
+        vec_name[0] = s2;
+        vec_name[1] = s1;
       }
     }
   }
@@ -94,13 +110,28 @@ if(num_user == 3){
     console.log(document.getElementById(vec_name[0]+"_signins").innerHTML);
     console.log(document.getElementById(vec_name[2]+"_signins").innerHTML);
     switch_pos(0,2)
+    s1=vec_name[0];
+    s2=vec_name[2];
+
+    vec_name[0] = s2;
+    vec_name[2] = s1;
     switch_pos(1,2)
+    s1=vec_name[1];
+    s2=vec_name[2];
+
+    vec_name[1] = s2;
+    vec_name[2] = s1;
   }
   else if(document.getElementById(vec_name[1]+"_signins").innerHTML <  document.getElementById(vec_name[2]+"_signins").innerHTMLs){
     console.log(document.getElementById(vec_name[1]+"_signins").innerHTML);
     console.log(document.getElementById(vec_name[2]+"_signins").innerHTML);
     console.log("3");
       switch_pos(1,2)
+      s1=vec_name[1];
+      s2=vec_name[2];
+
+      vec_name[1] = s2;
+      vec_name[2] = s1;
   }
 }
 
