@@ -86,6 +86,7 @@ function ranking(){
       console.log(document.getElementById(vec_name[1]+"_signins").innerHTML);
       if(y != i){
         if(document.getElementById(vec_name[i]+"_signins").innerHTML <  document.getElementById(vec_name[y]+"_signins").innerHTML){
+          console.log("Accepted");
           var i_id_num = document.getElementById(vec_name[i]+"_signins");
           var y_id_num = document.getElementById(vec_name[y]+"_signins");
           var i_value_num = document.getElementById(vec_name[i]+"_signins").innerHTML;
