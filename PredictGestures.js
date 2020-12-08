@@ -75,58 +75,58 @@ function IsNewUser(username,list){
 
 }
 function ranking(){
-  console.log("lenght");
-  console.log(vec_name.length);
-  for(var i = 0 ; i < vec_name.length ; i++){
-    document.getElementById(username+"_signins").innerHTML
-    var initial = i;
-    for(var y = 0 ; y < vec_name.length ; y++){
-      console.log("i");
-      console.log(i);
-      console.log("y");
-      console.log(y);
-      // console.log("lenght");
-      // console.log(vec_name.length);
-      // console.log(document.getElementById(vec_name[i]+"_signins").innerHTML);
-      // console.log(document.getElementById(vec_name[1]+"_signins").innerHTML);
-        if(document.getElementById(vec_name[i]+"_signins").innerHTML <  document.getElementById(vec_name[y]+"_signins").innerHTML && i < y){
-          console.log("Accepted");
 
-          var i_id_name_2 = document.getElementById(vec_name[i]);
-          var y_id_name_2 = document.getElementById(vec_name[y]);
-
-
-          var i_id_num = document.getElementById(vec_name[i]+"_signins");
-          var y_id_num = document.getElementById(vec_name[y]+"_signins");
-          var i_value_num = document.getElementById(vec_name[i]+"_signins").innerHTML;
-          var y_value_num = document.getElementById(vec_name[y]+"_signins").innerHTML;
-
-          var i_id_name = document.getElementById(vec_name[i]+"_name");
-          var y_id_name = document.getElementById(vec_name[y]+"_name");
-          var i_value_name = document.getElementById(vec_name[i]+"_name").innerHTML;
-          var y_value_name = document.getElementById(vec_name[y]+"_name").innerHTML;
-
-          i_id_num.id = vec_name[y]+"_signins";
-          y_id_num.id = vec_name[i]+"_signins";
-          i_id_num.innerHTML = y_value_num;
-          y_id_num.innerHTML = i_value_num;
-
-          i_id_name.id = vec_name[y]+"_name";
-          y_id_name.id = vec_name[i]+"_name";
-          i_id_name.innerHTML = y_value_name;
-          y_id_name.innerHTML = i_value_name;
-
-          i_id_name_2.id = vec_name[y];
-          y_id_name_2.id = vec_name[i];
-
-          i = 0;
-          y=0;
-
-        }
-
+  if(document.getElementById(vec_name[0]+"_signins").innerHTML <  document.getElementById(vec_name[1]+"_signins").innerHTML){
+    switch_pos(0,1);
+    if(document.getElementById(vec_name[1]+"_signins").innerHTML <  document.getElementById(vec_name[2]+"_signins").innerHTML){
+      switch_pos(1,2);
+      if(document.getElementById(vec_name[0]+"_signins").innerHTML <  document.getElementById(vec_name[1]+"_signins").innerHTML){
+        switch_pos(0,1);
       }
+    }
+  }
+  else if(document.getElementById(vec_name[0]+"_signins").innerHTML <  document.getElementById(vec_name[2]+"_signins").innerHTML){
+    switch_pos(0,2)
+    if(document.getElementById(vec_name[0]+"_signins").innerHTML <  document.getElementById(vec_name[1]+"_signins").innerHTML){
+      switch_pos(0,2)
+    }
+    if(document.getElementById(vec_name[1]+"_signins").innerHTML <  document.getElementById(vec_name[2]+"_signins").innerHTML){
+      switch_pos(1,2)
+    }
+  }
+  else if(document.getElementById(vec_name[1]+"_signins").innerHTML <  document.getElementById(vec_name[2]+"_signins").innerHTML){
+      switch_pos(1,2)
+  }
 
- }
+
+}
+function switch_pos(i,y){
+  var i_id_name_2 = document.getElementById(vec_name[i]);
+  var y_id_name_2 = document.getElementById(vec_name[y]);
+
+
+  var i_id_num = document.getElementById(vec_name[i]+"_signins");
+  var y_id_num = document.getElementById(vec_name[y]+"_signins");
+  var i_value_num = document.getElementById(vec_name[i]+"_signins").innerHTML;
+  var y_value_num = document.getElementById(vec_name[y]+"_signins").innerHTML;
+
+  var i_id_name = document.getElementById(vec_name[i]+"_name");
+  var y_id_name = document.getElementById(vec_name[y]+"_name");
+  var i_value_name = document.getElementById(vec_name[i]+"_name").innerHTML;
+  var y_value_name = document.getElementById(vec_name[y]+"_name").innerHTML;
+
+  i_id_num.id = vec_name[y]+"_signins";
+  y_id_num.id = vec_name[i]+"_signins";
+  i_id_num.innerHTML = y_value_num;
+  y_id_num.innerHTML = i_value_num;
+
+  i_id_name.id = vec_name[y]+"_name";
+  y_id_name.id = vec_name[i]+"_name";
+  i_id_name.innerHTML = y_value_name;
+  y_id_name.innerHTML = i_value_name;
+
+  i_id_name_2.id = vec_name[y];
+  y_id_name_2.id = vec_name[i];
 }
 function SignIn(){
   if(current_usrname != "none"){
