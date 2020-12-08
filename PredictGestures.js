@@ -34,9 +34,9 @@ function CreateNewUser(username,list){
   }
   else{
     vec_name.push(username);
-    console.log(vec_name[1]);
+
   }
-  console.log(vec_name[0]);
+
   num_user++;
   var item = document.createElement('th');
   var item2 = document.createElement('tr');
@@ -79,6 +79,8 @@ function ranking(){
     document.getElementById(username+"_signins").innerHTML
     var initial = i;
     for(var y = 0 ; y < num_user.length ; i++){
+      console.log(num_user.length);
+      console.log(i);
       if(y != i){
         if(document.getElementById(vec_name[i]+"_signins").innerHTML <  document.getElementById(vec_name[y]+"_signins").innerHTML){
           var i_id_num = document.getElementById(vec_name[i]+"_signins");
@@ -112,7 +114,6 @@ function SignIn(){
     ranking();
     ID = String(current_usrname) + "_signins";
     listItem = document.getElementById(ID);
-    console.log(listItem.innerHTML);
     if(denominator == 0){
 
     }
@@ -145,11 +146,8 @@ function SignIn(){
   }
   else{
       user_playing.innerHTML = String("User : " + username + "    Last Score: " + document.getElementById(username+"_signins").innerHTML);
-      console.log(username);
       document.value
-      console.log( document.getElementById(username+"_signins"))
-      console.log( str(document.getElementById(username+"_signins").value))
-      console.log(document.getElementById(username+"_signins").innerHTML)
+
 
   }
 
@@ -626,7 +624,7 @@ function phase_choice(time_min, time_max){
         if(digitToshow == phase1[i]){
           denominator++;
           numerator++;
-          console.log(numerator/denominator);
+
           phase1.splice(i,1);
 
         }
@@ -687,7 +685,7 @@ function TimeToSwitchDigits(){
           if(digitToshow == phase1[i]){
             denominator++;
             numerator++;
-            console.log(numerator/denominator);
+
             phase1.splice(i,1);
           }
         }
@@ -733,7 +731,7 @@ function TimeToSwitchDigits(){
           if(digitToshow == phase1[i]){
             denominator++;
             numerator++;
-            console.log(numerator/denominator);
+
             phase1.splice(i,1);
           }
         }
@@ -756,7 +754,7 @@ function TimeToSwitchDigits(){
           if(digitToshow == phase1[i]){
             denominator++;
             numerator++;
-            console.log(numerator/denominator);
+
             phase1.splice(i,1);
           }
         }
@@ -779,7 +777,7 @@ function TimeToSwitchDigits(){
           if(digitToshow == phase1[i]){
             denominator++;
             numerator++;
-            console.log(numerator/denominator);
+
             phase1.splice(i,1);
           }
         }
@@ -817,7 +815,7 @@ function TimeToSwitchDigits(){
           if(digitToshow == phase1[i]){
             denominator++;
             numerator++;
-            console.log(numerator/denominator);
+
             phase1.splice(i,1);
           }
         }
