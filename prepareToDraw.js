@@ -46,5 +46,9 @@ three_plus_four = loadImage('https://i.imgur.com/700aePU.png');
 yes = loadImage('https://i.imgur.com/CdNouYK.png');
 no = loadImage('https://i.imgur.com/ceZsav1.jpg');
 
+num_three_two_five = loadImage('https://i.imgur.com/CAsF4WL.png');
+num_two_two_four = loadImage('https://i.imgur.com/TmHcBa6.png');
+num_one_two_three = loadImage('https://i.imgur.com/EOGi6KC.png');
+
 
 }
