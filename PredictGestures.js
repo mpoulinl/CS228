@@ -35,7 +35,7 @@ function CreateNewUser(username,list){
   else{
     vec_name.push(username);
   }
-  console.log(vec_name);
+  console.log(vec_name[0]);
   num_user++;
   var item = document.createElement('th');
   var item2 = document.createElement('tr');
@@ -74,8 +74,8 @@ function IsNewUser(username,list){
 
 }
 function ranking(){
-  for(var i = 0 ; i < num_user ; i++){
-    document.ge
+  for(var i = 0 ; i < num_user.length ; i++){
+   document.getElementById(username+"_signins").innerHTML
   }
 }
 function SignIn(){
