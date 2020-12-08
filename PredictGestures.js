@@ -92,6 +92,11 @@ function ranking(){
       if(i < y){
         if(document.getElementById(vec_name[i]+"_signins").innerHTML <  document.getElementById(vec_name[y]+"_signins").innerHTML){
           console.log("Accepted");
+
+          var i_id_name_2 = document.getElementById(vec_name[i]);
+          var y_id_name_2 = document.getElementById(vec_name[y]);
+
+
           var i_id_num = document.getElementById(vec_name[i]+"_signins");
           var y_id_num = document.getElementById(vec_name[y]+"_signins");
           var i_value_num = document.getElementById(vec_name[i]+"_signins").innerHTML;
@@ -111,6 +116,10 @@ function ranking(){
           y_id_name.id = vec_name[i]+"_name";
           i_id_name.innerHTML = y_value_name;
           y_id_name.innerHTML = i_value_name;
+
+          i_id_name_2.id = vec_name[y];
+          y_id_name_2.id = vec_name[i];
+
 
           i = y;
 
