@@ -75,6 +75,7 @@ function IsNewUser(username,list){
 
 }
 function ranking(){
+    console.log("lenght");
   for(var i = 0 ; i < num_user.length ; i++){
     document.getElementById(username+"_signins").innerHTML
     var initial = i;
