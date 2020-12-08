@@ -637,13 +637,13 @@ function DrawLowerLeftPanel(){
     image(num_2,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
   if(digitToshow == 3){
-    image(num_3,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(num_one_two_three,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
   if(digitToshow == 4){
-    image(num_4,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(num_two_two_four,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
   if(digitToshow == 5){
-    image(num_5,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
+    image(num_three_two_five,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
   }
   if(digitToshow == 6){
     image(num_6,0, window.innerHeight/2.2, window.innerWidth/2.2, window.innerHeight/2.2);
