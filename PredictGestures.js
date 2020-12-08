@@ -89,7 +89,7 @@ function ranking(){
       // console.log(vec_name.length);
       // console.log(document.getElementById(vec_name[i]+"_signins").innerHTML);
       // console.log(document.getElementById(vec_name[1]+"_signins").innerHTML);
-        if(document.getElementById(vec_name[i]+"_signins").innerHTML <  document.getElementById(vec_name[y]+"_signins").innerHTML){
+        if(document.getElementById(vec_name[i]+"_signins").innerHTML <  document.getElementById(vec_name[y]+"_signins").innerHTML && i < y){
           console.log("Accepted");
 
           var i_id_name_2 = document.getElementById(vec_name[i]);
@@ -119,10 +119,13 @@ function ranking(){
           i_id_name_2.id = vec_name[y];
           y_id_name_2.id = vec_name[i];
 
+          i = 0;
+          y=0;
+
         }
 
       }
-   
+
  }
 }
 function SignIn(){
