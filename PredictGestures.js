@@ -78,6 +78,7 @@ function ranking(){
 
 if(num_user == 3){
   if(document.getElementById(vec_name[0]+"_signins").innerHTML <  document.getElementById(vec_name[1]+"_signins").innerHTML){
+    console.log("1");
     switch_pos(0,1);
     if(document.getElementById(vec_name[1]+"_signins").innerHTML <  document.getElementById(vec_name[2]+"_signins").innerHTML){
       switch_pos(1,2);
@@ -87,6 +88,7 @@ if(num_user == 3){
     }
   }
   else if(document.getElementById(vec_name[0]+"_signins").innerHTML <  document.getElementById(vec_name[2]+"_signins").innerHTML){
+    console.log("2");
     switch_pos(0,2)
     if(document.getElementById(vec_name[0]+"_signins").innerHTML <  document.getElementById(vec_name[1]+"_signins").innerHTML){
       switch_pos(0,2)
@@ -96,6 +98,7 @@ if(num_user == 3){
     }
   }
   else if(document.getElementById(vec_name[1]+"_signins").innerHTML <  document.getElementById(vec_name[2]+"_signins").innerHTML){
+    console.log("3");
       switch_pos(1,2)
   }
 }
