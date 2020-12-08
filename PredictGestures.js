@@ -75,16 +75,21 @@ function IsNewUser(username,list){
 
 }
 function ranking(){
+  console.log("lenght");
+  console.log(vec_name.length);
   for(var i = 0 ; i < vec_name.length ; i++){
     document.getElementById(username+"_signins").innerHTML
     var initial = i;
     for(var y = 0 ; y < vec_name.length ; y++){
-
-      console.log("lenght");
-      console.log(vec_name.length);
-      console.log(document.getElementById(vec_name[i]+"_signins").innerHTML);
-      console.log(document.getElementById(vec_name[1]+"_signins").innerHTML);
-      if(y != i){
+      console.log("i");
+      console.log(i);
+      console.log("y");
+      console.log(y);
+      // console.log("lenght");
+      // console.log(vec_name.length);
+      // console.log(document.getElementById(vec_name[i]+"_signins").innerHTML);
+      // console.log(document.getElementById(vec_name[1]+"_signins").innerHTML);
+      if(i < y){
         if(document.getElementById(vec_name[i]+"_signins").innerHTML <  document.getElementById(vec_name[y]+"_signins").innerHTML){
           console.log("Accepted");
           var i_id_num = document.getElementById(vec_name[i]+"_signins");
