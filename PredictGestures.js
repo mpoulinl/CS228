@@ -79,8 +79,9 @@ function ranking(){
     document.getElementById(username+"_signins").innerHTML
     var initial = i;
     for(var y = 0 ; y < num_user.length ; i++){
-      console.log(num_user.length);
-      console.log(i);
+
+      console.log("length ",num_user.length);
+      console.log("i ",i);
       if(y != i){
         if(document.getElementById(vec_name[i]+"_signins").innerHTML <  document.getElementById(vec_name[y]+"_signins").innerHTML){
           var i_id_num = document.getElementById(vec_name[i]+"_signins");
