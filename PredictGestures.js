@@ -104,8 +104,8 @@ function ranking(){
 
           i_id_num.id = vec_name[y]+"_signins";
           y_id_num.id = vec_name[i]+"_signins";
-          i_id_num.innerHTML = y_id_num;
-          y_id_num.innerHTML = i_id_num;
+          i_id_num.innerHTML = y_value_num;
+          y_id_num.innerHTML = i_value_num;
 
           i_id_name.id = vec_name[y]+"_name";
           y_id_name.id = vec_name[i]+"_name";
