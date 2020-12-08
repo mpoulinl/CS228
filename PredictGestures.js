@@ -121,12 +121,11 @@ function ranking(){
           y_id_name_2.id = vec_name[i];
 
 
-          i = y;
+          y = 10;
+          i = -1;
 
         }
-        if(i!=initial){
-          i = 0;
-        }
+
       }
    }
  }
