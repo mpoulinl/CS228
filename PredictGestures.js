@@ -76,6 +76,7 @@ function IsNewUser(username,list){
 }
 function ranking(){
 
+if(num_user == 3){
   if(document.getElementById(vec_name[0]+"_signins").innerHTML <  document.getElementById(vec_name[1]+"_signins").innerHTML){
     switch_pos(0,1);
     if(document.getElementById(vec_name[1]+"_signins").innerHTML <  document.getElementById(vec_name[2]+"_signins").innerHTML){
@@ -97,6 +98,7 @@ function ranking(){
   else if(document.getElementById(vec_name[1]+"_signins").innerHTML <  document.getElementById(vec_name[2]+"_signins").innerHTML){
       switch_pos(1,2)
   }
+}
 
 
 }
