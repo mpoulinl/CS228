@@ -89,7 +89,6 @@ function ranking(){
       // console.log(vec_name.length);
       // console.log(document.getElementById(vec_name[i]+"_signins").innerHTML);
       // console.log(document.getElementById(vec_name[1]+"_signins").innerHTML);
-      if(i < y){
         if(document.getElementById(vec_name[i]+"_signins").innerHTML <  document.getElementById(vec_name[y]+"_signins").innerHTML){
           console.log("Accepted");
 
@@ -120,14 +119,10 @@ function ranking(){
           i_id_name_2.id = vec_name[y];
           y_id_name_2.id = vec_name[i];
 
-
-          y = 10;
-          i = -1;
-
         }
 
       }
-   }
+   
  }
 }
 function SignIn(){
