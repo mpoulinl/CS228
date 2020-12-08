@@ -105,7 +105,7 @@ function SignIn(){
       document.value
       console.log( document.getElementById(username+"_signins"))
       console.log( str(document.getElementById(username+"_signins").value))
-      console.log(str(document.getElementById(username+"_signins")_)
+      console.log(str(document.getElementById(username+"_signins"))
 
   }
 
