@@ -100,7 +100,7 @@ function SignIn(){
      user_playing.innerHTML = String("User : " + username + "    Last Score: None");
   }
   else{
-      user_playing.innerHTML = String("User : " + username + "    Last Score: " + document.getElementById(username+"_signins"));
+      user_playing.innerHTML = String("User : " + username + "    Last Score: " + document.getElementById(username+"_signins").innerHTML);
       console.log(username);
       document.value
       console.log( document.getElementById(username+"_signins"))
