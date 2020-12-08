@@ -11,7 +11,7 @@ var oneFrameOfData = nj.zeros([5,4,6]);
 var numSamples = 100;
 var currentSample = 0;
 
-var vec_name;
+var vec_name= new array();
 var num_user = 0;
 var current_usrname = "none";
 var programState = 0;
@@ -30,10 +30,10 @@ var num_phase = 1;
 var c;
 function CreateNewUser(username,list){
   if(num_user == 0){
-    vec_name = [username];
+    vec_name.push(username);
   }
   else{
-    vec_name.append("hi");
+    vec_name.push(username);
   }
   console.log(vec_name);
   num_user++;
