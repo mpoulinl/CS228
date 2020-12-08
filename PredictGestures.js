@@ -33,7 +33,7 @@ function CreateNewUser(username,list){
     vec_name = username;
   }
   else{
-    vec_name = vec_name + " " + user
+    vec_name = vec_name + " " + username
   }
   console.log(vec_name);
   num_user++;
