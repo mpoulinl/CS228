@@ -11,6 +11,8 @@ var oneFrameOfData = nj.zeros([5,4,6]);
 var numSamples = 100;
 var currentSample = 0;
 
+var vec_name;
+var num_user = 0;
 var current_usrname = "none";
 var programState = 0;
 var last_performance;
@@ -27,6 +29,15 @@ var index = 0;
 var num_phase = 1;
 var c;
 function CreateNewUser(username,list){
+  if(num_user == 0){
+    vec_name = username;
+  }
+  else{
+    vec_name = np.concatenate([vec_name, username])
+  }
+  console.console.log(vec_name);
+  num_user++;
+  vec_name = np.concatenate
   var item = document.createElement('th');
   var item2 = document.createElement('tr');
   item.innerHTML = String(username);
@@ -63,7 +74,11 @@ function IsNewUser(username,list){
   return usernameFound == false;
 
 }
-
+function ranking(){
+  for(var i = 0 ; i < num_user ; i++){
+    document.ge
+  }
+}
 function SignIn(){
   if(current_usrname != "none"){
     ID = String(current_usrname) + "_signins";
