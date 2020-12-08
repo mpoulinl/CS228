@@ -75,14 +75,15 @@ function IsNewUser(username,list){
 
 }
 function ranking(){
-  console.log("length ",num_user.length);
   for(var i = 0 ; i < num_user.length ; i++){
     document.getElementById(username+"_signins").innerHTML
     var initial = i;
     for(var y = 0 ; y < num_user.length ; i++){
 
-      console.log("length ",num_user.length);
-      console.log("i ",i);
+      console.log("lenght");
+      console.log(num_user.length);
+      console.log("i");
+      console.log(i);
       if(y != i){
         if(document.getElementById(vec_name[i]+"_signins").innerHTML <  document.getElementById(vec_name[y]+"_signins").innerHTML){
           var i_id_num = document.getElementById(vec_name[i]+"_signins");
