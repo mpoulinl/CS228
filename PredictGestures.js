@@ -30,7 +30,7 @@ var num_phase = 1;
 var c;
 function CreateNewUser(username,list){
   if(num_user == 0){
-    vec_name =  = new Array(username);
+    vec_name = new Array(username);
   }
   else{
     vec_name.push(username);
